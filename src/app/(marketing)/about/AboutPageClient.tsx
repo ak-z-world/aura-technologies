@@ -96,37 +96,30 @@ const PRINCIPLES = [
 ]
 
 const LEADERSHIP = [
+
   {
-    initials: 'SK',
-    name: 'Siddharth Krishnamurti',
-    role: 'Co-Founder & CEO',
+    initials: 'VS',
+    name: 'Vignesh S',
+    role: 'Co-Founder & Head of Academy',
+    focus: 'Curriculum Design, Corporate Training, Pedagogy',
+    bg: 'from-gold-soft to-[#e8d4a8]',
+    accent: '#a07830',
+  },
+  {
+    initials: 'KS',
+    name: 'Karthik S',
+    role: 'Co-Founder, Global Sales & Marketing',
     focus: 'Strategy, Ecosystem Architecture, Enterprise Partnerships',
     bg: 'from-sky-soft to-sky-mist',
     accent: '#4a7fa5',
   },
   {
-    initials: 'PR',
-    name: 'Priya Rangarajan',
-    role: 'Co-Founder & CTO',
-    focus: 'AI Research, Software Architecture, Platform Engineering',
-    bg: 'from-lavender-soft to-lavender-mist',
-    accent: '#7c6fad',
-  },
-  {
-    initials: 'AM',
-    name: 'Aditya Mehrotra',
+    initials: 'AK',
+    name: 'Arun Kumar',
     role: 'Head of AI Products',
     focus: 'LLM Systems, Product Strategy, AI Safety Practices',
     bg: 'from-mint-soft to-mint-mist',
     accent: '#3d8c7a',
-  },
-  {
-    initials: 'VN',
-    name: 'Vidya Nair',
-    role: 'Head of Academy',
-    focus: 'Curriculum Design, Corporate Training, Pedagogy',
-    bg: 'from-gold-soft to-[#e8d4a8]',
-    accent: '#a07830',
   },
 ]
 

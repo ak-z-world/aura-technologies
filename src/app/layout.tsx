@@ -3,8 +3,10 @@ import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   title: 'Vertex Loop — Next-Generation Technology Ecosystem',
+
   description:
     'Vertex Loop is a next-generation technology company spanning AI product development, software engineering, IT services, tech education, and digital marketing.',
+
   keywords: [
     'AI Products',
     'Software Engineering',
@@ -14,23 +16,48 @@ export const metadata: Metadata = {
     'Artificial Intelligence',
     'Technology Company',
   ],
+
   authors: [{ name: 'Vertex Loop' }],
   creator: 'Vertex Loop',
+
   metadataBase: new URL('https://vertexloop.io'),
+
   openGraph: {
     title: 'Vertex Loop — Next-Generation Technology Ecosystem',
-    description: 'Five divisions. One vision. Engineering the frontier of technology.',
+
+    description:
+      'Five divisions. One vision. Engineering the frontier of technology.',
+
     type: 'website',
     locale: 'en_US',
+
     url: 'https://vertexloop.io',
+
     siteName: 'Vertex Loop',
+
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1080,
+        height: 1080,
+        alt: 'Vertex Loop Technology Ecosystem',
+      },
+    ],
   },
+
   twitter: {
     card: 'summary_large_image',
+
     title: 'Vertex Loop — Next-Generation Technology Ecosystem',
-    description: 'Five divisions. One vision. Engineering the frontier of technology.',
+
+    description:
+      'Five divisions. One vision. Engineering the frontier of technology.',
+
     creator: '@vertexloop',
+
+    images: ['/og-image.png'],
   },
+
   robots: {
     index: true,
     follow: true,
