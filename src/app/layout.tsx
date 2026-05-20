@@ -38,9 +38,9 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: 'https://vertex-loop.vercel.app/og-image.png',
-        width: 1200,
-        height: 630,
+        url: 'https://vertex-loop.vercel.app/og-image.jpg',
+        width: 1494,
+        height: 785,
         alt: 'Vertex Loop Technology Ecosystem',
       },
     ],
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: 'Vertex Loop — Next-Generation Technology Ecosystem',
 
     description:
-      'Five divisions. One vision. Engineering the frontier of technology.',
+    'Vertex Loop delivers AI products, software engineering, digital marketing, IT services, and technology education to help businesses innovate, scale, and grow globally.',
 
     creator: '@vertexloop',
 
