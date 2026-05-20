@@ -6,7 +6,7 @@ import SectionLabel from '@/components/ui/SectionLabel'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import ValueCard from '@/components/ui/ValueCard'
 import { staggerContainerVariants, staggerItemVariants, fadeUpVariants } from '@/lib/motion'
-import { VALUE_PROPOSITIONS, STATS } from '@/lib/data'
+import { VALUE_PROPOSITIONS } from '@/lib/data'
 
 function StatBadge({ value, label, index }: { value: string; label: string; index: number }) {
   return (
@@ -84,7 +84,7 @@ export default function WhyUsSection() {
         </div>
 
         {/* Stats row */}
-        <motion.div
+        {/* <motion.div
           variants={staggerContainerVariants}
           initial="hidden"
           whileInView="visible"
@@ -94,7 +94,7 @@ export default function WhyUsSection() {
           {STATS.map((stat, i) => (
             <StatBadge key={stat.label} value={stat.value} label={stat.label} index={i} />
           ))}
-        </motion.div>
+        </motion.div> */}
 
         {/* Divider */}
         <div className="divider-gradient mb-16" />

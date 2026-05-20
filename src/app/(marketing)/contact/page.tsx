@@ -1,7 +1,12 @@
+import type { Metadata } from 'next'
+import ContactPageClient from './ContactPageClient'
+
+export const metadata: Metadata = {
+  title: 'Contact Vertex Loop — Start a Partnership',
+  description:
+    'Get in touch with Vertex Loop. Whether you need one division or all five, a conversation starts here.',
+}
+
 export default function ContactPage() {
-  return (
-    <main className="min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl font-bold">Contact Page — Coming Soon</h1>
-    </main>
-  )
+  return <ContactPageClient />
 }

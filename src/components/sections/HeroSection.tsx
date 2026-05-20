@@ -11,7 +11,7 @@ import {
   orbFloat2Variants,
   fadeInVariants,
 } from '@/lib/motion'
-import { STATS } from '@/lib/data'
+// import { STATS } from '@/lib/data'
 
 function AnimatedWord({ word, delay }: { word: string; delay: number }) {
   return (
@@ -172,7 +172,7 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Stats bar */}
-        <motion.div
+        {/* <motion.div
           variants={staggerContainerVariants}
           initial="hidden"
           animate="visible"
@@ -189,7 +189,7 @@ export default function HeroSection() {
               <span className="text-slate-dim text-xs font-mono tracking-wider uppercase">{stat.label}</span>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </motion.div>
 
       {/* Scroll indicator */}

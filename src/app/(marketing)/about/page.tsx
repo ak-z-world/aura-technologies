@@ -1,7 +1,12 @@
+import type { Metadata } from 'next'
+import AboutPageClient from './AboutPageClient'
+
+export const metadata: Metadata = {
+  title: 'About Us — Vertex Loop',
+  description:
+    'Learn who we are — the people, principles, and philosophy behind the Vertex Loop technology ecosystem.',
+}
+
 export default function AboutPage() {
-  return (
-    <main className="min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl font-bold">About Page — Coming Soon</h1>
-    </main>
-  )
+  return <AboutPageClient />
 }

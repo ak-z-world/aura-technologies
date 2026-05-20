@@ -1,10 +1,10 @@
 import type { Division, ValueProposition, NavLink } from '@/types'
 
 export const NAV_LINKS: NavLink[] = [
-  { label: 'Who We Are', href: '#about' },
-  { label: 'Ecosystem', href: '#ecosystem' },
-  { label: 'Why Us', href: '#why-us' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Who We Are', href: '/about' },
+  { label: 'Ecosystem', href: '/ecosystem' },
+  { label: 'Why Us', href: '/why-us' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export const DIVISIONS: Division[] = [
@@ -157,9 +157,9 @@ export const VALUE_PROPOSITIONS: ValueProposition[] = [
   },
 ]
 
-export const STATS = [
-  { value: '120+', label: 'Global Clients' },
-  { value: '5', label: 'Core Divisions' },
-  { value: '8+', label: 'Years of Excellence' },
-  { value: '2,400+', label: 'Professionals Trained' },
-]
+// export const STATS = [
+//   { value: '120+', label: 'Global Clients' },
+//   { value: '5', label: 'Core Divisions' },
+//   { value: '8+', label: 'Years of Excellence' },
+//   { value: '2,400+', label: 'Professionals Trained' },
+// ]
