@@ -26,20 +26,21 @@ export const metadata: Metadata = {
     title: 'Vertex Loop — Next-Generation Technology Ecosystem',
 
     description:
-      'Five divisions. One vision. Engineering the frontier of technology.',
-
-    type: 'website',
-    locale: 'en_US',
+      'Vertex Loop delivers AI products, software engineering, digital marketing, IT services, and technology education to help businesses innovate, scale, and grow globally.',
 
     url: 'https://vertex-loop.vercel.app',
 
     siteName: 'Vertex Loop',
 
+    locale: 'en_US',
+
+    type: 'website',
+
     images: [
       {
         url: 'https://vertex-loop.vercel.app/og-image.png',
-        width: 1080,
-        height: 1080,
+        width: 1200,
+        height: 630,
         alt: 'Vertex Loop Technology Ecosystem',
       },
     ],
