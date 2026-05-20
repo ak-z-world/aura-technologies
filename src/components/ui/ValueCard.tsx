@@ -21,7 +21,7 @@ const ICON_MAP: Record<
     className?: string
     style?: React.CSSProperties
   }>
->
+> = {}
 
 interface ValueCardProps {
   value: ValueProposition

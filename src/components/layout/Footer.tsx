@@ -2,7 +2,15 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { ArrowUpRight, Mail, MapPin, Linkedin, Twitter, Github } from 'lucide-react'
+import {
+  ArrowUpRight,
+  Mail,
+  MapPin,
+  Globe,
+  Share2,
+  Code2
+} from 'lucide-react'
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 import { staggerContainerVariants, staggerItemVariants, fadeUpVariants } from '@/lib/motion'
 import { DIVISIONS, NAV_LINKS } from '@/lib/data'
 
@@ -81,9 +89,9 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-3 mt-8">
               {[
-                { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                { icon: Twitter, href: '#', label: 'Twitter' },
-                { icon: Github, href: '#', label: 'GitHub' },
+                { icon: Globe, href: '#', label: 'LinkedIn' },
+                { icon: Share2, href: '#', label: 'Twitter' },
+                { icon: Code2, href: '#', label: 'GitHub' },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
