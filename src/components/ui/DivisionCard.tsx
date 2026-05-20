@@ -15,13 +15,14 @@ import { cn } from '@/lib/utils'
 import type { Division } from '@/types'
 import { cardHoverVariants } from '@/lib/motion'
 
-const ICON_MAP: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
-  GraduationCap,
-  Cpu,
-  Server,
-  Code2,
-  TrendingUp,
-}
+const ICON_MAP: Record<
+  string,
+  React.ComponentType<{
+    size?: number
+    className?: string
+    style?: React.CSSProperties
+  }>
+> = {}
 
 interface DivisionCardProps {
   division: Division

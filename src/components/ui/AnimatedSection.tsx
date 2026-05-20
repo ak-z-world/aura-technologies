@@ -26,7 +26,7 @@ const VARIANT_MAP: Record<AnimationVariant, Variants> = {
 interface Props extends AnimatedSectionProps {
   as?: 'div' | 'section' | 'article' | 'aside'
   once?: boolean
-  margin?: string
+  margin?: `${number}px` | `${number}%`
 }
 
 export default function AnimatedSection({
@@ -39,7 +39,11 @@ export default function AnimatedSection({
   margin = '-100px',
 }: Props) {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once, margin: margin as Parameters<typeof useInView>[1]['margin'] })
+
+  const inView = useInView(ref, {
+    once,
+    margin,
+  })
   const variants = VARIANT_MAP[variant]
 
   const customVariants: Variants = {
