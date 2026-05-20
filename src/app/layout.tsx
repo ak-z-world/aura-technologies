@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Vertex Loop' }],
   creator: 'Vertex Loop',
 
-  metadataBase: new URL('https://vertexloop.io'),
+  metadataBase: new URL('https://vertex-loop.vercel.app'),
 
   openGraph: {
     title: 'Vertex Loop — Next-Generation Technology Ecosystem',
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
 
-    url: 'https://vertexloop.io',
+    url: 'https://vertex-loop.vercel.app',
 
     siteName: 'Vertex Loop',
 
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://vertex-loop.vercel.app/og-image.png',
         width: 1080,
         height: 1080,
         alt: 'Vertex Loop Technology Ecosystem',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 
     creator: '@vertexloop',
 
-    images: ['/og-image.png'],
+    images: ['https://vertex-loop.vercel.app/og-image.png'],
   },
 
   robots: {
