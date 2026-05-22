@@ -21,8 +21,8 @@ const FOOTER_LINKS = {
     { label: 'Press & Media', href: '#' },
   ],
   legal: [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
+    { label: 'Privacy Policy', href: '/privacy-policy' },
+    { label: 'Terms of Service', href: '/terms-conditions' },
     { label: 'Cookie Policy', href: '#' },
   ],
 }
@@ -90,8 +90,8 @@ export default function Footer() {
             {/* FIXED: Now using the correct FontAwesome icons instead of Lucide placeholders */}
             <div className="flex items-center gap-3 mt-8">
               {[
-                { icon: FaLinkedin, href: '#', label: 'LinkedIn' },
-                { icon: FaTwitter, href: '#', label: 'Twitter' },
+                { icon: FaLinkedin, href: 'https://www.linkedin.com/company/vertex-loop', label: 'LinkedIn' },
+                { icon: FaTwitter, href: 'https://x.com/LoopVertex99532', label: 'Twitter' },
                 { icon: FaGithub, href: '#', label: 'GitHub' },
               ].map(({ icon: Icon, href, label }) => (
                 <a

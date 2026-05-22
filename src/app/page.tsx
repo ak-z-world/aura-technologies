@@ -5,7 +5,7 @@ import HeroSection from "@/components/sections/HeroSection"
 import AboutSection from "@/components/sections/AboutSection"
 import EcosystemSection from "@/components/sections/EcosystemSection"
 import WhyUsSection from "@/components/sections/WhyUsSection"
-import CtaSection from "@/components/sections/CtaSection"
+// import CtaSection from "@/components/sections/CtaSection"
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
 
       <WhyUsSection />
 
-      <CtaSection />
+      {/* <CtaSection /> */}
 
       <Footer />
     </main>

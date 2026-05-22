@@ -590,7 +590,7 @@ export default function ContactPageClient() {
                         icon: MessageSquare,
                         label: 'LinkedIn',
                         value: 'linkedin.com/company/vertexloop',
-                        href: 'https://linkedin.com/company/vertexloop',
+                        href: 'https://linkedin.com/company/vertex-loop',
                         color: '#3d8c7a',
                       },
                     ].map(({ icon: Icon, label, value, href, color }) => (

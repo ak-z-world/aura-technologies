@@ -119,7 +119,7 @@ export default function EcosystemSection() {
                 team, deploys on our IT infrastructure, and grows through our Marketing division —
                 does not just save costs. They gain a strategic moat.
               </p>
-              <a href="#contact" className="btn-primary inline-flex mx-auto">
+              <a href="/contact" className="btn-primary inline-flex mx-auto">
                 Explore Multi-Division Partnerships
               </a>
             </div>
