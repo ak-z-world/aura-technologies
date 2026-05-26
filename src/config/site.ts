@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: "Aura Technologies",
+  name: "Vertex Loop",
   description: "Pioneering the next generation of AI and software solutions.",
-  url: "https://auratechnologies.com",
-  ogImage: "https://auratechnologies.com/og.jpg",
+  url: "https://vertex-loop.vercel.app",
+  ogImage: "https://vertex-loop.vercel.app/og.jpg",
   links: {
-    twitter: "https://twitter.com/auratech",
+    twitter: "https://x.com/LoopVertex99532",
     github: "https://github.com/auratech",
   },
 }

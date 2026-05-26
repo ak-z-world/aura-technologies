@@ -340,7 +340,7 @@ export default function ContactPageClient() {
                             <FormField label="Company">
                               <input
                                 className={inputCls}
-                                placeholder="Aryu Enterprises"
+                                placeholder="Aura Enterprises"
                                 value={form.company}
                                 onChange={e => set('company', e.target.value)}
                               />
@@ -589,7 +589,7 @@ export default function ContactPageClient() {
                       {
                         icon: MessageSquare,
                         label: 'LinkedIn',
-                        value: 'linkedin.com/company/vertexloop',
+                        value: 'linkedin.com/company/vertex-loop',
                         href: 'https://linkedin.com/company/vertex-loop',
                         color: '#3d8c7a',
                       },
@@ -676,8 +676,8 @@ export default function ContactPageClient() {
                   <div className="flex items-center gap-2">
                     {[
                       // Use the new FontAwesome icons from react-icons
-                      { icon: FaLinkedin, href: '#', label: 'LinkedIn' },
-                      { icon: FaTwitter, href: '#', label: 'Twitter' },
+                      { icon: FaLinkedin, href: 'https://linkedin.com/company/vertex-loop', label: 'LinkedIn' },
+                      { icon: FaTwitter, href: 'https://x.com/LoopVertex99532', label: 'Twitter' },
                       { icon: FaGithub, href: '#', label: 'GitHub' },
                     ].map(({ icon: Icon, href, label }) => (
                       <a
