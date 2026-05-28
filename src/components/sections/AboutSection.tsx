@@ -102,110 +102,126 @@ export default function AboutSection() {
 
           {/* Right: Visual ecosystem representation */}
           <div className="relative">
-            <AnimatedSection variant="scaleIn" delay={0.15}>
-              {/* Central orb */}
-              <div className="relative flex items-center justify-center">
-                <div className="relative w-full max-w-lg mx-auto aspect-square">
-                  {/* Background glow */}
-                  <div className="absolute inset-8 rounded-full bg-gradient-to-br from-sky-soft via-lavender-soft to-mint-soft opacity-50 blur-2xl" />
+  <AnimatedSection variant="scaleIn" delay={0.15}>
+    {/* Central orb */}
+    <div className="relative flex items-center justify-center">
+      <div className="relative w-full max-w-lg mx-auto aspect-square">
+        {/* Background glow */}
+        <div className="absolute inset-8 rounded-full bg-gradient-to-br from-sky-soft via-lavender-soft to-mint-soft opacity-50 blur-2xl" />
 
-                  {/* Center hub */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                    <motion.div
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
-                      className="absolute inset-0 w-28 h-28 -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-slate-ink/10"
-                    />
-                    <div className="w-28 h-28 -translate-x-1/2 -translate-y-1/2 rounded-full glass-card-strong flex flex-col items-center justify-center shadow-glass-lg">
-                      <div className="text-display font-bold text-slate-ink text-2xl leading-none">V</div>
-                      <div className="text-[9px] font-mono text-slate-dim tracking-wider uppercase mt-1">Loop</div>
-                    </div>
-                  </div>
+        {/* Global Connecting Lines Layer (FIXED) */}
+        <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
+          {DIVISIONS.map((division, i) => {
+            const angle = (i / DIVISIONS.length) * 2 * Math.PI - Math.PI / 2
+            const radius = 42 // % of container
+            const x = 50 + radius * Math.cos(angle)
+            const y = 50 + radius * Math.sin(angle)
+            const color = DIVISION_COLORS[division.id as keyof typeof DIVISION_COLORS]
 
-                  {/* Division nodes positioned around the center */}
-                  {DIVISIONS.map((division, i) => {
-                    const angle = (i / DIVISIONS.length) * 2 * Math.PI - Math.PI / 2
-                    const radius = 42 // % of container
-                    const x = 50 + radius * Math.cos(angle)
-                    const y = 50 + radius * Math.sin(angle)
-                    const color = DIVISION_COLORS[division.id as keyof typeof DIVISION_COLORS]
+            return (
+              <motion.line
+                key={`line-${division.id}`}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 0.25 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.4 + i * 0.1,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                x1="50%"
+                y1="50%"
+                x2={`${x}%`}
+                y2={`${y}%`}
+                stroke={color}
+                strokeWidth="1.5"
+                strokeDasharray="4 4"
+              />
+            )
+          })}
+        </svg>
 
-                    return (
-                      <motion.div
-                        key={division.id}
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{
-                          duration: 0.5,
-                          delay: 0.4 + i * 0.1,
-                          ease: [0.22, 1, 0.36, 1],
-                        }}
-                        className="absolute z-10"
-                        style={{ left: `${x}%`, top: `${y}%`, transform: 'translate(-50%, -50%)' }}
-                      >
-                        {/* Connecting line */}
-                        <svg
-                          className="absolute inset-0 pointer-events-none overflow-visible"
-                          style={{ transform: 'translate(50%, 50%)' }}
-                        >
-                          <line
-                            x1="0"
-                            y1="0"
-                            x2={`${(50 - x) * 2.4}%`}
-                            y2={`${(50 - y) * 2.4}%`}
-                            stroke={color}
-                            strokeOpacity="0.2"
-                            strokeWidth="1"
-                            strokeDasharray="3 4"
-                          />
-                        </svg>
-                        <motion.div
-                          animate={{ scale: [1, 1.05, 1] }}
-                          transition={{ duration: 4 + i, repeat: Infinity, ease: 'easeInOut', delay: i * 0.8 }}
-                          className="w-16 h-16 rounded-2xl glass-card flex items-center justify-center shadow-glass cursor-default group"
-                          style={{ borderColor: `${color}20` }}
-                          title={division.title}
-                        >
-                          <span
-                            className="w-3 h-3 rounded-full"
-                            style={{ backgroundColor: color, opacity: 0.8 }}
-                          />
-                        </motion.div>
-                        <div
-                          className="absolute top-full mt-2 left-1/2 -translate-x-1/2 text-center whitespace-nowrap text-[10px] font-mono tracking-wider"
-                          style={{ color }}
-                        >
-                          {division.id === 'ai-products' ? 'AI Products' : division.title.split(' ').slice(-1)[0]}
-                        </div>
-                      </motion.div>
-                    )
-                  })}
-
-                  {/* Outer orbit ring */}
-                  <motion.div
-                    animate={{ rotate: -360 }}
-                    transition={{ duration: 90, repeat: Infinity, ease: 'linear' }}
-                    className="absolute inset-0 rounded-full border border-dashed border-slate-ink/5"
-                  />
-                  <div className="absolute inset-4 rounded-full border border-slate-ink/5" />
-                </div>
-              </div>
-            </AnimatedSection>
-
-            {/* Division pills */}
-            <motion.div
-              variants={staggerContainerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="mt-10 flex flex-wrap gap-2.5 justify-center"
-            >
-              {DIVISIONS.map((division) => (
-                <DivisionPill key={division.id} division={division} />
-              ))}
-            </motion.div>
+        {/* Center hub */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
+            className="absolute inset-0 w-28 h-28 -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-slate-ink/10"
+          />
+          <div className="w-28 h-28 -translate-x-1/2 -translate-y-1/2 rounded-full glass-card-strong flex flex-col items-center justify-center shadow-glass-lg">
+            <div className="text-display font-bold text-slate-ink text-2xl leading-none">V</div>
+            <div className="text-[9px] font-mono text-slate-dim tracking-wider uppercase mt-1">Loop</div>
           </div>
+        </div>
+
+        {/* Division nodes positioned around the center */}
+        {DIVISIONS.map((division, i) => {
+          const angle = (i / DIVISIONS.length) * 2 * Math.PI - Math.PI / 2
+          const radius = 42 // % of container
+          const x = 50 + radius * Math.cos(angle)
+          const y = 50 + radius * Math.sin(angle)
+          const color = DIVISION_COLORS[division.id as keyof typeof DIVISION_COLORS]
+
+          return (
+            <motion.div
+              key={division.id}
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: 0.4 + i * 0.1,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="absolute z-20"
+              style={{ left: `${x}%`, top: `${y}%`, transform: 'translate(-50%, -50%)' }}
+            >
+              <motion.div
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 4 + i, repeat: Infinity, ease: 'easeInOut', delay: i * 0.8 }}
+                className="w-16 h-16 rounded-2xl glass-card flex items-center justify-center shadow-glass cursor-default group"
+                style={{ borderColor: `${color}20` }}
+                title={division.title}
+              >
+                <span
+                  className="w-3 h-3 rounded-full"
+                  style={{ backgroundColor: color, opacity: 0.8 }}
+                />
+              </motion.div>
+              <div
+                className="absolute top-full mt-2 left-1/2 -translate-x-1/2 text-center whitespace-nowrap text-[10px] font-mono tracking-wider"
+                style={{ color }}
+              >
+                {division.id === 'ai-products' ? 'AI Products' : division.title.split(' ').slice(-1)[0]}
+              </div>
+            </motion.div>
+          )
+        })}
+
+        {/* Outer orbit ring */}
+        <motion.div
+          animate={{ rotate: -360 }}
+          transition={{ duration: 90, repeat: Infinity, ease: 'linear' }}
+          className="absolute inset-0 z-0 rounded-full border border-dashed border-slate-ink/5"
+        />
+        <div className="absolute inset-4 z-0 rounded-full border border-slate-ink/5" />
+      </div>
+    </div>
+  </AnimatedSection>
+
+  {/* Division pills */}
+  <motion.div
+    variants={staggerContainerVariants}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    className="mt-10 flex flex-wrap gap-2.5 justify-center relative z-20"
+  >
+    {DIVISIONS.map((division) => (
+      <DivisionPill key={division.id} division={division} />
+    ))}
+  </motion.div>
+</div>
         </div>
 
         {/* Divider */}

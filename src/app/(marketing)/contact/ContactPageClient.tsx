@@ -59,22 +59,6 @@ const INITIAL_FORM: FormData = {
   budget: '', timeline: '', message: '', hearAbout: '',
 }
 
-const ENGAGEMENT_TYPES: { id: EngagementType; label: string; desc: string; icon: React.ComponentType<{ size?: number; className?: string }> }[] = [
-  { id: 'project', label: 'Project-Based', desc: 'Defined scope, fixed outcome', icon: Layers },
-  { id: 'retainer', label: 'Retainer', desc: 'Ongoing embedded capacity', icon: Clock },
-  { id: 'advisory', label: 'Advisory', desc: 'Strategic guidance & consulting', icon: MessageSquare },
-  { id: 'training', label: 'Training', desc: 'Team upskilling & education', icon: GraduationCap },
-  { id: 'multi', label: 'Multi-Division', desc: 'Full ecosystem engagement', icon: Layers },
-]
-
-const BUDGET_OPTIONS: { id: BudgetRange; label: string }[] = [
-  { id: 'under-10k', label: 'Under ₹10L / $10K' },
-  { id: '10k-50k', label: '₹10L–₹50L / $10K–$50K' },
-  { id: '50k-200k', label: '₹50L–₹2Cr / $50K–$200K' },
-  { id: '200k-plus', label: '₹2Cr+ / $200K+' },
-  { id: 'not-sure', label: 'Not yet defined' },
-]
-
 const TIMELINE_OPTIONS: { id: Timeline; label: string }[] = [
   { id: 'asap', label: 'Immediately' },
   { id: '1-3m', label: 'Within 1–3 months' },
@@ -254,312 +238,228 @@ export default function ContactPageClient() {
 
             {/* ── FORM (3 cols) ── */}
             <AnimatedSection variant="slideLeft" className="lg:col-span-3">
-              <div className="glass-card-strong rounded-3xl p-8 md:p-10 relative overflow-hidden min-h-[600px]">
-                <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-[#3d8c7a]/40 to-transparent" />
+  <div className="glass-card-strong rounded-3xl p-8 md:p-10 relative overflow-hidden min-h-[600px]">
+    <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-[#3d8c7a]/40 to-transparent" />
 
-                {submitted ? (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.88 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                    className="flex flex-col items-center justify-center py-20 text-center h-full"
-                  >
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ duration: 0.5, delay: 0.2, type: 'spring', stiffness: 200 }}
-                      className="w-20 h-20 rounded-full bg-mint-soft border border-[#3d8c7a]/25 flex items-center justify-center mb-8"
+    {submitted ? (
+      <motion.div
+        initial={{ opacity: 0, scale: 0.88 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        className="flex flex-col items-center justify-center py-20 text-center h-full"
+      >
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2, type: 'spring', stiffness: 200 }}
+          className="w-20 h-20 rounded-full bg-mint-soft border border-[#3d8c7a]/25 flex items-center justify-center mb-8"
+        >
+          <CheckCircle2 size={36} className="text-[#3d8c7a]" />
+        </motion.div>
+        <h3 className="text-display font-semibold text-slate-ink text-3xl mb-3 tracking-tight">
+          Inquiry received.
+        </h3>
+        <p className="text-slate-mid text-base max-w-sm leading-relaxed mb-10">
+          A Vertex Loop strategist will reach out within one business day. We look forward to
+          building something extraordinary with you.
+        </p>
+        <div className="flex gap-3">
+          <Link href="/ecosystem" className="btn-ghost text-sm">
+            Explore Our Divisions
+          </Link>
+          <Link href="/about" className="btn-primary text-sm">
+            Learn About Us <ArrowUpRight size={13} />
+          </Link>
+        </div>
+      </motion.div>
+    ) : (
+      <motion.form 
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        className="flex flex-col h-full"
+        onSubmit={(e) => { e.preventDefault(); handleSubmit(); }}
+      >
+        <div className="mb-8">
+          <h2 className="text-display font-semibold text-slate-ink text-3xl tracking-tight mb-2">
+            Let&rsquo;s work together.
+          </h2>
+          <p className="text-slate-dim text-base">
+            Tell us a little about yourself and what you&rsquo;re looking to build.
+          </p>
+        </div>
+
+        <div className="space-y-12">
+          {/* ── SECTION 1: Identity ── */}
+          <section className="space-y-5">
+            <h3 className="text-lg font-medium text-slate-ink border-b border-pearl-100 pb-2">
+              1. About You
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <FormField label="First Name" required>
+                <input
+                  className={inputCls}
+                  placeholder="Arunkumar"
+                  value={form.firstName}
+                  onChange={e => set('firstName', e.target.value)}
+                />
+              </FormField>
+              <FormField label="Last Name">
+                <input
+                  className={inputCls}
+                  placeholder="R."
+                  value={form.lastName}
+                  onChange={e => set('lastName', e.target.value)}
+                />
+              </FormField>
+            </div>
+            <FormField label="Work Email" required>
+              <input
+                type="email"
+                className={inputCls}
+                placeholder="you@company.com"
+                value={form.email}
+                onChange={e => set('email', e.target.value)}
+              />
+            </FormField>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <FormField label="Company">
+                <input
+                  className={inputCls}
+                  placeholder="Aura Enterprises"
+                  value={form.company}
+                  onChange={e => set('company', e.target.value)}
+                />
+              </FormField>
+              <FormField label="Your Role">
+                <input
+                  className={inputCls}
+                  placeholder="CTO / Founder / VP Eng."
+                  value={form.role}
+                  onChange={e => set('role', e.target.value)}
+                />
+              </FormField>
+            </div>
+          </section>
+
+          {/* ── SECTION 2: Engagement ── */}
+          <section className="space-y-5">
+            <h3 className="text-lg font-medium text-slate-ink border-b border-pearl-100 pb-2">
+              2. Division(s) of Interest
+            </h3>
+            <FormField label="Select all that apply" required>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+                {DIVISIONS.map(division => {
+                  const accent = ACCENT_CONFIGS[division.id as keyof typeof ACCENT_CONFIGS]
+                  const IconComponent = ICON_MAP[division.icon]
+                  const selected = form.divisions.includes(division.id)
+                  return (
+                    <button
+                      key={division.id}
+                      type="button"
+                      onClick={() => toggleDivision(division.id)}
+                      className="flex items-center gap-3 p-3.5 rounded-xl border text-left transition-all duration-250"
+                      style={{
+                        background: selected ? `${accent.color}08` : 'rgba(255,255,255,0.5)',
+                        borderColor: selected ? `${accent.color}35` : 'rgba(255,255,255,0.6)',
+                      }}
                     >
-                      <CheckCircle2 size={36} className="text-[#3d8c7a]" />
-                    </motion.div>
-                    <h3 className="text-display font-semibold text-slate-ink text-3xl mb-3 tracking-tight">
-                      Inquiry received.
-                    </h3>
-                    <p className="text-slate-mid text-base max-w-sm leading-relaxed mb-10">
-                      A Vertex Loop strategist will reach out within one business day. We look forward to
-                      building something extraordinary with you.
-                    </p>
-                    <div className="flex gap-3">
-                      <Link href="/ecosystem" className="btn-ghost text-sm">
-                        Explore Our Divisions
-                      </Link>
-                      <Link href="/about" className="btn-primary text-sm">
-                        Learn About Us <ArrowUpRight size={13} />
-                      </Link>
-                    </div>
-                  </motion.div>
-                ) : (
-                  <>
-                    <StepIndicator current={step} total={TOTAL_STEPS} />
-
-                    <AnimatePresence mode="wait">
-                      {/* ── STEP 0: Identity ── */}
-                      {step === 0 && (
-                        <motion.div
-                          key="step-0"
-                          initial={{ opacity: 0, x: 30, filter: 'blur(6px)' }}
-                          animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
-                          exit={{ opacity: 0, x: -30, filter: 'blur(4px)' }}
-                          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                          className="space-y-5"
-                        >
-                          <div>
-                            <h3 className="text-display font-semibold text-slate-ink text-2xl tracking-tight mb-1">
-                              Let&rsquo;s start with you.
-                            </h3>
-                            <p className="text-slate-dim text-sm">Tell us who you are and where you work.</p>
-                          </div>
-                          <div className="grid grid-cols-2 gap-4 pt-2">
-                            <FormField label="First Name" required>
-                              <input
-                                className={inputCls}
-                                placeholder="Arunkumar"
-                                value={form.firstName}
-                                onChange={e => set('firstName', e.target.value)}
-                              />
-                            </FormField>
-                            <FormField label="Last Name">
-                              <input
-                                className={inputCls}
-                                placeholder="R."
-                                value={form.lastName}
-                                onChange={e => set('lastName', e.target.value)}
-                              />
-                            </FormField>
-                          </div>
-                          <FormField label="Work Email" required>
-                            <input
-                              type="email"
-                              className={inputCls}
-                              placeholder="you@company.com"
-                              value={form.email}
-                              onChange={e => set('email', e.target.value)}
-                            />
-                          </FormField>
-                          <div className="grid grid-cols-2 gap-4">
-                            <FormField label="Company">
-                              <input
-                                className={inputCls}
-                                placeholder="Aura Enterprises"
-                                value={form.company}
-                                onChange={e => set('company', e.target.value)}
-                              />
-                            </FormField>
-                            <FormField label="Your Role">
-                              <input
-                                className={inputCls}
-                                placeholder="CTO / Founder / VP Eng."
-                                value={form.role}
-                                onChange={e => set('role', e.target.value)}
-                              />
-                            </FormField>
-                          </div>
-                        </motion.div>
-                      )}
-
-                      {/* ── STEP 1: Engagement ── */}
-                      {step === 1 && (
-                        <motion.div
-                          key="step-1"
-                          initial={{ opacity: 0, x: 30, filter: 'blur(6px)' }}
-                          animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
-                          exit={{ opacity: 0, x: -30, filter: 'blur(4px)' }}
-                          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                          className="space-y-6"
-                        >
-                          <div>
-                            <h3 className="text-display font-semibold text-slate-ink text-2xl tracking-tight mb-1">
-                              How do you want to work together?
-                            </h3>
-                            <p className="text-slate-dim text-sm">Select your engagement type and divisions of interest.</p>
-                          </div>
-
-                          <FormField label="Engagement Type" required>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                              {ENGAGEMENT_TYPES.map(({ id, label, desc, icon: Icon }) => (
-                                <button
-                                  key={id}
-                                  type="button"
-                                  onClick={() => set('engagementType', id)}
-                                  className="flex items-start gap-3 p-4 rounded-xl border text-left transition-all duration-250"
-                                  style={{
-                                    background: form.engagementType === id ? 'rgba(74,127,165,0.08)' : 'rgba(255,255,255,0.55)',
-                                    borderColor: form.engagementType === id ? 'rgba(74,127,165,0.4)' : 'rgba(255,255,255,0.65)',
-                                    boxShadow: form.engagementType === id ? '0 0 0 1px rgba(74,127,165,0.25)' : 'none',
-                                  }}
-                                >
-                                  <Icon size={16} className={form.engagementType === id ? 'text-[#4a7fa5] mt-0.5' : 'text-slate-dim mt-0.5'} />
-                                  <div>
-                                    <div className={`text-sm font-medium ${form.engagementType === id ? 'text-[#4a7fa5]' : 'text-slate-ink'}`}>{label}</div>
-                                    <div className="text-xs text-slate-dim mt-0.5">{desc}</div>
-                                  </div>
-                                </button>
-                              ))}
-                            </div>
-                          </FormField>
-
-                          <FormField label="Division(s) of Interest" required>
-                            <div className="grid grid-cols-1 gap-2">
-                              {DIVISIONS.map(division => {
-                                const accent = ACCENT_CONFIGS[division.id as keyof typeof ACCENT_CONFIGS]
-                                const IconComponent = ICON_MAP[division.icon]
-                                const selected = form.divisions.includes(division.id)
-                                return (
-                                  <button
-                                    key={division.id}
-                                    type="button"
-                                    onClick={() => toggleDivision(division.id)}
-                                    className="flex items-center gap-3 p-3.5 rounded-xl border text-left transition-all duration-250"
-                                    style={{
-                                      background: selected ? `${accent.color}08` : 'rgba(255,255,255,0.5)',
-                                      borderColor: selected ? `${accent.color}35` : 'rgba(255,255,255,0.6)',
-                                    }}
-                                  >
-                                    <div
-                                      className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                                      style={{ background: `${accent.color}12`, border: `1px solid ${accent.color}25` }}
-                                    >
-                                      {IconComponent && <IconComponent size={15} style={{ color: accent.color }} />}
-                                    </div>
-                                    <div className="flex-1">
-                                      <div className={`text-sm font-medium ${selected ? 'text-slate-ink' : 'text-slate-mid'}`}>{division.title}</div>
-                                      <div className="text-xs text-slate-dim">{division.tagline}</div>
-                                    </div>
-                                    <div
-                                      className="w-5 h-5 rounded-full border flex items-center justify-center flex-shrink-0"
-                                      style={{
-                                        background: selected ? accent.color : 'transparent',
-                                        borderColor: selected ? accent.color : 'rgba(100,116,139,0.25)',
-                                      }}
-                                    >
-                                      {selected && (
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                                          <path d="M2 5l2.5 2.5 3.5-4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                                        </svg>
-                                      )}
-                                    </div>
-                                  </button>
-                                )
-                              })}
-                            </div>
-                          </FormField>
-                        </motion.div>
-                      )}
-
-                      {/* ── STEP 2: Project details ── */}
-                      {step === 2 && (
-                        <motion.div
-                          key="step-2"
-                          initial={{ opacity: 0, x: 30, filter: 'blur(6px)' }}
-                          animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
-                          exit={{ opacity: 0, x: -30, filter: 'blur(4px)' }}
-                          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                          className="space-y-5"
-                        >
-                          <div>
-                            <h3 className="text-display font-semibold text-slate-ink text-2xl tracking-tight mb-1">
-                              Tell us about your challenge.
-                            </h3>
-                            <p className="text-slate-dim text-sm">The more specific, the better we can respond.</p>
-                          </div>
-
-                          <FormField label="Budget Range">
-                            <div className="flex flex-wrap gap-2">
-                              {BUDGET_OPTIONS.map(o => (
-                                <SelectChip
-                                  key={o.id}
-                                  label={o.label}
-                                  selected={form.budget === o.id}
-                                  onClick={() => set('budget', o.id)}
-                                  color="#3d8c7a"
-                                />
-                              ))}
-                            </div>
-                          </FormField>
-
-                          <FormField label="Ideal Start Timeline">
-                            <div className="flex flex-wrap gap-2">
-                              {TIMELINE_OPTIONS.map(o => (
-                                <SelectChip
-                                  key={o.id}
-                                  label={o.label}
-                                  selected={form.timeline === o.id}
-                                  onClick={() => set('timeline', o.id)}
-                                  color="#4a7fa5"
-                                />
-                              ))}
-                            </div>
-                          </FormField>
-
-                          <FormField label="What are you trying to achieve?" required>
-                            <textarea
-                              rows={4}
-                              className={inputCls}
-                              placeholder="Describe your challenge, goal, or the outcome you need. Include any constraints, existing stack, or context that would help us understand your situation."
-                              value={form.message}
-                              onChange={e => set('message', e.target.value)}
-                              style={{ resize: 'none' }}
-                            />
-                          </FormField>
-
-                          <FormField label="How did you hear about us?">
-                            <input
-                              className={inputCls}
-                              placeholder="LinkedIn / referral / search / event…"
-                              value={form.hearAbout}
-                              onChange={e => set('hearAbout', e.target.value)}
-                            />
-                          </FormField>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-
-                    {/* Navigation */}
-                    <div className="flex items-center justify-between mt-8 pt-6 border-t border-pearl-100">
-                      <button
-                        type="button"
-                        onClick={() => setStep(s => s - 1)}
-                        disabled={step === 0}
-                        className="flex items-center gap-2 text-sm text-slate-dim hover:text-slate-ink transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                      <div
+                        className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                        style={{ background: `${accent.color}12`, border: `1px solid ${accent.color}25` }}
                       >
-                        <ChevronLeft size={16} /> Back
-                      </button>
-
-                      {step < TOTAL_STEPS - 1 ? (
-                        <button
-                          type="button"
-                          onClick={() => setStep(s => s + 1)}
-                          disabled={!canProceed()}
-                          className="btn-primary text-sm disabled:opacity-40 disabled:cursor-not-allowed"
-                        >
-                          Continue <ChevronRight size={14} />
-                        </button>
-                      ) : (
-                        <button
-                          type="button"
-                          onClick={handleSubmit}
-                          disabled={loading || !canProceed()}
-                          className="btn-primary text-sm disabled:opacity-40 disabled:cursor-not-allowed"
-                        >
-                          {loading ? (
-                            <>
-                              <motion.span
-                                animate={{ rotate: 360 }}
-                                transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                                className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full"
-                              />
-                              Sending…
-                            </>
-                          ) : (
-                            <>Submit Inquiry <Send size={14} /></>
-                          )}
-                        </button>
-                      )}
-                    </div>
-                  </>
-                )}
+                        {IconComponent && <IconComponent size={15} style={{ color: accent.color }} />}
+                      </div>
+                      <div className="flex-1">
+                        <div className={`text-sm font-medium ${selected ? 'text-slate-ink' : 'text-slate-mid'}`}>{division.title}</div>
+                        <div className="text-xs text-slate-dim line-clamp-1">{division.tagline}</div>
+                      </div>
+                      <div
+                        className="w-5 h-5 rounded-full border flex items-center justify-center flex-shrink-0"
+                        style={{
+                          background: selected ? accent.color : 'transparent',
+                          borderColor: selected ? accent.color : 'rgba(100,116,139,0.25)',
+                        }}
+                      >
+                        {selected && (
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <path d="M2 5l2.5 2.5 3.5-4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        )}
+                      </div>
+                    </button>
+                  )
+                })}
               </div>
-            </AnimatedSection>
+            </FormField>
+          </section>
+
+          {/* ── SECTION 3: Project details ── */}
+          <section className="space-y-5">
+            <h3 className="text-lg font-medium text-slate-ink border-b border-pearl-100 pb-2">
+              3. Project Details
+            </h3>
+            <FormField label="Ideal Start Timeline">
+              <div className="flex flex-wrap gap-2 pt-2">
+                {TIMELINE_OPTIONS.map(o => (
+                  <SelectChip
+                    key={o.id}
+                    label={o.label}
+                    selected={form.timeline === o.id}
+                    onClick={() => set('timeline', o.id)}
+                    color="#4a7fa5"
+                  />
+                ))}
+              </div>
+            </FormField>
+
+            <FormField label="What are you trying to achieve?" required>
+              <textarea
+                rows={4}
+                className={inputCls}
+                placeholder="Describe your challenge, goal, or the outcome you need. Include any constraints, existing stack, or context that would help us understand your situation."
+                value={form.message}
+                onChange={e => set('message', e.target.value)}
+                style={{ resize: 'none' }}
+              />
+            </FormField>
+
+            <FormField label="How did you hear about us?">
+              <input
+                className={inputCls}
+                placeholder="LinkedIn / referral / search / event…"
+                value={form.hearAbout}
+                onChange={e => set('hearAbout', e.target.value)}
+              />
+            </FormField>
+          </section>
+        </div>
+
+        {/* Submit Action */}
+        <div className="mt-12 pt-6 border-t border-pearl-100 flex justify-end">
+          <button
+            type="submit"
+            disabled={loading || !canProceed()}
+            className="btn-primary text-sm px-8 py-3 disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-2"
+          >
+            {loading ? (
+              <>
+                <motion.span
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                  className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full"
+                />
+                Sending…
+              </>
+            ) : (
+              <>Submit Inquiry <Send size={16} /></>
+            )}
+          </button>
+        </div>
+      </motion.form>
+    )}
+  </div>
+</AnimatedSection>
 
             {/* ── INFO PANEL (2 cols) ── */}
             <div className="lg:col-span-2 flex flex-col gap-5">
@@ -619,7 +519,7 @@ export default function ContactPageClient() {
               </AnimatedSection>
 
               {/* Location */}
-              <AnimatedSection variant="slideRight" delay={0.13}>
+              {/* <AnimatedSection variant="slideRight" delay={0.13}>
                 <div className="glass-card rounded-2xl p-6">
                   <h4 className="font-semibold text-slate-ink text-sm tracking-tight mb-4 flex items-center gap-2">
                     <MapPin size={14} className="text-[#b04a4a]" /> Global Operations
@@ -646,7 +546,7 @@ export default function ContactPageClient() {
                     ))}
                   </div>
                 </div>
-              </AnimatedSection>
+              </AnimatedSection> */}
 
               {/* Response commitment */}
               <AnimatedSection variant="slideRight" delay={0.18}>
