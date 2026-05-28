@@ -32,7 +32,7 @@ export default function WhyUsSection() {
     <section
       id="why-us"
       ref={sectionRef}
-      className="relative py-32 md:py-40 overflow-hidden"
+      className="relative py-10 md:py-15 overflow-hidden"
       aria-label="Why Choose Us"
     >
       {/* Background */}
@@ -61,7 +61,7 @@ export default function WhyUsSection() {
 
       <div className="relative z-10 section-padding">
         {/* Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-1">
           <AnimatedSection variant="fadeUp" className="mb-5">
             <SectionLabel accent="gold">Why Vertex Loop</SectionLabel>
           </AnimatedSection>
@@ -97,7 +97,7 @@ export default function WhyUsSection() {
         </motion.div> */}
 
         {/* Divider */}
-        <div className="divider-gradient mb-16" />
+        <div className="divider-gradient mb-5" />
 
         {/* Value grid */}
         <motion.div

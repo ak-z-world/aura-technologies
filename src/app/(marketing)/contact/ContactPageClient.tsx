@@ -183,7 +183,7 @@ export default function ContactPageClient() {
       <Navbar />
 
       {/* ── HERO ── */}
-      <section className="relative pt-36 pb-16 md:pt-44 md:pb-20 overflow-hidden">
+      <section className="relative pt-36 pb-16 md:pt-34 md:pb-20 overflow-hidden">
         <div
           className="absolute inset-0"
           style={{
@@ -227,7 +227,7 @@ export default function ContactPageClient() {
       </section>
 
       {/* ── MAIN CONTENT ── */}
-      <section ref={sectionRef} className="relative py-12 pb-32 overflow-hidden">
+      <section ref={sectionRef} className="relative py-5 pb-8 overflow-hidden">
         <motion.div style={{ y: bgY }} className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-b from-[#f0f6f4] to-[#e8f2ee]" />
           <div className="absolute top-1/4 right-0 w-[600px] h-[500px] rounded-full bg-mint-soft/40 blur-[120px]" />

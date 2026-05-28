@@ -246,7 +246,7 @@ export default function WhyUsPageClient() {
       </PageHero>
 
       {/* ── VALUE PROPS GRID ── */}
-      <section className="relative py-28 overflow-hidden">
+      <section className="relative py-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#f8f3eb] to-[#f0ece5]" />
         <div className="absolute top-1/3 right-0 w-[500px] h-[400px] rounded-full bg-gold-soft/50 blur-[100px]" />
         <div className="relative z-10 section-padding">
@@ -341,7 +341,7 @@ export default function WhyUsPageClient() {
       </section>
 
       {/* ── COMPARISON TABLE ── */}
-      <section ref={comparisonRef} className="relative py-28 overflow-hidden">
+      <section ref={comparisonRef} className="relative py-8 overflow-hidden">
         <motion.div style={{ y: bgY }} className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-b from-[#f0ece5] to-[#edeae4]" />
           <div className="absolute bottom-0 left-1/3 w-[600px] h-[400px] rounded-full bg-sky-soft/35 blur-[100px]" />
@@ -441,7 +441,7 @@ export default function WhyUsPageClient() {
       </section>
 
       {/* ── OUR PROCESS ── */}
-      <section className="relative py-28 overflow-hidden">
+      <section className="relative py-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#edeae4] to-[#f0ece5]" />
         <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-lavender-soft/35 blur-[100px]" />
         <div className="relative z-10 section-padding">
