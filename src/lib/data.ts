@@ -1,34 +1,34 @@
 import type { Division, ValueProposition, NavLink } from '@/types'
 
 export const NAV_LINKS: NavLink[] = [
+  { label: 'Services', href: '/services' },
+  { label: 'Products', href: '/products' },
+  { label: 'Crack Leap', href: 'https://crackleap.vertexloop.in' },
   { label: 'Who We Are', href: '/about' },
   { label: 'Ecosystem', href: '/ecosystem' },
   { label: 'Why Us', href: '/why-us' },
   { label: 'Contact', href: '/contact' },
 ]
 
+export const SERVICES_NAV = [
+  { label: 'AI Development & Agents', href: '/services/ai-development', description: 'LLM fine-tuning, RAG architecture, and custom AI solutions' },
+  { label: 'Custom Software Development', href: '/services/custom-software-development', description: 'Enterprise platforms, APIs, microservices, and bespoke software' },
+  { label: 'Cloud Architecture & DevOps', href: '/services/cloud-architecture', description: 'Managed cloud infrastructure, CI/CD, and scaling' },
+  { label: 'Digital Marketing & Tech SEO', href: '/services/digital-marketing', description: 'Data-driven growth, AEO/GEO, and performance marketing' },
+  { label: 'Crack Leap Tech Academy', href: 'https://crackleap.vertexloop.in', description: 'Vertex Loop’s technology education platform for developer upskilling', external: true },
+]
+
+export const PRODUCTS_NAV = [
+  { label: 'SCRIPTen', href: 'https://scripten.arivuon.in/', tag: 'Creator Tech', description: 'AI video creation & script workflow platform for creators', external: true },
+  { label: 'Vertex Loop ERP', href: '/products/erp', tag: 'Enterprise', description: 'Modular cloud ERP system for inventory, finance, and operations' },
+  { label: 'Invoicing Platform', href: '/products/invoicing', tag: 'SaaS', description: 'Automated billing, recurring invoicing, and financial management' },
+  { label: 'HRMS Platform', href: '/products/hrms', tag: 'Enterprise', description: 'Cloud workforce management, attendance, and HR automation' },
+]
+
 export const DIVISIONS: Division[] = [
   {
-    id: 'academy',
-    title: 'Tech Academy',
-    tagline: 'Engineer the Next Generation',
-    description:
-      'A world-class training institution forging elite engineers through intensive, industry-aligned programs in AI, cloud, full-stack development, and data science. Our alumni power global technology teams.',
-    capabilities: [
-      'AI & Machine Learning Bootcamps',
-      'Full-Stack Development Tracks',
-      'Cloud & DevOps Certification',
-      'Data Science & Analytics',
-      'Corporate Upskilling Programs',
-    ],
-    icon: 'GraduationCap',
-    gradient: { from: '#dde9f4', to: '#c8ddef', glow: 'rgba(180,208,234,0.4)' },
-    accentColor: '#4a7fa5',
-    stats: { label: 'Engineers Trained', value: '2,400+' },
-  },
-  {
     id: 'ai-products',
-    title: 'AI Products',
+    title: 'AI Products & Solutions',
     tagline: 'Intelligence, Productized',
     description:
       'We conceptualize, architect, and launch AI-native software products that operate at the frontier of what machines can do. From LLM-powered SaaS platforms to autonomous agent systems, we ship intelligence.',
@@ -36,31 +36,13 @@ export const DIVISIONS: Division[] = [
       'LLM Integration & Fine-Tuning',
       'AI SaaS Platform Development',
       'Autonomous Agent Architecture',
-      'Voice AI & Conversational Systems',
+      'RAG & Vector Search Systems',
       'Multimodal AI Applications',
     ],
     icon: 'Cpu',
     gradient: { from: '#e8e4f3', to: '#d8d2ec', glow: 'rgba(184,174,216,0.4)' },
     accentColor: '#7c6fad',
     stats: { label: 'AI Products Launched', value: '18+' },
-  },
-  {
-    id: 'it-services',
-    title: 'IT Services',
-    tagline: 'Infrastructure That Never Sleeps',
-    description:
-      'Enterprise-grade managed IT services, cloud infrastructure design, cybersecurity frameworks, and 24/7 operational support. We are the technological backbone for organizations that refuse to compromise on reliability.',
-    capabilities: [
-      'Managed Cloud Infrastructure',
-      'Cybersecurity & Compliance',
-      'Enterprise System Integration',
-      'IT Strategy & Consulting',
-      '24/7 NOC & Support Services',
-    ],
-    icon: 'Server',
-    gradient: { from: '#d8ede8', to: '#c2e2db', glow: 'rgba(157,207,196,0.4)' },
-    accentColor: '#3d8c7a',
-    stats: { label: 'Uptime Guaranteed', value: '99.97%' },
   },
   {
     id: 'software',
@@ -81,8 +63,44 @@ export const DIVISIONS: Division[] = [
     stats: { label: 'Systems Deployed', value: '85+' },
   },
   {
+    id: 'it-services',
+    title: 'Cloud Architecture & IT',
+    tagline: 'Infrastructure That Never Sleeps',
+    description:
+      'Enterprise-grade managed IT services, cloud infrastructure design, cybersecurity frameworks, and 24/7 operational support. We are the technological backbone for organizations that refuse to compromise on reliability.',
+    capabilities: [
+      'Managed Cloud Infrastructure',
+      'Cybersecurity & Compliance',
+      'Enterprise System Integration',
+      'IT Strategy & Consulting',
+      '24/7 NOC & Support Services',
+    ],
+    icon: 'Server',
+    gradient: { from: '#d8ede8', to: '#c2e2db', glow: 'rgba(157,207,196,0.4)' },
+    accentColor: '#3d8c7a',
+    stats: { label: 'Uptime Guaranteed', value: '99.97%' },
+  },
+  {
+    id: 'academy',
+    title: 'Crack Leap',
+    tagline: 'Technology Education Ecosystem',
+    description:
+      'Crack Leap is Vertex Loop’s dedicated technology education ecosystem, forging software engineers, AI developers, and cloud architects through intensive, industry-aligned training and upskilling programs.',
+    capabilities: [
+      'AI & Machine Learning Programs',
+      'Full-Stack Web Development',
+      'Cloud & DevOps Engineering',
+      'Data Science & Analytics',
+      'Corporate Engineering Upskilling',
+    ],
+    icon: 'GraduationCap',
+    gradient: { from: '#dde9f4', to: '#c8ddef', glow: 'rgba(180,208,234,0.4)' },
+    accentColor: '#4a7fa5',
+    stats: { label: 'Engineers Upskilled', value: '2,400+' },
+  },
+  {
     id: 'digital-marketing',
-    title: 'Digital Marketing',
+    title: 'Digital Marketing & SEO',
     tagline: 'Narratives That Convert',
     description:
       'Data-driven, AI-augmented digital marketing strategy that transforms brand narratives into measurable growth. We orchestrate campaigns across channels with precision, creativity, and obsessive performance focus.',
@@ -156,10 +174,3 @@ export const VALUE_PROPOSITIONS: ValueProposition[] = [
     metricLabel: 'Client Retention Rate',
   },
 ]
-
-// export const STATS = [
-//   { value: '120+', label: 'Global Clients' },
-//   { value: '5', label: 'Core Divisions' },
-//   { value: '8+', label: 'Years of Excellence' },
-//   { value: '2,400+', label: 'Professionals Trained' },
-// ]

@@ -1,11 +1,16 @@
 export const siteConfig = {
   name: "Vertex Loop",
-  description: "Pioneering the next generation of AI and software solutions.",
-  url: "https://vertexloop.in",
-  ogImage: "https://vertexloop.in/og.jpg",
+  legalName: "Vertex Loop",
+  description:
+    "Vertex Loop is a global technology company and ecosystem specializing in custom AI solutions, enterprise software engineering, cloud architecture, technology education, and proprietary business applications including ERP, HRMS, Invoicing, and SCRIPTen.",
+  url: "https://www.vertexloop.in",
+  ogImage: "https://www.vertexloop.in/og-image.png",
+  logo: "https://www.vertexloop.in/logo.png",
+  email: "hello@vertexloop.in",
   links: {
     twitter: "https://x.com/LoopVertex99532",
     github: "https://github.com/auratech",
+    linkedin: "https://www.linkedin.com/company/vertex-loop",
   },
 }
 
