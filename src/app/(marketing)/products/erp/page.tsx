@@ -3,11 +3,17 @@ import ProductPageLayout, { ProductPageData } from '@/components/products/Produc
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Vertex Loop Cloud ERP — Enterprise Resource Planning System | Vertex Loop Pvt Ltd',
+  title: 'Cloud ERP Software Solutions',
   description:
     'Vertex Loop ERP is a cloud-native enterprise resource planning software unifying supply chain, inventory management, multi-entity finance, procurement, and manufacturing.',
   alternates: {
     canonical: `${siteConfig.url}/products/erp`,
+  },
+  openGraph: {
+    title: 'Cloud ERP Software Solutions | Vertex Loop',
+    description:
+      'Vertex Loop ERP is a cloud-native enterprise resource planning software unifying supply chain, inventory management, and multi-entity finance.',
+    url: `${siteConfig.url}/products/erp`,
   },
 }
 

@@ -4,14 +4,14 @@ import JsonLd from '@/components/seo/JsonLd'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Contact Vertex Loop Pvt Ltd — Engineering Partnerships & Office HQ',
+  title: 'Contact Our Engineering Team',
   description:
     'Connect with Vertex Loop Pvt Ltd at our Ambattur, Chennai headquarters (G2, Venkatapuram, 600053). Phone: +91 94457 70160. Email: hello@vertexloop.in. Inquiries for AI, software, cloud & training.',
   alternates: {
     canonical: `${siteConfig.url}/contact`,
   },
   openGraph: {
-    title: 'Contact Vertex Loop Pvt Ltd — Engineering Partnerships & Office HQ',
+    title: 'Contact Our Engineering Team | Vertex Loop',
     description:
       'Connect with Vertex Loop Pvt Ltd at our Ambattur, Chennai headquarters. Direct phone: +91 94457 70160. Email: hello@vertexloop.in.',
     url: `${siteConfig.url}/contact`,

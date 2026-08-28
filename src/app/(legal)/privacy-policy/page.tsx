@@ -7,10 +7,15 @@ import PageHero from '@/components/ui/PageHero'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Vertex Loop Pvt Ltd',
+  title: 'Privacy Policy',
   description: 'Official Privacy Policy of Vertex Loop Pvt Ltd. Learn how we handle information, data security, and enterprise privacy compliance.',
   alternates: {
     canonical: `${siteConfig.url}/privacy-policy`,
+  },
+  openGraph: {
+    title: 'Privacy Policy | Vertex Loop',
+    description: 'Official Privacy Policy of Vertex Loop Pvt Ltd.',
+    url: `${siteConfig.url}/privacy-policy`,
   },
 }
 

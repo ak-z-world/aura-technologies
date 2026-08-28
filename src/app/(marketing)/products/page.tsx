@@ -9,14 +9,14 @@ import SectionLabel from '@/components/ui/SectionLabel'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Proprietary Software Products & SaaS Platforms | Vertex Loop Pvt Ltd',
+  title: 'Proprietary Software & SaaS Platforms',
   description:
     'Discover Vertex Loop Pvt Ltd’s proprietary software product ecosystem: SCRIPTen AI for creators, Enterprise ERP, Digital Invoicing Software, and HRMS platform.',
   alternates: {
     canonical: `${siteConfig.url}/products`,
   },
   openGraph: {
-    title: 'Proprietary Software Products & SaaS Platforms | Vertex Loop Pvt Ltd',
+    title: 'Proprietary Software & SaaS Platforms | Vertex Loop',
     description:
       'Vertex Loop Pvt Ltd’s in-house software products: SCRIPTen, Cloud ERP, HRMS, and Digital Invoicing.',
     url: `${siteConfig.url}/products`,

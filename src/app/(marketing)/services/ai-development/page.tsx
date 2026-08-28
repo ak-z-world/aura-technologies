@@ -3,14 +3,14 @@ import ServicePageLayout, { ServicePageData } from '@/components/services/Servic
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Custom AI Development, Generative AI & Autonomous AI Agents | Vertex Loop Pvt Ltd',
+  title: 'AI Development & Autonomous Agents',
   description:
     'Enterprise AI development company specializing in custom LLM fine-tuning, RAG retrieval systems, autonomous AI agents, voice intelligence, and computer vision.',
   alternates: {
     canonical: `${siteConfig.url}/services/ai-development`,
   },
   openGraph: {
-    title: 'Custom AI Development, Generative AI & Autonomous AI Agents | Vertex Loop Pvt Ltd',
+    title: 'AI Development & Autonomous Agents | Vertex Loop',
     description:
       'Enterprise AI development company specializing in custom LLM fine-tuning, RAG retrieval systems, autonomous AI agents, and computer vision.',
     url: `${siteConfig.url}/services/ai-development`,

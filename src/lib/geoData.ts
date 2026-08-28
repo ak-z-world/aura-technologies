@@ -45,6 +45,7 @@ export interface GeoEntity {
   timeZone: string
   currency: string
   headline: string
+  seoTitle?: string
   metaDescription: string
   businessContext: string
   targetIndustries: string[]
@@ -174,6 +175,7 @@ export const GEO_LOCATIONS: GeoEntity[] = [
     timeZone: 'IST (UTC+5:30)',
     currency: 'INR (₹)',
     headline: 'Enterprise AI Development, Software Engineering & Tech Academy in India',
+    seoTitle: 'Software & AI Development in India',
     metaDescription:
       'Vertex Loop Pvt Ltd is an Indian technology ecosystem headquartered in Ambattur, Chennai. We deliver custom AI solutions, SaaS platforms, cloud architecture, and technical training across India.',
     businessContext:
@@ -238,6 +240,7 @@ export const GEO_LOCATIONS: GeoEntity[] = [
     timeZone: 'IST (UTC+5:30)',
     currency: 'INR (₹)',
     headline: 'Tamil Nadu Enterprise Software Architecture, AI Innovation & Tech Bootcamps',
+    seoTitle: 'Software Engineering in Tamil Nadu',
     metaDescription:
       'Headquartered in Ambattur, Chennai, Vertex Loop Pvt Ltd provides Tamil Nadu enterprises and colleges with advanced AI engineering, cloud solutions, and Crack Leap tech bootcamps.',
     businessContext:
@@ -291,6 +294,7 @@ export const GEO_LOCATIONS: GeoEntity[] = [
     timeZone: 'IST (UTC+5:30)',
     currency: 'INR (₹)',
     headline: 'AI Development, Software Engineering & Tech Academy in Chennai (Ambattur HQ)',
+    seoTitle: 'Software Development Company in Chennai',
     metaDescription:
       'Vertex Loop Pvt Ltd is an AI development and enterprise software company in Ambattur, Chennai (G2, Venkatapuram, 600053). Custom AI agents, cloud DevOps, ERP, and software academy.',
     businessContext:
@@ -349,6 +353,7 @@ export const GEO_LOCATIONS: GeoEntity[] = [
     timeZone: 'IST (UTC+5:30)',
     currency: 'INR (₹)',
     headline: 'Industrial AI Solutions, ERP Software & Campus Tech Bootcamps for Coimbatore',
+    seoTitle: 'AI & Software Solutions in Coimbatore',
     metaDescription:
       'Vertex Loop Pvt Ltd brings enterprise AI, custom ERP software, and Crack Leap engineering bootcamps to Coimbatore manufacturers, tech firms, and engineering colleges.',
     businessContext:
@@ -400,6 +405,7 @@ export const GEO_LOCATIONS: GeoEntity[] = [
     timeZone: 'IST (UTC+5:30)',
     currency: 'INR (₹)',
     headline: 'Frontier AI Development, Cloud DevOps & High-Concurrency Systems for Bengaluru',
+    seoTitle: 'AI & Cloud Software in Bengaluru',
     metaDescription:
       'Vertex Loop Pvt Ltd partners with Bengaluru startups and enterprises to build autonomous AI agents, RAG pipelines, scalable Next.js backends, and cloud DevOps.',
     businessContext:
@@ -451,6 +457,7 @@ export const GEO_LOCATIONS: GeoEntity[] = [
     timeZone: 'IST (UTC+5:30)',
     currency: 'INR (₹)',
     headline: 'Enterprise Cloud Architecture, AI Systems & Custom Software for Hyderabad',
+    seoTitle: 'Cloud Architecture & AI in Hyderabad',
     metaDescription:
       'Vertex Loop Pvt Ltd builds custom AI agents, pharma ERP systems, and cloud infrastructure for Hyderabad enterprises, HITEC City startups, and universities.',
     businessContext:
@@ -499,6 +506,7 @@ export const GEO_LOCATIONS: GeoEntity[] = [
     timeZone: 'EST / CST / MST / PST',
     currency: 'USD ($)',
     headline: 'Custom AI Development & Offshore Software Engineering for US Enterprises',
+    seoTitle: 'Offshore AI & Software Development for US',
     metaDescription:
       'Vertex Loop Pvt Ltd delivers high-performance AI agents, custom software engineering, and AWS cloud architecture for US enterprises and venture-backed startups.',
     businessContext:
@@ -554,6 +562,7 @@ export const GEO_LOCATIONS: GeoEntity[] = [
     timeZone: 'GMT / BST (UTC+0 / +1)',
     currency: 'GBP (£)',
     headline: 'Enterprise AI Development & Cloud Engineering for UK Businesses',
+    seoTitle: 'Custom Software & AI Services for UK',
     metaDescription:
       'Vertex Loop Pvt Ltd provides UK enterprises with bespoke AI development, cloud architecture, and software engineering with seamless GMT overlap.',
     businessContext:
@@ -602,6 +611,7 @@ export const GEO_LOCATIONS: GeoEntity[] = [
     timeZone: 'EST / CST / MST / PST',
     currency: 'CAD ($)',
     headline: 'Custom AI Development & SaaS Engineering for Canadian Enterprises',
+    seoTitle: 'AI & Cloud Software Services for Canada',
     metaDescription:
       'Vertex Loop Pvt Ltd builds custom AI agents, scalable SaaS platforms, and cloud DevOps for companies in Toronto, Vancouver, Montreal, and across Canada.',
     businessContext:
@@ -634,6 +644,7 @@ export const GEO_LOCATIONS: GeoEntity[] = [
     timeZone: 'AEST / AEDT (UTC+10 / +11)',
     currency: 'AUD ($)',
     headline: 'AI Solutions, Cloud Architecture & Custom Software for Australia',
+    seoTitle: 'Custom Software & AI Solutions for Australia',
     metaDescription:
       'Vertex Loop Pvt Ltd delivers enterprise AI applications, cloud migrations, and custom software engineering for businesses across Sydney, Melbourne, and Brisbane.',
     businessContext:
@@ -666,6 +677,7 @@ export const GEO_LOCATIONS: GeoEntity[] = [
     timeZone: 'GST (UTC+4)',
     currency: 'AED (د.إ)',
     headline: 'AI Transformation & Custom Software Development for UAE Enterprises',
+    seoTitle: 'AI & Software Development for UAE',
     metaDescription:
       'Vertex Loop Pvt Ltd provides custom AI agents, enterprise ERP platforms, and cloud solutions for companies across Dubai, Abu Dhabi, and the UAE.',
     businessContext:
@@ -698,6 +710,7 @@ export const GEO_LOCATIONS: GeoEntity[] = [
     timeZone: 'SGT (UTC+8)',
     currency: 'SGD ($)',
     headline: 'Enterprise AI Development & Cloud Software Engineering for Singapore',
+    seoTitle: 'Enterprise AI & Cloud Software for Singapore',
     metaDescription:
       'Vertex Loop Pvt Ltd delivers high-performance AI systems, fintech-grade software engineering, and DevOps for Singapore and Southeast Asian enterprises.',
     businessContext:

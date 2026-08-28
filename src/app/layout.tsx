@@ -7,8 +7,8 @@ import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Vertex Loop Pvt Ltd — Global AI & Enterprise Software Technology Ecosystem',
-    template: '%s | Vertex Loop Pvt Ltd',
+    default: 'Global Technology & Software Solutions | Vertex Loop',
+    template: '%s | Vertex Loop',
   },
   description:
     'Vertex Loop Pvt Ltd is an enterprise technology company and software ecosystem providing custom AI development, autonomous agents, RAG systems, bespoke software engineering, cloud DevOps, digital marketing, and Crack Leap technology academy.',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     canonical: './',
   },
   openGraph: {
-    title: 'Vertex Loop Pvt Ltd — Global AI & Enterprise Software Technology Ecosystem',
+    title: 'Global Technology & Software Solutions | Vertex Loop',
     description:
       'Vertex Loop Pvt Ltd builds custom AI solutions, autonomous multi-agents, enterprise software engineering, cloud architectures, proprietary products (ERP, HRMS, Invoicing, SCRIPTen), and Crack Leap technology academy.',
     url: siteConfig.url,
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vertex Loop Pvt Ltd — Global AI & Enterprise Software Technology Ecosystem',
+    title: 'Global Technology & Software Solutions | Vertex Loop',
     description:
       'Vertex Loop Pvt Ltd builds custom AI solutions, autonomous multi-agents, enterprise software engineering, cloud architectures, proprietary products (ERP, HRMS, Invoicing, SCRIPTen), and Crack Leap technology academy.',
     creator: '@LoopVertex99532',

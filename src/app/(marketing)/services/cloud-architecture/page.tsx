@@ -3,14 +3,14 @@ import ServicePageLayout, { ServicePageData } from '@/components/services/Servic
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Cloud Architecture, AWS Solutions & Managed DevOps Services | Vertex Loop Pvt Ltd',
+  title: 'Cloud Architecture & AWS DevOps Services',
   description:
     'Enterprise cloud architecture services, AWS solutions, DevOps engineering, Kubernetes containerization, Terraform Infrastructure as Code, and 24/7 cloud management.',
   alternates: {
     canonical: `${siteConfig.url}/services/cloud-architecture`,
   },
   openGraph: {
-    title: 'Cloud Architecture, AWS Solutions & Managed DevOps Services | Vertex Loop Pvt Ltd',
+    title: 'Cloud Architecture & AWS DevOps Services | Vertex Loop',
     description:
       'Enterprise cloud architecture services, AWS solutions, DevOps engineering, Kubernetes containerization, Terraform Infrastructure as Code, and 24/7 cloud management.',
     url: `${siteConfig.url}/services/cloud-architecture`,

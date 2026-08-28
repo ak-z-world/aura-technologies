@@ -9,14 +9,14 @@ import SectionLabel from '@/components/ui/SectionLabel'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Engineering Services & Technology Ecosystem | Vertex Loop Pvt Ltd',
+  title: 'Custom Software & AI Services',
   description:
     'Vertex Loop Pvt Ltd provides custom AI development, autonomous agents, enterprise software engineering, cloud architecture, digital marketing & SEO, and technology education through Crack Leap.',
   alternates: {
     canonical: `${siteConfig.url}/services`,
   },
   openGraph: {
-    title: 'Engineering Services & Technology Ecosystem | Vertex Loop Pvt Ltd',
+    title: 'Custom Software & AI Services | Vertex Loop',
     description:
       'Vertex Loop Pvt Ltd provides custom AI solutions, bespoke software development, cloud DevOps, digital growth, and Crack Leap tech education.',
     url: `${siteConfig.url}/services`,

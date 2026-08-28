@@ -3,11 +3,17 @@ import ProductPageLayout, { ProductPageData } from '@/components/products/Produc
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'SCRIPTen — AI Content Creation & Script Workflow Engine | Vertex Loop Pvt Ltd',
+  title: 'SCRIPTen AI Video Scripting Platform',
   description:
     'SCRIPTen is an advanced generative AI content platform built by Vertex Loop Pvt Ltd for digital creators, copywriters, vloggers, and marketing teams.',
   alternates: {
     canonical: `${siteConfig.url}/products/scripten`,
+  },
+  openGraph: {
+    title: 'SCRIPTen AI Video Scripting Platform | Vertex Loop',
+    description:
+      'SCRIPTen is an advanced generative AI content platform built by Vertex Loop Pvt Ltd for digital creators, copywriters, and video producers.',
+    url: `${siteConfig.url}/products/scripten`,
   },
 }
 

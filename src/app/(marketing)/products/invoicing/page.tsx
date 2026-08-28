@@ -3,11 +3,17 @@ import ProductPageLayout, { ProductPageData } from '@/components/products/Produc
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Digital Invoicing Software & Billing Automation | Vertex Loop Pvt Ltd',
+  title: 'Digital Invoicing & Billing Software',
   description:
     'Cloud digital invoicing platform automating GST/VAT billing, recurring subscriptions, automated reminders, and multi-currency payment gateways.',
   alternates: {
     canonical: `${siteConfig.url}/products/invoicing`,
+  },
+  openGraph: {
+    title: 'Digital Invoicing & Billing Software | Vertex Loop',
+    description:
+      'Cloud digital invoicing platform automating GST/VAT billing, recurring subscriptions, and payment gateways.',
+    url: `${siteConfig.url}/products/invoicing`,
   },
 }
 

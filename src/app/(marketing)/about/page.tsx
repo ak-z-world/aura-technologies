@@ -4,14 +4,14 @@ import JsonLd from '@/components/seo/JsonLd'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'About Vertex Loop Pvt Ltd — Leadership, Engineering Principles & Mission',
+  title: 'About Our Technology Company',
   description:
     'Discover Vertex Loop Pvt Ltd — an Indian technology ecosystem headquartered in Ambattur, Chennai. Learn about our leadership, engineering principles, AI innovations, and Crack Leap education mission.',
   alternates: {
     canonical: `${siteConfig.url}/about`,
   },
   openGraph: {
-    title: 'About Vertex Loop Pvt Ltd — Leadership, Engineering Principles & Mission',
+    title: 'About Our Technology Company | Vertex Loop',
     description:
       'Learn who we are — the leadership, principles, and philosophy behind Vertex Loop Pvt Ltd.',
     url: `${siteConfig.url}/about`,

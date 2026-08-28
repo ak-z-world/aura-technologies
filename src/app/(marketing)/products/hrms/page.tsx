@@ -3,11 +3,17 @@ import ProductPageLayout, { ProductPageData } from '@/components/products/Produc
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Enterprise HRMS Platform & Payroll System | Vertex Loop Pvt Ltd',
+  title: 'Enterprise HRMS & Payroll Software',
   description:
     'Cloud enterprise HRMS software managing payroll, attendance, employee lifecycle, performance reviews, and HR compliance automation.',
   alternates: {
     canonical: `${siteConfig.url}/products/hrms`,
+  },
+  openGraph: {
+    title: 'Enterprise HRMS & Payroll Software | Vertex Loop',
+    description:
+      'Cloud enterprise HRMS software managing payroll, attendance, employee lifecycle, and HR compliance automation.',
+    url: `${siteConfig.url}/products/hrms`,
   },
 }
 

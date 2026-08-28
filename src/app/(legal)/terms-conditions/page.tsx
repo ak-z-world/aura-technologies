@@ -7,11 +7,16 @@ import { FileText, ShieldAlert, CheckCircle2, Scale, ExternalLink, Mail, MapPin 
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Terms and Conditions | Vertex Loop Pvt Ltd',
+  title: 'Terms & Conditions',
   description:
     'Read the official terms and conditions governing the use of the Vertex Loop Pvt Ltd website, software architectures, and consulting showcase.',
   alternates: {
     canonical: `${siteConfig.url}/terms-conditions`,
+  },
+  openGraph: {
+    title: 'Terms & Conditions | Vertex Loop',
+    description: 'Read the official terms and conditions governing the use of Vertex Loop Pvt Ltd.',
+    url: `${siteConfig.url}/terms-conditions`,
   },
 }
 

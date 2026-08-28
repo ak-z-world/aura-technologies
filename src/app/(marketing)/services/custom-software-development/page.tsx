@@ -3,14 +3,14 @@ import ServicePageLayout, { ServicePageData } from '@/components/services/Servic
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Custom Software Engineering, Microservices & Web Architecture | Vertex Loop Pvt Ltd',
+  title: 'Custom Software & Microservices',
   description:
     'Custom software development company delivering scalable backend microservices, high-concurrency APIs, enterprise SaaS platforms, and modern Next.js/WordPress web architectures.',
   alternates: {
     canonical: `${siteConfig.url}/services/custom-software-development`,
   },
   openGraph: {
-    title: 'Custom Software Engineering, Microservices & Web Architecture | Vertex Loop Pvt Ltd',
+    title: 'Custom Software & Microservices | Vertex Loop',
     description:
       'Custom software development company delivering scalable backend microservices, high-concurrency APIs, enterprise SaaS platforms, and modern web architectures.',
     url: `${siteConfig.url}/services/custom-software-development`,

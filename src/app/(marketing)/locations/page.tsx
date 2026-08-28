@@ -11,14 +11,14 @@ import { siteConfig } from '@/config/site'
 import { GEO_LOCATIONS } from '@/lib/geoData'
 
 export const metadata: Metadata = {
-  title: 'Global Service Locations & Operations | Vertex Loop Pvt Ltd',
+  title: 'Global Service Locations & Delivery Hubs',
   description:
     'Vertex Loop Pvt Ltd operates from its single registered headquarters in Ambattur, Chennai, delivering custom AI, enterprise software, cloud DevOps, and tech training across India, US, UK, Canada, Australia, UAE, and Singapore.',
   alternates: {
     canonical: `${siteConfig.url}/locations`,
   },
   openGraph: {
-    title: 'Global Service Locations & Operations | Vertex Loop Pvt Ltd',
+    title: 'Global Service Locations & Delivery Hubs | Vertex Loop',
     description:
       'Explore Vertex Loop Pvt Ltd’s global service reach. Single headquarters in Ambattur, Chennai with remote engineering delivery worldwide.',
     url: `${siteConfig.url}/locations`,

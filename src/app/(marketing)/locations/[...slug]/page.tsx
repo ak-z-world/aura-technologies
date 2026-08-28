@@ -28,27 +28,28 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!location) {
     return {
-      title: 'Location Not Found | Vertex Loop Pvt Ltd',
+      title: 'Location Not Found',
     }
   }
 
+  const title = location.seoTitle || `${location.name} Technology Solutions`
   const canonicalUrl = `${siteConfig.url}/locations/${location.slugPath.join('/')}`
 
   return {
-    title: `${location.headline} | Vertex Loop Pvt Ltd`,
+    title,
     description: location.metaDescription,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: `${location.headline} | Vertex Loop Pvt Ltd`,
+      title: `${title} | Vertex Loop`,
       description: location.metaDescription,
       url: canonicalUrl,
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${location.headline} | Vertex Loop Pvt Ltd`,
+      title: `${title} | Vertex Loop`,
       description: location.metaDescription,
     },
   }

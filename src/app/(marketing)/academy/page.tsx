@@ -10,7 +10,7 @@ import SectionLabel from '@/components/ui/SectionLabel'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Crack Leap — Technology Education Ecosystem | Vertex Loop Pvt Ltd',
+  title: 'Crack Leap Software Training Academy',
   description:
     'Crack Leap is Vertex Loop Pvt Ltd’s technology education ecosystem, delivering intensive developer upskilling, college campus bootcamps, and corporate training in Python, AI, AWS Cloud, and DevOps.',
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     canonical: `${siteConfig.url}/academy`,
   },
   openGraph: {
-    title: 'Crack Leap — Technology Education Ecosystem | Vertex Loop Pvt Ltd',
+    title: 'Crack Leap Software Training Academy | Vertex Loop',
     description:
       'Crack Leap is Vertex Loop Pvt Ltd’s technology education ecosystem for developer bootcamps, college campus workshops, and corporate upskilling.',
     url: `${siteConfig.url}/academy`,

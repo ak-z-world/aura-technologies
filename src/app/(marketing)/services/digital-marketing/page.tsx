@@ -3,14 +3,14 @@ import ServicePageLayout, { ServicePageData } from '@/components/services/Servic
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing, Technical SEO, AEO & GEO Search Visibility | Vertex Loop Pvt Ltd',
+  title: 'Technical SEO & Digital Marketing',
   description:
     'Data-driven digital marketing agency specializing in technical SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and performance marketing.',
   alternates: {
     canonical: `${siteConfig.url}/services/digital-marketing`,
   },
   openGraph: {
-    title: 'Digital Marketing, Technical SEO, AEO & GEO Search Visibility | Vertex Loop Pvt Ltd',
+    title: 'Technical SEO & Digital Marketing | Vertex Loop',
     description:
       'Data-driven digital marketing agency specializing in technical SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and performance marketing.',
     url: `${siteConfig.url}/services/digital-marketing`,
