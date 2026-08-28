@@ -4,11 +4,22 @@ import Script from 'next/script'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useEffect } from 'react'
 
+declare global {
+  interface Window {
+    gtag?: (
+      command: 'event' | 'config' | 'js',
+      targetId: string | Date,
+      config?: Record<string, unknown>
+    ) => void
+    dataLayer?: unknown[]
+  }
+}
+
 export const GA_MEASUREMENT_ID = 'G-91YN9MYRL0'
 
-export function trackGAEvent(action: string, params?: Record<string, any>) {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    ;(window as any).gtag('event', action, params)
+export function trackGAEvent(action: string, params?: Record<string, unknown>) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', action, params)
   }
 }
 
@@ -24,9 +35,9 @@ export default function GoogleAnalytics() {
   const searchParams = useSearchParams()
 
   useEffect(() => {
-    if (pathname && (window as any).gtag) {
+    if (pathname && typeof window !== 'undefined' && typeof window.gtag === 'function') {
       const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '')
-      ;(window as any).gtag('config', GA_MEASUREMENT_ID, {
+      window.gtag('config', GA_MEASUREMENT_ID, {
         page_path: url,
       })
     }

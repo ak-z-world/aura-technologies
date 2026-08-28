@@ -4,6 +4,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: 'Services', href: '/services' },
   { label: 'Products', href: '/products' },
   { label: 'Crack Leap', href: 'https://crackleap.vertexloop.in' },
+  { label: 'Locations', href: '/locations' },
   { label: 'Who We Are', href: '/about' },
   { label: 'Ecosystem', href: '/ecosystem' },
   { label: 'Why Us', href: '/why-us' },
@@ -15,6 +16,7 @@ export const SERVICES_NAV = [
   { label: 'Custom Software Development', href: '/services/custom-software-development', description: 'Enterprise platforms, APIs, microservices, and bespoke software' },
   { label: 'Cloud Architecture & DevOps', href: '/services/cloud-architecture', description: 'Managed cloud infrastructure, CI/CD, and scaling' },
   { label: 'Digital Marketing & Tech SEO', href: '/services/digital-marketing', description: 'Data-driven growth, AEO/GEO, and performance marketing' },
+  { label: 'Global Service Locations', href: '/locations', description: 'Global operations & regional service delivery models' },
   { label: 'Crack Leap Tech Academy', href: 'https://crackleap.vertexloop.in', description: 'Vertex Loop’s technology education platform for developer upskilling', external: true },
 ]
 

@@ -29,8 +29,8 @@ const TIMELINE = [
   },
   {
     year: "2026",
-    title: "Tech Academy Opens",
-    body: "We recognized that the talent shortage was as critical as the technology gap. Vertex Loop Tech Academy launched, building the engineers our industry desperately needed from the ground up.",
+    title: "Crack Leap Tech Academy Opens",
+    body: "We recognized that the talent shortage was as critical as the technology gap. Crack Leap Tech Academy launched under Vertex Loop Pvt Ltd, building the engineers our industry desperately needed from the ground up.",
     accent: "#7c6fad",
   },
   {

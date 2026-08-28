@@ -3,7 +3,7 @@ import ProductPageLayout, { ProductPageData } from '@/components/products/Produc
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Enterprise HRMS Platform & Payroll System | Vertex Loop',
+  title: 'Enterprise HRMS Platform & Payroll System | Vertex Loop Pvt Ltd',
   description:
     'Cloud enterprise HRMS software managing payroll, attendance, employee lifecycle, performance reviews, and HR compliance automation.',
   alternates: {
@@ -62,9 +62,16 @@ const productData: ProductPageData = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: 'Enterprise HRMS Platform',
+    description: 'Complete HR Management System providing automated payroll calculations, biometric attendance tracking, leave workflows, and compliance reporting.',
+    url: `${siteConfig.url}/products/hrms`,
     operatingSystem: 'Web/Mobile',
     applicationCategory: 'BusinessApplication',
-    publisher: { '@type': 'Organization', name: 'Vertex Loop', url: siteConfig.url },
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${siteConfig.url}/#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
   },
 }
 

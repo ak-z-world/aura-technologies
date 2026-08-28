@@ -7,9 +7,9 @@ import { FileText, ShieldAlert, CheckCircle2, Scale, ExternalLink, Mail, MapPin 
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions | Vertex Loop',
+  title: 'Terms and Conditions | Vertex Loop Pvt Ltd',
   description:
-    'Terms and conditions governing the use of the Vertex Loop website, software products, and technology ecosystem services.',
+    'Read the official terms and conditions governing the use of the Vertex Loop Pvt Ltd website, software architectures, and consulting showcase.',
   alternates: {
     canonical: `${siteConfig.url}/terms-conditions`,
   },
@@ -24,23 +24,23 @@ export default function TermsConditionsPage() {
 
       {/* Hero Section */}
       <PageHero
-        label="Legal Agreement"
+        label="Legal & Governance"
         labelAccent="gold"
         headline={
           <>
-            Terms & <span className="italic font-normal text-[#a07830]">Conditions</span>
+            Terms & <span className="italic font-normal text-[#a07830]">Conditions.</span>
           </>
         }
-        subline="These terms govern your access to and use of the Vertex Loop website, content, product showcases, and affiliated ecosystem properties."
+        subline="The formal terms governing access to and use of Vertex Loop Pvt Ltd websites, service briefings, and software platform showcases."
         gradient={{
-          orb1: 'rgba(235,224,200,0.5)',
+          orb1: 'rgba(235,224,204,0.5)',
           orb2: 'rgba(216,210,236,0.4)',
-          orb3: 'rgba(193,218,240,0.3)',
-          base: '#f4f1f9',
+          orb3: 'rgba(193,226,219,0.3)',
+          base: '#f6f4f0',
         }}
       >
         <div className="text-xs font-mono text-slate-dim bg-white/60 px-4 py-2 rounded-full border border-white/80 w-fit">
-          Last Updated: {lastUpdated}
+          Last Updated: {lastUpdated} · Headquartered in Chennai, India
         </div>
       </PageHero>
 
@@ -54,7 +54,7 @@ export default function TermsConditionsPage() {
               <Scale size={22} className="text-[#a07830]" /> 1. Introduction & Acceptance of Terms
             </h2>
             <p className="text-slate-mid text-sm leading-relaxed font-light mb-3">
-              These Terms and Conditions ("Terms") govern your access to and use of <code>https://www.vertexloop.in</code> (the "Website"), operated by Vertex Loop ("Company", "we", "our", or "us").
+              These Terms and Conditions (&ldquo;Terms&rdquo;) govern your access to and use of <code>https://www.vertexloop.in</code> (the &ldquo;Website&rdquo;), operated by Vertex Loop Pvt Ltd (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;).
             </p>
             <p className="text-slate-mid text-sm leading-relaxed font-light">
               By browsing, accessing, or interacting with this Website, you agree to comply with and be bound by these Terms. If you do not agree with any part of these Terms, you should discontinue use of the Website immediately.
@@ -132,7 +132,7 @@ export default function TermsConditionsPage() {
               <ShieldAlert size={22} className="text-[#a07830]" /> 6. Disclaimer & Limitation of Liability
             </h2>
             <p className="text-slate-mid text-sm leading-relaxed font-light mb-3">
-              The Website and its contents are provided on an "as is" and "as available" basis without warranties of any kind, whether express or implied.
+              The Website and its contents are provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis without warranties of any kind, whether express or implied.
             </p>
             <p className="text-slate-mid text-sm leading-relaxed font-light">
               To the maximum extent permitted by applicable law, Vertex Loop disclaims liability for any indirect, incidental, or consequential damages resulting from your use of or inability to access the Website.
@@ -168,8 +168,14 @@ export default function TermsConditionsPage() {
                 </a>
               </div>
               <div className="flex items-center gap-2">
+                <span className="text-[#a07830]">📞</span>
+                <a href="tel:+919445770160" className="hover:underline">
+                  +91 94457 70160
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
                 <MapPin size={14} className="text-[#a07830]" />
-                <span>Vertex Loop Private Limited</span>
+                <span>G2, Venkatapuram, Ambattur, Chennai - 600053</span>
               </div>
             </div>
           </div>

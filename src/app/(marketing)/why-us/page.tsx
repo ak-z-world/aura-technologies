@@ -1,10 +1,20 @@
 import type { Metadata } from 'next'
 import WhyUsPageClient from './WhyUsPageClient'
+import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Why Vertex Loop — Our Standards & Differentiators',
+  title: 'Why Vertex Loop Pvt Ltd — Engineering Standards & Differentiators',
   description:
-    'Discover what sets Vertex Loop apart — frontier thinking, outcome accountability, architectural integrity, and elite cross-domain talent.',
+    'Discover what sets Vertex Loop Pvt Ltd apart — frontier-first AI innovation, outcome accountability, architectural depth, and elite cross-domain talent.',
+  alternates: {
+    canonical: `${siteConfig.url}/why-us`,
+  },
+  openGraph: {
+    title: 'Why Vertex Loop Pvt Ltd — Engineering Standards & Differentiators',
+    description:
+      'Discover what sets Vertex Loop Pvt Ltd apart — frontier AI innovation, architectural depth, and outcome accountability.',
+    url: `${siteConfig.url}/why-us`,
+  },
 }
 
 export default function WhyUsPage() {

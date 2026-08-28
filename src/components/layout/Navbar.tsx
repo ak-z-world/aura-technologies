@@ -61,11 +61,11 @@ export default function Navbar() {
           )}>
           <nav className="flex items-center justify-between" aria-label="Main Navigation">
             {/* Logo */}
-            <Link href="/" className="flex items-center group" aria-label="Vertex Loop Homepage">
+            <Link href="/" className="flex items-center group" aria-label="Vertex Loop Pvt Ltd Homepage">
               <div className="relative w-32 sm:w-36 lg:w-40 transition-all duration-300 group-hover:scale-[1.02]">
                 <img
                   src="/logo.png"
-                  alt="Vertex Loop Technology Ecosystem"
+                  alt="Vertex Loop Pvt Ltd Technology Ecosystem"
                   className="w-full h-auto object-contain"
                 />
               </div>

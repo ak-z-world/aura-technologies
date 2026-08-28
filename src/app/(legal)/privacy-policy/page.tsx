@@ -1,38 +1,35 @@
 import type { Metadata } from 'next'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import { ShieldCheck, Lock, Eye, FileText, Server, RefreshCw, Mail, MapPin } from 'lucide-react'
+import JsonLd from '@/components/seo/JsonLd'
 import PageHero from '@/components/ui/PageHero'
-import SectionLabel from '@/components/ui/SectionLabel'
-import Link from 'next/link'
-import { ShieldCheck, Lock, Eye, FileText, Mail, MapPin } from 'lucide-react'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Vertex Loop',
-  description:
-    'Learn how Vertex Loop collects, uses, and protects user information across our website and technology ecosystem properties.',
+  title: 'Privacy Policy | Vertex Loop Pvt Ltd',
+  description: 'Official Privacy Policy of Vertex Loop Pvt Ltd. Learn how we handle information, data security, and enterprise privacy compliance.',
   alternates: {
     canonical: `${siteConfig.url}/privacy-policy`,
   },
 }
 
 export default function PrivacyPolicyPage() {
-  const lastUpdated = 'August 19, 2026'
-
   return (
     <main className="relative overflow-hidden bg-[#f6f4f0] text-slate-ink min-h-screen">
       <Navbar />
 
-      {/* Hero Section */}
+      {/* Hero */}
       <PageHero
-        label="Legal & Transparency"
+        label="Legal & Governance"
         labelAccent="lavender"
         headline={
           <>
-            Privacy <span className="italic font-normal text-[#7c6fad]">Policy</span>
+            Privacy Policy &{' '}
+            <span className="italic font-normal text-[#7c6fad]">Data Protection.</span>
           </>
         }
-        subline="Vertex Loop is committed to respecting user privacy, safeguarding data, and maintaining transparent information practices across our technology ecosystem."
+        subline="Our transparent commitments regarding data handling, enterprise confidentiality, and information security standards across Vertex Loop Pvt Ltd operations."
         gradient={{
           orb1: 'rgba(216,210,236,0.5)',
           orb2: 'rgba(193,218,240,0.4)',
@@ -40,8 +37,8 @@ export default function PrivacyPolicyPage() {
           base: '#f4f1f9',
         }}
       >
-        <div className="text-xs font-mono text-slate-dim bg-white/60 px-4 py-2 rounded-full border border-white/80 w-fit">
-          Last Updated: {lastUpdated}
+        <div className="text-xs font-mono text-slate-dim">
+          Effective Date: January 1, 2026 · Registered in Chennai, Tamil Nadu, India
         </div>
       </PageHero>
 
@@ -55,7 +52,7 @@ export default function PrivacyPolicyPage() {
               <ShieldCheck size={22} className="text-[#7c6fad]" /> 1. Introduction
             </h2>
             <p className="text-slate-mid text-sm leading-relaxed font-light mb-3">
-              Vertex Loop ("Company", "we", "our", or "us") operates the website <code>https://www.vertexloop.in</code> and affiliated digital platforms. This Privacy Policy outlines how we collect, store, process, and protect information when you visit our website or interact with our consulting services and software product showcases.
+              Vertex Loop Pvt Ltd (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) operates the website <code>https://www.vertexloop.in</code> and affiliated digital platforms. This Privacy Policy outlines how we collect, store, process, and protect information when you visit our website or interact with our consulting services and software product showcases.
             </p>
             <p className="text-slate-mid text-sm leading-relaxed font-light">
               By accessing or using our website, you acknowledge the terms set forth in this policy. If you have any questions regarding our privacy practices, please contact us at <code>hello@vertexloop.in</code>.
@@ -184,8 +181,14 @@ export default function PrivacyPolicyPage() {
                 </a>
               </div>
               <div className="flex items-center gap-2">
+                <span className="text-[#7c6fad]">📞</span>
+                <a href="tel:+919445770160" className="hover:underline">
+                  +91 94457 70160
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
                 <MapPin size={14} className="text-[#7c6fad]" />
-                <span>Vertex Loop Operations Hub</span>
+                <span>G2, Venkatapuram, Ambattur, Chennai - 600053</span>
               </div>
             </div>
           </div>

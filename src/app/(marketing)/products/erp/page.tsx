@@ -3,7 +3,7 @@ import ProductPageLayout, { ProductPageData } from '@/components/products/Produc
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Vertex Loop Cloud ERP — Enterprise Resource Planning System',
+  title: 'Vertex Loop Cloud ERP — Enterprise Resource Planning System | Vertex Loop Pvt Ltd',
   description:
     'Vertex Loop ERP is a cloud-native enterprise resource planning software unifying supply chain, inventory management, multi-entity finance, procurement, and manufacturing.',
   alternates: {
@@ -62,9 +62,16 @@ const productData: ProductPageData = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: 'Vertex Loop Cloud ERP',
+    description: 'Modular cloud ERP system designed to unify multi-location inventory, vendor procurement, financial ledgers, and operational analytics.',
+    url: `${siteConfig.url}/products/erp`,
     operatingSystem: 'Web/Cloud',
     applicationCategory: 'BusinessApplication',
-    publisher: { '@type': 'Organization', name: 'Vertex Loop', url: siteConfig.url },
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${siteConfig.url}/#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
   },
 }
 

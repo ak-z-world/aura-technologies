@@ -3,31 +3,34 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Link from 'next/link'
 import { GraduationCap, ExternalLink, CheckCircle2, Cpu, Code2, Server, Users, ArrowRight } from 'lucide-react'
+import Breadcrumb from '@/components/seo/Breadcrumb'
 import JsonLd from '@/components/seo/JsonLd'
 import PageHero from '@/components/ui/PageHero'
 import SectionLabel from '@/components/ui/SectionLabel'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'CrackLeap — Technology Education Ecosystem | Vertex Loop',
+  title: 'Crack Leap — Technology Education Ecosystem | Vertex Loop Pvt Ltd',
   description:
-    'CrackLeap is Vertex Loop’s dedicated technology education ecosystem, offering intensive developer upskilling programs in Artificial Intelligence, Full-Stack Development, Cloud Architecture, and DevOps.',
+    'Crack Leap is Vertex Loop Pvt Ltd’s technology education ecosystem, delivering intensive developer upskilling, college campus bootcamps, and corporate training in Python, AI, AWS Cloud, and DevOps.',
   keywords: [
-    'CrackLeap',
-    'CrackLeap tech academy',
-    'CrackLeap education ecosystem',
-    'software engineering training',
+    'Crack Leap',
+    'Crack Leap tech academy',
+    'Vertex Loop Pvt Ltd education',
+    'Python training Chennai',
     'AI developer upskilling',
     'cloud devops bootcamp',
-    'Vertex Loop education',
+    'college campus training Tamil Nadu',
+    'corporate software training India',
+    'Agentic AI courses',
   ],
   alternates: {
     canonical: `${siteConfig.url}/academy`,
   },
   openGraph: {
-    title: 'CrackLeap — Technology Education Ecosystem | Vertex Loop',
+    title: 'Crack Leap — Technology Education Ecosystem | Vertex Loop Pvt Ltd',
     description:
-      'CrackLeap is Vertex Loop’s technology education ecosystem for developer bootcamps and corporate upskilling.',
+      'Crack Leap is Vertex Loop Pvt Ltd’s technology education ecosystem for developer bootcamps, college campus workshops, and corporate upskilling.',
     url: `${siteConfig.url}/academy`,
   },
 }
@@ -35,33 +38,78 @@ export const metadata: Metadata = {
 const academyOverviewSchema = {
   '@context': 'https://schema.org',
   '@type': 'EducationalOrganization',
-  name: 'CrackLeap',
-  url: 'https://crackleap.vertexloop.in',
+  name: 'Crack Leap',
+  url: siteConfig.academyUrl,
   parentOrganization: {
     '@type': 'Organization',
-    name: 'Vertex Loop',
+    name: siteConfig.name,
+    legalName: siteConfig.legalName,
     url: siteConfig.url,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: siteConfig.address.streetAddress,
+      addressLocality: siteConfig.address.addressLocality,
+      addressRegion: siteConfig.address.addressRegion,
+      postalCode: siteConfig.address.postalCode,
+      addressCountry: siteConfig.address.addressCountry,
+    },
   },
   description:
-    'Dedicated technology education ecosystem powered by Vertex Loop, providing developer upskilling in AI, Full-Stack, and Cloud DevOps.',
+    'Dedicated technology education ecosystem powered by Vertex Loop Pvt Ltd, providing developer upskilling, campus bootcamps, and corporate training in Python, AI, Full-Stack, and Cloud DevOps.',
+}
+
+const coursesSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Crack Leap Technology Training Programs',
+  itemListElement: [
+    {
+      '@type': 'Course',
+      position: 1,
+      name: 'Applied Artificial Intelligence & Agentic AI Engineering',
+      description: 'Master LLM fine-tuning, RAG vector search, multi-agent frameworks, and production AI deployment.',
+      provider: { '@type': 'EducationalOrganization', name: 'Crack Leap', url: siteConfig.academyUrl },
+    },
+    {
+      '@type': 'Course',
+      position: 2,
+      name: 'Python for Data Engineering & Intelligent Systems',
+      description: 'Comprehensive Python programming from foundations to asynchronous systems, FastAPI, and data engineering.',
+      provider: { '@type': 'EducationalOrganization', name: 'Crack Leap', url: siteConfig.academyUrl },
+    },
+    {
+      '@type': 'Course',
+      position: 3,
+      name: 'AWS Cloud Architecture & Production DevOps',
+      description: 'Hands-on enterprise cloud architecture, Terraform IaC, Docker, Kubernetes, and CI/CD pipelines.',
+      provider: { '@type': 'EducationalOrganization', name: 'Crack Leap', url: siteConfig.academyUrl },
+    },
+    {
+      '@type': 'Course',
+      position: 4,
+      name: 'Full-Stack Software Architecture & Next.js Systems',
+      description: 'Modern full-stack engineering with Next.js, React, TypeScript, PostgreSQL, and scalable microservices.',
+      provider: { '@type': 'EducationalOrganization', name: 'Crack Leap', url: siteConfig.academyUrl },
+    },
+  ],
 }
 
 const faqData = [
   {
-    q: 'What is CrackLeap?',
-    a: 'CrackLeap is the dedicated technology education ecosystem within the Vertex Loop ecosystem. It delivers hands-on, industry-aligned training programs for software engineers, AI developers, and enterprise technical teams.',
+    q: 'What is Crack Leap and how does it relate to Vertex Loop Pvt Ltd?',
+    a: 'Crack Leap is Vertex Loop Pvt Ltd’s dedicated technology education ecosystem. It translates production engineering practices from Vertex Loop’s custom AI and enterprise software operations into intensive training programs for developers, engineering students, and enterprise tech teams.',
   },
   {
-    q: 'What is the relationship between Vertex Loop and CrackLeap?',
-    a: 'CrackLeap operates as the technology education arm of Vertex Loop. While Vertex Loop provides enterprise AI, software engineering, and SaaS products, CrackLeap trains developers and upskills corporate engineering teams.',
+    q: 'What domains are covered in Crack Leap programs?',
+    a: 'Crack Leap delivers immersive curriculum in Python for data engineering, Applied Generative AI & Autonomous Agents (LangGraph/CrewAI), AWS Cloud Architecture & Managed DevOps (Terraform/Kubernetes), and Full-Stack Next.js platform engineering.',
   },
   {
-    q: 'Where can I view the full CrackLeap course catalog and enroll?',
-    a: 'The full course catalog, program schedules, and enrollment details are hosted on the official CrackLeap website at https://crackleap.vertexloop.in.',
+    q: 'Does Crack Leap conduct on-campus training for engineering colleges?',
+    a: 'Yes. Crack Leap partners with technical universities and engineering institutions across Tamil Nadu and pan-India to deliver high-impact placement preparation bootcamps, faculty development programs, and hackathon immersion workshops.',
   },
   {
-    q: 'Does CrackLeap offer corporate upskilling for tech teams?',
-    a: 'Yes, CrackLeap designs custom enterprise training programs to upskill software development and IT teams in generative AI, cloud migration, modern web frameworks, and DevOps practices.',
+    q: 'Does Crack Leap provide customized corporate software upskilling?',
+    a: 'Yes. We design and deliver tailored corporate training cohorts for enterprise engineering teams transitioning to generative AI workflows, cloud-native microservices, or modern DevOps practices.',
   },
 ]
 
@@ -79,9 +127,14 @@ const faqSchema = {
 }
 
 export default function AcademyOverviewPage() {
+  const breadcrumbItems = [
+    { name: 'Crack Leap Tech Academy', url: '/academy' },
+  ]
+
   return (
     <main className="relative overflow-hidden bg-[#f6f4f0] text-slate-ink min-h-screen">
       <JsonLd data={academyOverviewSchema} id="crackleap-org-jsonld" />
+      <JsonLd data={coursesSchema} id="crackleap-courses-jsonld" />
       <JsonLd data={faqSchema} id="crackleap-faq-jsonld" />
       <Navbar />
 
@@ -91,12 +144,12 @@ export default function AcademyOverviewPage() {
         labelAccent="blue"
         headline={
           <>
-            CrackLeap — Technology
+            Crack Leap — Technology
             <br />
             <span className="italic font-normal text-[#4a7fa5]">Education Ecosystem.</span>
           </>
         }
-        subline="CrackLeap is Vertex Loop’s dedicated technology education brand and ecosystem, delivering intensive engineering bootcamps and corporate tech upskilling in AI, Full-Stack Architecture, and Cloud Native DevOps."
+        subline="Crack Leap is Vertex Loop Pvt Ltd’s dedicated technology education ecosystem, delivering intensive engineering bootcamps, college campus training, and corporate tech upskilling in Python, AI, Full-Stack Architecture, and Cloud Native DevOps."
         gradient={{
           orb1: 'rgba(193,218,240,0.55)',
           orb2: 'rgba(216,210,236,0.45)',
@@ -110,7 +163,7 @@ export default function AcademyOverviewPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary text-sm py-3 px-6 flex items-center gap-2">
-            <span>Visit Official CrackLeap Site</span>
+            <span>Visit Official Crack Leap Site</span>
             <ExternalLink size={16} />
           </a>
           <Link href="#education-tracks" className="btn-ghost text-sm py-3 px-6">
@@ -119,14 +172,19 @@ export default function AcademyOverviewPage() {
         </div>
       </PageHero>
 
+      {/* Breadcrumb Container */}
+      <div className="section-padding py-4 max-w-7xl mx-auto">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
+
       {/* AEO Summary Box */}
       <section className="relative py-8 section-padding max-w-5xl mx-auto">
         <div className="glass-card-strong rounded-3xl p-8 border border-white/80 shadow-glass-lg">
           <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#4a7fa5] mb-2">
-            Direct Summary — CrackLeap Ecosystem
+            Direct Summary — Crack Leap Tech Education Ecosystem
           </div>
           <p className="text-slate-mid text-base leading-relaxed font-light">
-            CrackLeap is Vertex Loop's dedicated technology education platform. Hosted at <code>https://crackleap.vertexloop.in</code>, CrackLeap delivers hands-on bootcamps in AI engineering, full-stack web development, and cloud DevOps for both individual engineers and corporate enterprises.
+            Crack Leap is Vertex Loop Pvt Ltd’s specialized technology training ecosystem. Operating from our central headquarters at G2, Venkatapuram, Ambattur, Chennai - 600053, Crack Leap delivers intensive hands-on bootcamps in Python, Agentic AI, full-stack web architecture, and cloud DevOps for engineering students, universities, and corporate tech organizations globally. Hosted at <code>https://crackleap.vertexloop.in</code>.
           </p>
         </div>
       </section>
@@ -135,7 +193,7 @@ export default function AcademyOverviewPage() {
       <section id="education-tracks" className="relative py-20 section-padding max-w-7xl mx-auto">
         <div className="text-center mb-14">
           <SectionLabel accent="blue" className="mb-4 mx-auto w-fit">
-            CrackLeap Programs
+            Crack Leap Programs
           </SectionLabel>
           <h2 className="text-display font-semibold text-slate-ink text-4xl md:text-5xl leading-tight tracking-[-0.03em]">
             Developer & Corporate <span className="italic font-normal text-[#4a7fa5]">Upskilling Tracks</span>
@@ -146,26 +204,26 @@ export default function AcademyOverviewPage() {
           {[
             {
               icon: Cpu,
-              title: 'Applied AI & ML Engineering',
+              title: 'Applied AI & Agentic AI Engineering',
               desc: 'Deep hands-on training in LLM fine-tuning, RAG vector retrieval, PyTorch, and autonomous AI agent deployment.',
               accent: '#7c6fad',
             },
             {
               icon: Code2,
-              title: 'Full-Stack Web Architecture',
-              desc: 'Production web development with Next.js, React, TypeScript, PostgreSQL, microservices, and clean software patterns.',
+              title: 'Full-Stack Web Architecture & Python',
+              desc: 'Production web development with Next.js, React, TypeScript, Python FastAPI, PostgreSQL, microservices, and clean software patterns.',
               accent: '#a07830',
             },
             {
               icon: Server,
-              title: 'Cloud Native & DevOps',
+              title: 'Cloud Native & DevOps Engineering',
               desc: 'Cloud infrastructure engineering covering Docker, Kubernetes, Terraform, AWS multi-region setups, and CI/CD pipelines.',
               accent: '#3d8c7a',
             },
             {
               icon: Users,
-              title: 'Corporate Team Upskilling',
-              desc: 'Customized technology modernizations and AI adoption workshops designed for enterprise engineering teams.',
+              title: 'College Campus Bootcamps & Corporate Upskilling',
+              desc: 'Customized campus workshops for engineering universities and AI adoption training designed for enterprise engineering teams.',
               accent: '#4a7fa5',
             },
           ].map((item) => {

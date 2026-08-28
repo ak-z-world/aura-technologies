@@ -12,7 +12,19 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/'],
       },
       {
-        userAgent: ['Googlebot', 'Bingbot', 'PerplexityBot', 'GPTBot', 'ChatGPT-User', 'ClaudeBot', 'Applebot'],
+        userAgent: [
+          'Googlebot',
+          'Bingbot',
+          'PerplexityBot',
+          'GPTBot',
+          'ChatGPT-User',
+          'ClaudeBot',
+          'anthropic-ai',
+          'Applebot',
+          'DuckDuckBot',
+          'Amazonbot',
+          'Cohere-AI',
+        ],
         allow: '/',
         disallow: ['/api/'],
       },
@@ -21,3 +33,4 @@ export default function robots(): MetadataRoute.Robots {
     host: baseUrl,
   }
 }
+

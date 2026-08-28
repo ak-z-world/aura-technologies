@@ -688,7 +688,7 @@ export default function EcosystemPageClient() {
               </AnimatedSection>
               <AnimatedSection variant="fadeUp" delay={0.12}>
                 <p className="text-slate-mid text-lg font-light leading-relaxed mb-8">
-                  Companies that engage multiple Vertex Loop divisions don't
+                  Companies that engage multiple Vertex Loop divisions don&apos;t
                   just save on coordination — they access a level of integrated
                   intelligence that is architecturally impossible to replicate
                   with separate vendors.

@@ -1,12 +1,12 @@
 import Script from 'next/script'
 
 interface JsonLdProps {
-  data: Record<string, any> | Array<Record<string, any>>
+  data: Record<string, unknown> | Array<Record<string, unknown>>
   id?: string
 }
 
 export default function JsonLd({ data, id }: JsonLdProps) {
-  const scriptId = id || `json-ld-${Math.random().toString(36).substring(2, 9)}`
+  const scriptId = id || 'json-ld-schema'
 
   return (
     <Script
@@ -17,3 +17,4 @@ export default function JsonLd({ data, id }: JsonLdProps) {
     />
   )
 }
+

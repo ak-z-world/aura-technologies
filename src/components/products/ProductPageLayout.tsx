@@ -1,8 +1,8 @@
-import type { Metadata } from 'next'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2, ExternalLink, HelpCircle, Layers, ShieldCheck, Sparkles } from 'lucide-react'
+import Breadcrumb from '@/components/seo/Breadcrumb'
 import JsonLd from '@/components/seo/JsonLd'
 import PageHero from '@/components/ui/PageHero'
 import SectionLabel from '@/components/ui/SectionLabel'
@@ -24,10 +24,15 @@ export interface ProductPageData {
   technologies: string[]
   useCases: string[]
   faq: { q: string; a: string }[]
-  jsonLdData: object
+  jsonLdData: Record<string, unknown> | Array<Record<string, unknown>>
 }
 
 export default function ProductPageLayout({ product }: { product: ProductPageData }) {
+  const breadcrumbItems = [
+    { name: 'Products', url: '/products' },
+    { name: product.title, url: `/products/${product.slug}` },
+  ]
+
   return (
     <main className="relative overflow-hidden bg-[#f6f4f0] text-slate-ink min-h-screen">
       <JsonLd data={product.jsonLdData} id={`${product.slug}-jsonld`} />
@@ -69,6 +74,11 @@ export default function ProductPageLayout({ product }: { product: ProductPageDat
           </Link>
         </div>
       </PageHero>
+
+      {/* Breadcrumb Container */}
+      <div className="section-padding py-4 max-w-7xl mx-auto">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
 
       {/* AEO Summary Box */}
       <section className="relative py-8 section-padding max-w-5xl mx-auto">

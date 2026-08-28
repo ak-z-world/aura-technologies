@@ -273,24 +273,32 @@ export default function CtaSection() {
                   Prefer a direct conversation?
                 </h4>
                 <a
-                  href="mailto:hello@vertexloop.io"
+                  href="mailto:hello@vertexloop.in"
                   className="flex items-center justify-between p-3.5 rounded-xl bg-white/50 border border-white/70 hover:bg-white/80 hover:shadow-glass transition-all duration-300 group mb-3"
                 >
                   <div>
                     <div className="text-xs font-mono text-slate-dim uppercase tracking-wider mb-0.5">Email</div>
-                    <div className="text-sm font-medium text-slate-ink">hello@vertexloop.io</div>
+                    <div className="text-sm font-medium text-slate-ink">hello@vertexloop.in</div>
                   </div>
                   <ArrowUpRight size={14} className="text-slate-dim group-hover:text-slate-ink transition-colors" />
                 </a>
                 <a
-                  href="https://calendly.com/vertexloop"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="tel:+919445770160"
+                  className="flex items-center justify-between p-3.5 rounded-xl bg-white/50 border border-white/70 hover:bg-white/80 hover:shadow-glass transition-all duration-300 group mb-3"
+                >
+                  <div>
+                    <div className="text-xs font-mono text-slate-dim uppercase tracking-wider mb-0.5">Phone</div>
+                    <div className="text-sm font-medium text-slate-ink">+91 94457 70160</div>
+                  </div>
+                  <ArrowUpRight size={14} className="text-slate-dim group-hover:text-slate-ink transition-colors" />
+                </a>
+                <a
+                  href="/contact"
                   className="flex items-center justify-between p-3.5 rounded-xl bg-white/50 border border-white/70 hover:bg-white/80 hover:shadow-glass transition-all duration-300 group"
                 >
                   <div>
-                    <div className="text-xs font-mono text-slate-dim uppercase tracking-wider mb-0.5">Schedule</div>
-                    <div className="text-sm font-medium text-slate-ink">Book a 30-min strategy call</div>
+                    <div className="text-xs font-mono text-slate-dim uppercase tracking-wider mb-0.5">Consultation</div>
+                    <div className="text-sm font-medium text-slate-ink">Book a technical discovery session</div>
                   </div>
                   <ArrowUpRight size={14} className="text-slate-dim group-hover:text-slate-ink transition-colors" />
                 </a>

@@ -16,6 +16,7 @@ const FOOTER_LINKS = {
     { label: 'Custom Software Engineering', href: '/services/custom-software-development' },
     { label: 'Cloud Architecture & DevOps', href: '/services/cloud-architecture' },
     { label: 'Digital Marketing & SEO', href: '/services/digital-marketing' },
+    { label: 'Global Service Locations', href: '/locations' },
   ],
   products: [
     { label: 'SCRIPTen AI Creator Tool', href: 'https://scripten.arivuon.in/', external: true },
@@ -57,7 +58,7 @@ export default function Footer() {
         >
           {/* Brand column */}
           <motion.div variants={staggerItemVariants} className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-6 w-fit group" aria-label="Vertex Loop">
+            <Link href="/" className="flex items-center gap-3 mb-6 w-fit group" aria-label="Vertex Loop Pvt Ltd">
               <div className="relative w-10 h-10 flex-shrink-0">
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/20 to-white/5 border border-white/20" />
                 <div className="absolute inset-0 rounded-xl flex items-center justify-center">
@@ -72,31 +73,37 @@ export default function Footer() {
                   Vertex<span className="text-[#a5b4fc]">Loop</span>
                 </span>
                 <p className="text-[10px] text-white/50 tracking-[0.12em] uppercase mt-0.5 font-mono">
-                  Technology Ecosystem
+                  Pvt Ltd · Technology Ecosystem
                 </p>
               </div>
             </Link>
-            <p className="text-white/60 text-sm leading-relaxed max-w-sm mb-8">
-              Custom AI development, enterprise software engineering, cloud architecture, software academy, and proprietary business applications (ERP, HRMS, Invoicing, SCRIPTen). Building intelligence infrastructure globally.
+            <p className="text-white/60 text-sm leading-relaxed max-w-sm mb-6">
+              Custom AI development, enterprise software engineering, cloud architecture, Crack Leap software academy, and proprietary business applications (ERP, HRMS, Invoicing, SCRIPTen).
             </p>
-            <div className="flex flex-col gap-3">
-              <div className="flex items-center gap-3 text-white/50 text-sm">
-                <Mail size={16} className="text-white/40 flex-shrink-0" />
+            <div className="flex flex-col gap-2.5">
+              <div className="flex items-center gap-3 text-white/60 text-sm">
+                <Mail size={15} className="text-[#a5b4fc] flex-shrink-0" />
                 <a href="mailto:hello@vertexloop.in" className="hover:text-white transition-colors">
                   hello@vertexloop.in
                 </a>
               </div>
-              <div className="flex items-start gap-3 text-white/50 text-sm">
-                <MapPin size={16} className="text-white/40 flex-shrink-0 mt-0.5" />
-                <span>Global Operations · Technology Hub, India</span>
+              <div className="flex items-center gap-3 text-white/60 text-sm">
+                <span className="text-[#a5b4fc] text-xs font-mono">📞</span>
+                <a href="tel:+919445770160" className="hover:text-white transition-colors">
+                  +91 94457 70160
+                </a>
+              </div>
+              <div className="flex items-start gap-3 text-white/60 text-xs">
+                <MapPin size={15} className="text-[#a5b4fc] flex-shrink-0 mt-0.5" />
+                <span>G2, Venkatapuram, Ambattur, Chennai - 600053, Tamil Nadu, India</span>
               </div>
             </div>
             
-            <div className="flex items-center gap-3 mt-8">
+            <div className="flex items-center gap-3 mt-6">
               {[
                 { icon: FaLinkedin, href: 'https://www.linkedin.com/company/vertex-loop', label: 'LinkedIn' },
                 { icon: FaTwitter, href: 'https://x.com/LoopVertex99532', label: 'Twitter' },
-                { icon: FaGithub, href: 'https://github.com/auratech', label: 'GitHub' },
+                { icon: FaGithub, href: 'https://github.com/vertexloop', label: 'GitHub' },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -195,7 +202,7 @@ export default function Footer() {
           className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
         >
           <p className="text-white/40 text-xs font-mono">
-            © {new Date().getFullYear()} Vertex Loop Technology Ecosystem. All rights reserved.
+            © {new Date().getFullYear()} Vertex Loop Pvt Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-2 text-white/40 text-xs font-mono">
             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]" />

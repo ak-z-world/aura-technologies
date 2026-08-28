@@ -3,7 +3,7 @@ import ProductPageLayout, { ProductPageData } from '@/components/products/Produc
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Digital Invoicing Software & Billing Automation | Vertex Loop',
+  title: 'Digital Invoicing Software & Billing Automation | Vertex Loop Pvt Ltd',
   description:
     'Cloud digital invoicing platform automating GST/VAT billing, recurring subscriptions, automated reminders, and multi-currency payment gateways.',
   alternates: {
@@ -62,9 +62,16 @@ const productData: ProductPageData = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: 'Digital Invoicing Platform',
+    description: 'Automated cloud invoicing and billing software enabling recurring payment processing, multi-tenant billing, and instant payment links.',
+    url: `${siteConfig.url}/products/invoicing`,
     operatingSystem: 'Web',
     applicationCategory: 'FinanceApplication',
-    publisher: { '@type': 'Organization', name: 'Vertex Loop', url: siteConfig.url },
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${siteConfig.url}/#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
   },
 }
 

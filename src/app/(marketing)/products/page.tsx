@@ -2,23 +2,23 @@ import type { Metadata } from 'next'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Link from 'next/link'
-import { ArrowRight, Layers, FileText, Users, Video, Sparkles, ExternalLink, CheckCircle2 } from 'lucide-react'
+import { ArrowRight, Layers, FileText, Users, Video, ExternalLink, CheckCircle2 } from 'lucide-react'
 import JsonLd from '@/components/seo/JsonLd'
 import PageHero from '@/components/ui/PageHero'
 import SectionLabel from '@/components/ui/SectionLabel'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Proprietary Software Products & SaaS Platforms | Vertex Loop',
+  title: 'Proprietary Software Products & SaaS Platforms | Vertex Loop Pvt Ltd',
   description:
-    'Discover Vertex Loop’s proprietary software product ecosystem: SCRIPTen AI for creators, Enterprise ERP, Digital Invoicing Software, and HRMS platform.',
+    'Discover Vertex Loop Pvt Ltd’s proprietary software product ecosystem: SCRIPTen AI for creators, Enterprise ERP, Digital Invoicing Software, and HRMS platform.',
   alternates: {
     canonical: `${siteConfig.url}/products`,
   },
   openGraph: {
-    title: 'Proprietary Software Products & SaaS Platforms | Vertex Loop',
+    title: 'Proprietary Software Products & SaaS Platforms | Vertex Loop Pvt Ltd',
     description:
-      'Vertex Loop’s in-house software products: SCRIPTen, Cloud ERP, HRMS, and Digital Invoicing.',
+      'Vertex Loop Pvt Ltd’s in-house software products: SCRIPTen, Cloud ERP, HRMS, and Digital Invoicing.',
     url: `${siteConfig.url}/products`,
   },
 }
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
 const productsHubSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Vertex Loop Proprietary Software Products',
-  description: 'Software products and SaaS platforms developed by Vertex Loop',
+  name: 'Vertex Loop Pvt Ltd Proprietary Software Products',
+  description: 'Software products and SaaS platforms developed by Vertex Loop Pvt Ltd',
   itemListElement: [
     {
       '@type': 'ListItem',

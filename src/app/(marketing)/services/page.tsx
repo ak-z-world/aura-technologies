@@ -9,16 +9,16 @@ import SectionLabel from '@/components/ui/SectionLabel'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Engineering Services & Technology Ecosystem | Vertex Loop',
+  title: 'Engineering Services & Technology Ecosystem | Vertex Loop Pvt Ltd',
   description:
-    'Vertex Loop provides custom AI development, enterprise software engineering, cloud architecture, digital marketing & SEO, and technology education through CrackLeap.',
+    'Vertex Loop Pvt Ltd provides custom AI development, autonomous agents, enterprise software engineering, cloud architecture, digital marketing & SEO, and technology education through Crack Leap.',
   alternates: {
     canonical: `${siteConfig.url}/services`,
   },
   openGraph: {
-    title: 'Engineering Services & Technology Ecosystem | Vertex Loop',
+    title: 'Engineering Services & Technology Ecosystem | Vertex Loop Pvt Ltd',
     description:
-      'Vertex Loop provides custom AI solutions, bespoke software development, cloud DevOps, digital growth, and CrackLeap tech education.',
+      'Vertex Loop Pvt Ltd provides custom AI solutions, bespoke software development, cloud DevOps, digital growth, and Crack Leap tech education.',
     url: `${siteConfig.url}/services`,
   },
 }
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
 const servicesHubSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Vertex Loop Core Engineering Services & Education Ecosystem',
-  description: 'Services and offerings provided by Vertex Loop and its ecosystem properties',
+  name: 'Vertex Loop Pvt Ltd Core Engineering Services & Education Ecosystem',
+  description: 'Services and offerings provided by Vertex Loop Pvt Ltd and its ecosystem properties',
   itemListElement: [
     {
       '@type': 'ListItem',
@@ -56,8 +56,14 @@ const servicesHubSchema = {
     {
       '@type': 'ListItem',
       position: 5,
-      name: 'CrackLeap — Technology Education Ecosystem',
-      url: 'https://crackleap.vertexloop.in',
+      name: 'Global Service Locations & Regional Delivery',
+      url: `${siteConfig.url}/locations`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 6,
+      name: 'Crack Leap — Technology Education Ecosystem',
+      url: siteConfig.academyUrl,
     },
   ],
 }

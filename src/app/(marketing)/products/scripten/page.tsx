@@ -3,9 +3,9 @@ import ProductPageLayout, { ProductPageData } from '@/components/products/Produc
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'SCRIPTen — AI Content Creation & Script Workflow Engine | Vertex Loop',
+  title: 'SCRIPTen — AI Content Creation & Script Workflow Engine | Vertex Loop Pvt Ltd',
   description:
-    'SCRIPTen is an advanced generative AI content platform built by Vertex Loop for digital creators, copywriters, vloggers, and marketing teams.',
+    'SCRIPTen is an advanced generative AI content platform built by Vertex Loop Pvt Ltd for digital creators, copywriters, vloggers, and marketing teams.',
   alternates: {
     canonical: `${siteConfig.url}/products/scripten`,
   },
@@ -19,9 +19,9 @@ const productData: ProductPageData = {
   heroLabel: 'Creator Technology',
   heroAccent: 'lavender',
   heroDescription:
-    'SCRIPTen is Vertex Loop’s proprietary AI platform designed for digital video creators, vloggers, and media teams to automate script outline generation, hook optimization, and production workflows.',
+    'SCRIPTen is Vertex Loop Pvt Ltd’s proprietary AI platform designed for digital video creators, vloggers, and media teams to automate script outline generation, hook optimization, and production workflows.',
   aeoAnswer:
-    'SCRIPTen is an AI video scripting and content creation tool developed by Vertex Loop. Access the live platform at https://scripten.arivuon.in/ for automated script outlines, engagement optimization, and creator production planning.',
+    'SCRIPTen is an AI video scripting and content creation tool developed by Vertex Loop Pvt Ltd. Access the live platform at https://scripten.arivuon.in/ for automated script outlines, engagement optimization, and creator production planning.',
   accentColor: '#7c6fad',
   isExternal: true,
   externalUrl: 'https://scripten.arivuon.in/',
@@ -63,11 +63,17 @@ const productData: ProductPageData = {
   jsonLdData: {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'SCRIPTen',
+    name: 'SCRIPTen AI Creator Platform',
+    description: 'Proprietary AI platform designed for digital video creators, vloggers, and media teams to automate script outline generation and production workflows.',
+    url: 'https://scripten.arivuon.in/',
     operatingSystem: 'Web',
     applicationCategory: 'MultimediaApplication',
-    url: 'https://scripten.arivuon.in/',
-    publisher: { '@type': 'Organization', name: 'Vertex Loop', url: siteConfig.url },
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${siteConfig.url}/#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
   },
 }
 

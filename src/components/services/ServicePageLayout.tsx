@@ -1,11 +1,12 @@
-import type { Metadata } from 'next'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle2, ChevronRight, HelpCircle, Layers } from 'lucide-react'
+import { ArrowRight, CheckCircle2, ChevronRight, HelpCircle, Layers, Globe, MapPin } from 'lucide-react'
 import JsonLd from '@/components/seo/JsonLd'
 import PageHero from '@/components/ui/PageHero'
 import SectionLabel from '@/components/ui/SectionLabel'
+import Breadcrumb from '@/components/seo/Breadcrumb'
+import { getAllIndexableLocations } from '@/lib/geoData'
 
 export interface ServicePageData {
   slug: string
@@ -21,13 +22,34 @@ export interface ServicePageData {
   technologies: string[]
   useCases: string[]
   faq: { q: string; a: string }[]
-  jsonLdData: object
+  jsonLdData: Record<string, unknown> | Array<Record<string, unknown>>
 }
 
 export default function ServicePageLayout({ service }: { service: ServicePageData }) {
+  const indexableLocations = getAllIndexableLocations()
+
+  const breadcrumbItems = [
+    { name: 'Services', url: '/services' },
+    { name: service.title, url: `/services/${service.slug}` },
+  ]
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: service.faq.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  }
+
   return (
     <main className="relative overflow-hidden bg-[#f6f4f0] text-slate-ink min-h-screen">
-      <JsonLd data={service.jsonLdData} id={`${service.slug}-jsonld`} />
+      <JsonLd data={service.jsonLdData} id={`${service.slug}-service-jsonld`} />
+      <JsonLd data={faqSchema} id={`${service.slug}-faq-jsonld`} />
       <Navbar />
 
       {/* Hero */}
@@ -60,8 +82,13 @@ export default function ServicePageLayout({ service }: { service: ServicePageDat
         </div>
       </PageHero>
 
+      {/* Breadcrumb Bar */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 pt-4">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
+
       {/* AEO Summary Box */}
-      <section className="relative py-8 section-padding max-w-5xl mx-auto">
+      <section className="relative py-6 section-padding max-w-5xl mx-auto">
         <div className="glass-card-strong rounded-3xl p-8 border border-white/80 shadow-glass-lg">
           <div className="text-xs font-mono font-bold uppercase tracking-wider mb-2" style={{ color: service.accentColor }}>
             Direct Overview — {service.title}
@@ -71,7 +98,7 @@ export default function ServicePageLayout({ service }: { service: ServicePageDat
       </section>
 
       {/* Core Capabilities */}
-      <section className="relative py-20 section-padding max-w-7xl mx-auto">
+      <section className="relative py-16 section-padding max-w-7xl mx-auto">
         <div className="mb-14 text-center max-w-3xl mx-auto">
           <SectionLabel accent={service.heroAccent} className="mb-4 mx-auto w-fit">
             Technical Capabilities
@@ -102,7 +129,7 @@ export default function ServicePageLayout({ service }: { service: ServicePageDat
       </section>
 
       {/* Process / Methodology */}
-      <section className="relative py-20 section-padding max-w-7xl mx-auto">
+      <section className="relative py-16 section-padding max-w-7xl mx-auto">
         <div className="glass-card rounded-3xl p-10">
           <div className="mb-10">
             <SectionLabel accent={service.heroAccent} className="mb-3">
@@ -128,7 +155,7 @@ export default function ServicePageLayout({ service }: { service: ServicePageDat
       </section>
 
       {/* Technologies & Use Cases */}
-      <section className="relative py-20 section-padding max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <section className="relative py-16 section-padding max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="glass-card rounded-3xl p-8">
           <h3 className="font-semibold text-slate-ink text-lg mb-6 flex items-center gap-2">
             <Layers size={18} style={{ color: service.accentColor }} /> Core Technology Stack
@@ -157,13 +184,56 @@ export default function ServicePageLayout({ service }: { service: ServicePageDat
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* Geographic Reach & Service Areas Bridge */}
+      <section className="relative py-16 section-padding max-w-7xl mx-auto">
+        <div className="glass-card rounded-3xl p-8 sm:p-10 border border-white/80 shadow-glass">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+            <div>
+              <SectionLabel accent={service.heroAccent} className="mb-2">
+                Geographic Service Availability
+              </SectionLabel>
+              <h3 className="text-display font-semibold text-slate-ink text-2xl md:text-3xl">
+                Delivering {service.title} Globally
+              </h3>
+            </div>
+            <Link href="/locations" className="btn-ghost text-xs inline-flex items-center gap-1.5 self-start md:self-auto">
+              <Globe size={14} /> View All Locations Directory
+            </Link>
+          </div>
+
+          <p className="text-slate-mid text-sm font-light leading-relaxed mb-6 max-w-3xl">
+            From our single operational headquarters at <strong>G2, Venkatapuram, Ambattur, Chennai - 600053, Tamil Nadu, India</strong>, Vertex Loop Pvt Ltd provides remote agile delivery pods and on-site architectural consulting for clients across key domestic and international hubs:
+          </p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+            {indexableLocations.map((loc) => (
+              <Link
+                key={loc.slug}
+                href={`/locations/${loc.slugPath.join('/')}`}
+                className="p-3.5 rounded-2xl bg-white/70 border border-white/80 hover:bg-white hover:shadow-glass hover:-translate-y-0.5 transition-all text-left group"
+              >
+                <div className="flex items-center gap-1.5 text-slate-400 text-[11px] font-mono mb-1">
+                  <MapPin size={11} className={loc.isPhysicalHQ ? 'text-[#b04a4a]' : 'text-slate-400'} />
+                  <span className="truncate">{loc.isPhysicalHQ ? 'HQ (Chennai)' : loc.continent}</span>
+                </div>
+                <div className="text-xs font-semibold text-slate-800 group-hover:text-indigo-600 transition-colors truncate">
+                  {loc.name}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Comprehensive AEO FAQ Section */}
       <section className="relative py-20 section-padding max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <SectionLabel accent={service.heroAccent} className="mb-3 mx-auto w-fit">
             Frequently Asked Questions
           </SectionLabel>
-          <h2 className="text-display font-semibold text-slate-ink text-3xl md:text-4xl">Engineering FAQ</h2>
+          <h2 className="text-display font-semibold text-slate-ink text-3xl md:text-4xl">
+            Engineering & Strategic Q&A
+          </h2>
         </div>
 
         <div className="space-y-4">
@@ -186,7 +256,7 @@ export default function ServicePageLayout({ service }: { service: ServicePageDat
             Accelerate Your {service.title} Strategy
           </h3>
           <p className="text-slate-mid text-base max-w-2xl mx-auto font-light mb-8">
-            Partner with Vertex Loop's dedicated engineering team for production-grade execution.
+            Partner with Vertex Loop Pvt Ltd&apos;s dedicated engineering team for production-grade execution.
           </p>
           <Link href="/contact" className="btn-primary py-3.5 px-8 text-sm inline-flex items-center gap-2">
             <span>Start Engineering Discovery</span>
