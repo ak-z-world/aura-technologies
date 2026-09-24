@@ -1,299 +1,140 @@
-"use client";
+'use client'
 
-import { useState, useEffect, useRef } from "react";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import Link from "next/link";
-import { Menu, X, ArrowUpRight, ChevronDown, ExternalLink } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { navVariants } from "@/lib/motion";
-import { NAV_LINKS, SERVICES_NAV, PRODUCTS_NAV } from "@/lib/data";
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { usePathname } from 'next/navigation'
+import { Menu, X, ArrowRight } from 'lucide-react'
+
+const NAV_ITEMS = [
+  { label: 'Software', href: '/software' },
+  { label: 'Marketing', href: '/marketing' },
+  { label: 'Academy', href: '/academy' },
+  { label: 'Contact', href: '/contact' },
+]
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const { scrollY } = useScroll();
-
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    setIsScrolled(latest > 40);
-  });
+  const pathname = usePathname()
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = "hidden";
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = "";
+      document.body.style.overflow = ''
     }
     return () => {
-      document.body.style.overflow = "";
-    };
-  }, [mobileOpen]);
-
-  const handleMouseEnter = (key: string) => {
-    if (dropdownTimeoutRef.current) {
-      clearTimeout(dropdownTimeoutRef.current);
-      dropdownTimeoutRef.current = null;
+      document.body.style.overflow = ''
     }
-    setActiveDropdown(key);
-  };
-
-  const handleMouseLeave = () => {
-    dropdownTimeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null);
-    }, 150);
-  };
+  }, [mobileMenuOpen])
 
   return (
-    <>
-      <motion.header
-        variants={navVariants}
-        initial="hidden"
-        animate="visible"
-        className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-          isScrolled ? "py-3" : "py-6",
-        )}>
-        <div
-          className={cn(
-            "mx-4 md:mx-8 lg:mx-16 rounded-2xl transition-all duration-500",
-            isScrolled ? "glass-card-strong px-6 py-3" : "px-6 py-2",
-          )}>
-          <nav className="flex items-center justify-between" aria-label="Main Navigation">
-            {/* Logo */}
-            <Link href="/" className="flex items-center group" aria-label="Vertex Loop Pvt Ltd Homepage">
-              <div className="relative w-32 sm:w-36 lg:w-40 transition-all duration-300 group-hover:scale-[1.02]">
-                <img
-                  src="/logo.png"
-                  alt="Vertex Loop Pvt Ltd Technology Ecosystem"
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-            </Link>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-[0_1px_3px_rgba(0,0,0,0.05)] border-b border-[#1a2333]/8 py-3.5'
+          : 'bg-white border-b border-[#1a2333]/8 py-4'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+        {/* Logo */}
+        <Link
+          href="/"
+          className="flex items-center gap-2 transition-opacity hover:opacity-90"
+          aria-label="Vertex Loop Pvt Ltd Homepage"
+        >
+          <div className="relative h-8 sm:h-9 w-36 sm:w-44">
+            <Image
+              src="/logo.png"
+              alt="Vertex Loop Pvt Ltd"
+              fill
+              priority
+              sizes="(max-width: 640px) 144px, 176px"
+              className="object-contain object-left"
+            />
+          </div>
+        </Link>
 
-            {/* Desktop Nav Links */}
-            <div className="hidden lg:flex items-center gap-1">
-              {NAV_LINKS.map((link) => {
-                const isServices = link.href === "/services";
-                const isProducts = link.href === "/products";
-                const isExternal = link.href.startsWith("http");
-
-                if (isServices || isProducts) {
-                  const key = isServices ? "services" : "products";
-                  const items = isServices ? SERVICES_NAV : PRODUCTS_NAV;
-
-                  return (
-                    <div
-                      key={link.href}
-                      className="relative py-1"
-                      onMouseEnter={() => handleMouseEnter(key)}
-                      onMouseLeave={handleMouseLeave}>
-                      <Link
-                        href={link.href}
-                        className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 rounded-xl transition-all duration-200 hover:bg-white/60 flex items-center gap-1.5">
-                        {link.label}
-                        <ChevronDown size={14} className={cn("transition-transform duration-200", activeDropdown === key && "rotate-180")} />
-                      </Link>
-
-                      {/* Dropdown Menu with Hover Bridge */}
-                      {activeDropdown === key && (
-                        <div
-                          className="absolute top-full left-0 pt-2 w-80 z-50"
-                          onMouseEnter={() => handleMouseEnter(key)}
-                          onMouseLeave={handleMouseLeave}>
-                          <div className="p-3 bg-white/95 backdrop-blur-2xl rounded-2xl shadow-xl border border-slate-200/80 animate-in fade-in slide-in-from-top-2 duration-200">
-                            <div className="flex flex-col gap-1">
-                              {items.map((item) => {
-                                const isItemExternal = item.href.startsWith("http");
-                                if (isItemExternal) {
-                                  return (
-                                    <a
-                                      key={item.href}
-                                      href={item.href}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      onClick={() => setActiveDropdown(null)}
-                                      className="p-3 rounded-xl hover:bg-slate-100/80 transition-colors group">
-                                      <div className="text-sm font-semibold text-slate-900 group-hover:text-indigo-600 flex items-center justify-between">
-                                        <span className="flex items-center gap-1.5">
-                                          {item.label}
-                                          <ExternalLink size={12} className="text-slate-400" />
-                                        </span>
-                                        <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                                      </div>
-                                      <p className="text-xs text-slate-500 mt-1 line-clamp-2">{item.description}</p>
-                                    </a>
-                                  );
-                                }
-                                return (
-                                  <Link
-                                    key={item.href}
-                                    href={item.href}
-                                    onClick={() => setActiveDropdown(null)}
-                                    className="p-3 rounded-xl hover:bg-slate-100/80 transition-colors group">
-                                    <div className="text-sm font-semibold text-slate-900 group-hover:text-indigo-600 flex items-center justify-between">
-                                      <span>{item.label}</span>
-                                      <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    </div>
-                                    <p className="text-xs text-slate-500 mt-1 line-clamp-2">{item.description}</p>
-                                  </Link>
-                                );
-                              })}
-                            </div>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  );
-                }
-
-                if (isExternal) {
-                  return (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 rounded-xl transition-all duration-200 hover:bg-white/60 flex items-center gap-1">
-                      <span>{link.label}</span>
-                      <ExternalLink size={12} className="text-slate-400" />
-                    </a>
-                  );
-                }
-
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 rounded-xl transition-all duration-200 hover:bg-white/60">
-                    {link.label}
-                  </Link>
-                );
-              })}
-            </div>
-
-            {/* CTA */}
-            <div className="hidden lg:flex items-center gap-3">
-              <Link href="/contact" className="btn-ghost text-[13px] py-2.5 px-5">
-                Partner With Us
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-8 text-[14px] font-medium" aria-label="Main Navigation">
+          {NAV_ITEMS.map((item) => {
+            const isActive =
+              pathname === item.href || (item.href !== '/' && pathname?.startsWith(item.href))
+            return (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={`relative py-1 transition-colors ${
+                  isActive
+                    ? 'text-[#111827] font-semibold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#111827] after:rounded-full'
+                    : 'text-[#4b5563] hover:text-[#111827]'
+                }`}
+              >
+                {item.label}
               </Link>
-              <Link href="/ecosystem" className="btn-primary text-[13px] py-2.5 px-5">
-                Explore Ecosystem
-                <ArrowUpRight size={14} />
+            )
+          })}
+        </nav>
+
+        {/* Right CTA Button */}
+        <div className="hidden md:flex items-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#181e28] text-white text-[13px] font-medium tracking-wide transition-all duration-200 hover:bg-[#2c3545] hover:shadow-sm"
+          >
+            <span>Start a conversation</span>
+            <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
+          </Link>
+        </div>
+
+        {/* Mobile Hamburger Button */}
+        <button
+          type="button"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden p-2 rounded-lg text-[#1f2937] hover:bg-[#f3f4f6] transition-colors"
+          aria-label="Toggle Navigation Menu"
+          aria-expanded={mobileMenuOpen}
+        >
+          {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu Dropdown */}
+      {mobileMenuOpen && (
+        <div className="md:hidden fixed inset-x-0 top-[65px] bg-white border-b border-[#1a2333]/8 shadow-xl px-6 py-6 transition-all animate-in fade-in slide-in-from-top-2">
+          <nav className="flex flex-col gap-4">
+            {NAV_ITEMS.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-base font-medium text-[#1f2937] hover:text-[#2563eb] py-2 border-b border-gray-100"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <div className="pt-2">
+              <Link
+                href="/contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#181e28] text-white text-sm font-medium tracking-wide"
+              >
+                <span>Start a conversation</span>
+                <ArrowRight size={14} />
               </Link>
             </div>
-
-            {/* Mobile Menu Toggle */}
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl glass-card"
-              aria-label="Toggle navigation menu">
-              {mobileOpen ? (
-                <X size={18} className="text-slate-900" />
-              ) : (
-                <Menu size={18} className="text-slate-900" />
-              )}
-            </button>
           </nav>
         </div>
-      </motion.header>
-
-      {/* Mobile Menu Overlay */}
-      <motion.div
-        initial={false}
-        animate={mobileOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: "100%" }}
-        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed inset-0 z-40 lg:hidden">
-        <div
-          className="absolute inset-0 bg-slate-950/40 backdrop-blur-md"
-          onClick={() => setMobileOpen(false)}
-        />
-        <div className="absolute right-0 top-0 bottom-0 w-80 bg-white shadow-2xl p-6 flex flex-col pt-20 overflow-y-auto">
-          <div className="flex flex-col gap-1">
-            {NAV_LINKS.map((link) => {
-              const isExternal = link.href.startsWith("http");
-              if (isExternal) {
-                return (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setMobileOpen(false)}
-                    className="px-4 py-3 text-base font-semibold text-slate-800 hover:text-slate-950 rounded-xl transition-all hover:bg-slate-100 flex items-center justify-between">
-                    <span>{link.label}</span>
-                    <ExternalLink size={14} className="text-slate-400" />
-                  </a>
-                );
-              }
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="px-4 py-3 text-base font-semibold text-slate-800 hover:text-slate-950 rounded-xl transition-all hover:bg-slate-100">
-                  {link.label}
-                </Link>
-              );
-            })}
-          </div>
-
-          <div className="my-4 h-px bg-slate-200" />
-
-          {/* Quick Product/Service Links on Mobile */}
-          <div className="flex flex-col gap-3">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 px-4">
-              Products
-            </span>
-            {PRODUCTS_NAV.map((p) => {
-              const isExternal = p.href.startsWith("http");
-              if (isExternal) {
-                return (
-                  <a
-                    key={p.href}
-                    href={p.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setMobileOpen(false)}
-                    className="px-4 py-2 text-sm text-slate-700 hover:text-indigo-600 transition-colors flex items-center justify-between">
-                    <span className="flex items-center gap-1.5">
-                      {p.label}
-                      <ExternalLink size={12} className="text-slate-400" />
-                    </span>
-                    <span className="text-[10px] font-mono bg-slate-100 px-2 py-0.5 rounded text-slate-500">{p.tag}</span>
-                  </a>
-                );
-              }
-              return (
-                <Link
-                  key={p.href}
-                  href={p.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="px-4 py-2 text-sm text-slate-700 hover:text-indigo-600 transition-colors flex items-center justify-between">
-                  <span>{p.label}</span>
-                  <span className="text-[10px] font-mono bg-slate-100 px-2 py-0.5 rounded text-slate-500">{p.tag}</span>
-                </Link>
-              );
-            })}
-          </div>
-
-          <div className="mt-auto pt-6 flex flex-col gap-3">
-            <Link
-              href="/contact"
-              className="btn-ghost text-center justify-center text-sm py-3"
-              onClick={() => setMobileOpen(false)}>
-              Partner With Us
-            </Link>
-            <Link
-              href="/ecosystem"
-              className="btn-primary text-center justify-center text-sm py-3"
-              onClick={() => setMobileOpen(false)}>
-              Explore Ecosystem
-              <ArrowUpRight size={14} />
-            </Link>
-          </div>
-        </div>
-      </motion.div>
-    </>
-  );
+      )}
+    </header>
+  )
 }

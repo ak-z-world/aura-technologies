@@ -52,14 +52,14 @@ export default function TermsConditionsPage() {
       {/* Main Content Area */}
       <section className="relative py-16 section-padding max-w-4xl mx-auto">
         <div className="glass-card-strong rounded-3xl p-8 sm:p-12 border border-white/80 shadow-glass-lg space-y-10">
-          
+
           {/* Section 1: Introduction & Acceptance */}
           <div>
             <h2 className="text-display text-2xl font-semibold text-slate-ink mb-4 flex items-center gap-2">
               <Scale size={22} className="text-[#a07830]" /> 1. Introduction & Acceptance of Terms
             </h2>
             <p className="text-slate-mid text-sm leading-relaxed font-light mb-3">
-              These Terms and Conditions (&ldquo;Terms&rdquo;) govern your access to and use of <code>https://www.vertexloop.in</code> (the &ldquo;Website&rdquo;), operated by Vertex Loop Pvt Ltd (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;).
+              These Terms and Conditions (&ldquo;Terms&rdquo;) govern your access to and use of <code>https://vertex-loop.vercel.app</code> (the &ldquo;Website&rdquo;), operated by Vertex Loop Pvt Ltd (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;).
             </p>
             <p className="text-slate-mid text-sm leading-relaxed font-light">
               By browsing, accessing, or interacting with this Website, you agree to comply with and be bound by these Terms. If you do not agree with any part of these Terms, you should discontinue use of the Website immediately.

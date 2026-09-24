@@ -1,6 +1,6 @@
 # Vertex Loop — Master SEO & Search Presence Implementation Plan
 
-**Target Domain:** `https://www.vertexloop.in/`  
+**Target Domain:** `https://vertex-loop.vercel.app/`  
 **Execution Lead:** Principal Technical SEO Architect & Web Systems Engineer  
 
 ---

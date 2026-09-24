@@ -4,10 +4,10 @@ export const siteConfig = {
   legalName: "Vertex Loop Pvt Ltd",
   description:
     "Vertex Loop Pvt Ltd is an enterprise technology ecosystem providing custom AI development, autonomous agents, RAG systems, bespoke software engineering, cloud DevOps, digital marketing, and Crack Leap technology academy.",
-  url: "https://www.vertexloop.in",
+  url: "https://vertex-loop.vercel.app",
   academyUrl: "https://crackleap.vertexloop.in",
-  ogImage: "https://www.vertexloop.in/og-image.png",
-  logo: "https://www.vertexloop.in/logo.png",
+  ogImage: "https://vertex-loop.vercel.app/og-image.png",
+  logo: "https://vertex-loop.vercel.app/logo.png",
   email: "hello@vertexloop.in",
   telephone: "+91 94457 70160",
   phoneRaw: "9445770160",

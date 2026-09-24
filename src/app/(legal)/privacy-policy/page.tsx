@@ -50,14 +50,14 @@ export default function PrivacyPolicyPage() {
       {/* Main Content Area */}
       <section className="relative py-16 section-padding max-w-4xl mx-auto">
         <div className="glass-card-strong rounded-3xl p-8 sm:p-12 border border-white/80 shadow-glass-lg space-y-10">
-          
+
           {/* Section 1: Introduction */}
           <div>
             <h2 className="text-display text-2xl font-semibold text-slate-ink mb-4 flex items-center gap-2">
               <ShieldCheck size={22} className="text-[#7c6fad]" /> 1. Introduction
             </h2>
             <p className="text-slate-mid text-sm leading-relaxed font-light mb-3">
-              Vertex Loop Pvt Ltd (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) operates the website <code>https://www.vertexloop.in</code> and affiliated digital platforms. This Privacy Policy outlines how we collect, store, process, and protect information when you visit our website or interact with our consulting services and software product showcases.
+              Vertex Loop Pvt Ltd (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) operates the website <code>https://vertex-loop.vercel.app</code> and affiliated digital platforms. This Privacy Policy outlines how we collect, store, process, and protect information when you visit our website or interact with our consulting services and software product showcases.
             </p>
             <p className="text-slate-mid text-sm leading-relaxed font-light">
               By accessing or using our website, you acknowledge the terms set forth in this policy. If you have any questions regarding our privacy practices, please contact us at <code>hello@vertexloop.in</code>.
@@ -74,7 +74,7 @@ export default function PrivacyPolicyPage() {
             <p className="text-slate-mid text-sm leading-relaxed font-light mb-4">
               We distinguish between information you voluntarily provide and technical data collected automatically during your visit.
             </p>
-            
+
             <div className="space-y-4">
               <div className="p-5 rounded-2xl bg-white/60 border border-white/80">
                 <h3 className="font-semibold text-slate-ink text-sm mb-2">A. Information You Voluntarily Provide</h3>

@@ -7,11 +7,11 @@ import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Global Technology & Software Solutions | Vertex Loop',
-    template: '%s | Vertex Loop',
+    default: 'Vertex Loop Pvt Ltd | Software, Digital Marketing & Education',
+    template: '%s | Vertex Loop Pvt Ltd',
   },
   description:
-    'Vertex Loop Pvt Ltd is an enterprise technology company and software ecosystem providing custom AI development, autonomous agents, RAG systems, bespoke software engineering, cloud DevOps, digital marketing, and Crack Leap technology academy.',
+    'Vertex Loop Pvt Ltd operates across software, digital marketing and education to design products, support growth, and develop practical learning solutions.',
   keywords: [
     'Vertex Loop Pvt Ltd',
     'Vertex Loop',
@@ -175,10 +175,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+          rel="stylesheet"
+        />
         <JsonLd data={organizationSchema} id="org-jsonld" />
         <JsonLd data={webSiteSchema} id="website-jsonld" />
       </head>
-      <body className="antialiased font-sans bg-slate-50 text-slate-900">
+      <body className="antialiased font-body bg-[#faf9f5] text-[#111827] min-h-screen">
         <Suspense fallback={null}>
           <GoogleAnalytics />
         </Suspense>

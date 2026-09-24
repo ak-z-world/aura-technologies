@@ -17,8 +17,8 @@
 
 ## 2. Special Policy: `/academy` Route & Crack Leap Mapping
 
-* **Route:** `/academy` (`https://www.vertexloop.in/academy`)
+* **Route:** `/academy` (`https://vertex-loop.vercel.app/academy`)
 * **Policy:** Preserved as an internal canonical page on Vertex Loop that serves as an authoritative **Crack Leap Ecosystem Overview Hub**.
-* **Canonical Header:** `https://www.vertexloop.in/academy`
+* **Canonical Header:** `https://vertex-loop.vercel.app/academy`
 * **Outbound Referral Link:** Prominently links to Crack Leap's standalone subdomain `https://crackleap.vertexloop.in`.
 * **Rationale:** Preserves existing internal linking and search authority while establishing clear brand entity boundaries between Vertex Loop (parent platform) and Crack Leap (education platform).
