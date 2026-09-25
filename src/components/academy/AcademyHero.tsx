@@ -44,7 +44,7 @@ export default function AcademyHero() {
             {/* Supporting Copy */}
             <p className="text-base sm:text-lg md:text-[18px] text-[#4b5563] font-light leading-relaxed max-w-lg mb-9">
               CrackLeap is a technology training initiative focused on practical software
-              development, AI, cloud, data and modern digital skills.
+              development, AI, and modern digital skills.
             </p>
 
             {/* Dual CTAs */}

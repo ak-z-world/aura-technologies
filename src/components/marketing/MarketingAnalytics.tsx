@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Eye, Users, MousePointer, BarChart2, Database } from 'lucide-react'
+import { ArrowRight, Eye, Users, MousePointer, BarChart2 } from 'lucide-react'
 
 const ANALYTICS_STAGES = [
   {
@@ -25,12 +25,6 @@ const ANALYTICS_STAGES = [
     subtitle: 'Analyse meaningful actions',
     icon: BarChart2,
     iconBg: 'bg-purple-50/90 text-purple-600 border-purple-100',
-  },
-  {
-    title: 'Retention',
-    subtitle: 'Support ongoing growth',
-    icon: Database,
-    iconBg: 'bg-sky-50/90 text-sky-600 border-sky-100',
   },
 ]
 

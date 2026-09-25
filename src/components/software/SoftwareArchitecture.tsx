@@ -51,10 +51,7 @@ export default function SoftwareArchitecture() {
                   <div className="h-9 rounded-lg bg-gradient-to-r from-indigo-50 to-indigo-100/70 border border-indigo-200/60 flex items-center justify-center text-[11px] font-medium text-indigo-900 shadow-sm">
                     Business Logic
                   </div>
-                  {/* Layer 4: Data */}
-                  <div className="h-9 rounded-lg bg-gradient-to-r from-blue-50 to-blue-100/70 border border-blue-200/60 flex items-center justify-center text-[11px] font-medium text-blue-900 shadow-sm">
-                    Data Layer
-                  </div>
+                  
                   {/* Layer 5: AI / Automation */}
                   <div className="h-9 rounded-lg bg-gradient-to-r from-purple-50 to-purple-100/70 border border-purple-200/60 flex items-center justify-center text-[11px] font-medium text-purple-900 shadow-sm">
                     AI &amp; Automation

@@ -11,7 +11,7 @@ export default function SoftwareHeroVisual() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-full drop-shadow-sm overflow-visible"
-        aria-label="Software Architecture Layers: Applications, AI, Data, Automation, Cloud"
+        aria-label="Software Architecture Layers: Applications, AI, Automation"
       >
         <defs>
           {/* Layer 1 - Applications (Amber/Gold) */}
@@ -26,22 +26,10 @@ export default function SoftwareHeroVisual() {
             <stop offset="100%" stopColor="#bae6fd" stopOpacity="0.85" />
           </linearGradient>
 
-          {/* Layer 3 - Data (Blue) */}
-          <linearGradient id="layer3Top" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#eff6ff" stopOpacity="0.95" />
-            <stop offset="100%" stopColor="#bfdbfe" stopOpacity="0.8" />
-          </linearGradient>
-
-          {/* Layer 4 - Automation (Warm Sand/Peach) */}
+          {/* Layer 3 - Automation (Warm Sand/Peach) */}
           <linearGradient id="layer4Top" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#fff7ed" stopOpacity="0.95" />
             <stop offset="100%" stopColor="#fed7aa" stopOpacity="0.8" />
-          </linearGradient>
-
-          {/* Layer 5 - Cloud (Ice/Slate) */}
-          <linearGradient id="layer5Top" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#f8fafc" stopOpacity="0.95" />
-            <stop offset="100%" stopColor="#e2e8f0" stopOpacity="0.85" />
           </linearGradient>
 
           {/* Soft shadow filter */}
@@ -116,37 +104,7 @@ export default function SoftwareHeroVisual() {
           </text>
         </g>
 
-        {/* LAYER 3: DATA (y: 200) */}
-        <g className="transition-transform duration-300 hover:scale-105" filter="url(#layerShadow)">
-          <polygon
-            points="160,160 250,205 160,250 70,205"
-            fill="url(#layer3Top)"
-            stroke="#2563eb"
-            strokeWidth="0.75"
-            strokeOpacity="0.4"
-          />
-          <polygon points="70,205 160,250 160,258 70,213" fill="#bfdbfe" fillOpacity="0.6" />
-          <polygon points="250,205 160,250 160,258 250,213" fill="#60a5fa" fillOpacity="0.5" />
-          <circle cx="160" cy="205" r="3" fill="#2563eb" />
-        </g>
-        {/* Layer 3 Callout */}
-        <g>
-          <path d="M 250 205 L 305 205 L 330 185 L 350 185" stroke="#cbd5e1" strokeWidth="1" fill="none" />
-          <rect x="360" y="167" width="34" height="34" rx="8" fill="#eff6ff" stroke="#dbeafe" strokeWidth="1" />
-          <g transform="translate(370, 176)" stroke="#2563eb" strokeWidth="1.6" fill="none">
-            <ellipse cx="7" cy="3" rx="7" ry="2.5" />
-            <path d="M 0 3 V 10 C 0 11.5 3.5 13 7 13 C 10.5 13 14 11.5 14 10 V 3" />
-            <path d="M 0 6.5 C 0 8 3.5 9.5 7 9.5 C 10.5 9.5 14 8 14 6.5" />
-          </g>
-          <text x="404" y="181" fontFamily="var(--font-body, sans-serif)" fontSize="12" fontWeight="700" fill="#111827">
-            Data
-          </text>
-          <text x="404" y="195" fontFamily="var(--font-body, sans-serif)" fontSize="10.5" fill="#64748b" fontWeight="400">
-            Analytics
-          </text>
-        </g>
-
-        {/* LAYER 4: AUTOMATION (y: 270) */}
+        {/* LAYER 3: AUTOMATION (y: 270) */}
         <g className="transition-transform duration-300 hover:scale-105" filter="url(#layerShadow)">
           <polygon
             points="160,230 250,275 160,320 70,275"

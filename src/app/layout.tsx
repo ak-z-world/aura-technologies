@@ -151,7 +151,6 @@ const organizationSchema = {
     'Natural Language Processing',
     'Generative AI',
     'Large Language Models',
-    'Data Analytics',
     'Workflow Automation',
     'Cloud Software',
     'Digital Marketing Services',

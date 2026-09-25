@@ -34,14 +34,6 @@ const LEARNING_AREAS = [
     iconColor: 'text-purple-600 bg-purple-50/80 border-purple-200',
     href: '/contact?subject=AI%20and%20Machine%20Learning',
   },
-  {
-    title: 'Data Science',
-    description:
-      'Data analysis, machine learning, data workflows and practical data-driven development.',
-    icon: Database,
-    iconColor: 'text-rose-600 bg-rose-50/80 border-rose-200',
-    href: '/contact?subject=Data%20Science',
-  },
 ]
 
 export default function AcademyLearningAreas() {

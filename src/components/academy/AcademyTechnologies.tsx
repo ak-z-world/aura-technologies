@@ -4,10 +4,6 @@ const TECH_CATEGORIES = [
     items: ['Python', 'Django', 'React', 'Next.js', 'JavaScript'],
   },
   {
-    category: 'Data',
-    items: ['SQL', 'Data Science', 'Machine Learning', 'Data Analysis'],
-  },
-  {
     category: 'AI',
     items: ['Artificial Intelligence', 'Generative AI', 'LLMs', 'AI Applications'],
   },

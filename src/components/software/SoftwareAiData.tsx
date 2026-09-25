@@ -68,7 +68,7 @@ export default function SoftwareAiData() {
           {/* Left Column: Editorial Headline & Copy */}
           <div className="lg:col-span-5 flex flex-col items-start">
             <span className="text-[11px] font-mono font-semibold tracking-[0.16em] uppercase text-[#64748b] block mb-3">
-              AI / DATA / AUTOMATION
+              AI / AUTOMATION
             </span>
 
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#111827] tracking-[-0.03em] leading-tight mb-5">
@@ -80,7 +80,7 @@ export default function SoftwareAiData() {
             <p className="text-sm md:text-base text-[#4b5563] font-light leading-relaxed">
               Vertex Loop develops software that can incorporate artificial intelligence, machine
               learning, deep learning, natural language processing, computer vision, generative AI,
-              large language models, data analytics and automation.
+              large language models and automation.
             </p>
           </div>
 

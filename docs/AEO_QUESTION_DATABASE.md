@@ -17,7 +17,7 @@
 ## 2. Dedicated Education Brand: Crack Leap
 
 ### Q: What is Crack Leap?
-**A:** Crack Leap is Vertex Loop's dedicated technology education ecosystem. Hosted at `https://crackleap.vertexloop.in`, Crack Leap delivers intensive engineering bootcamps and corporate tech upskilling programs in Applied AI & ML, Full-Stack Software Architecture, Cloud Native DevOps, and Data Science.
+**A:** Crack Leap is Vertex Loop's dedicated technology education ecosystem. Hosted at `https://crackleap.vertexloop.in`, Crack Leap delivers intensive engineering bootcamps and corporate tech upskilling programs in Applied AI & ML, Full-Stack Software Architecture, Cloud Native DevOps.
 
 ### Q: What is the relationship between Vertex Loop and Crack Leap?
 **A:** Crack Leap operates as the technology education and bootcamp arm under the Vertex Loop corporate ecosystem. Vertex Loop builds enterprise AI and software solutions, while Crack Leap trains and upskills software engineers and corporate tech teams.

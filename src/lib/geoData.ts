@@ -197,7 +197,7 @@ export const GEO_LOCATIONS: GeoEntity[] = [
       'Proprietary SaaS: ERP, HRMS, Invoicing, SCRIPTen',
     ],
     academyOfferings: [
-      'Python Programming & Data Engineering',
+      'Python Programming',
       'Generative AI & Agentic AI Bootcamps',
       'AWS Cloud Architecture & Kubernetes DevOps',
       'College Campus Placement Training & Workshops',
