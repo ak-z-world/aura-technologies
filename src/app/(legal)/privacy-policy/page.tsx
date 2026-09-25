@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
               <ShieldCheck size={22} className="text-[#7c6fad]" /> 1. Introduction
             </h2>
             <p className="text-slate-mid text-sm leading-relaxed font-light mb-3">
-              Vertex Loop Pvt Ltd (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) operates the website <code>https://vertexloop.in</code> and affiliated digital platforms. This Privacy Policy outlines how we collect, store, process, and protect information when you visit our website or interact with our consulting services and software product showcases.
+              Vertex Loop Pvt Ltd (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) operates the website <code>https://vertex-loop.vercel.app</code> and affiliated digital platforms. This Privacy Policy outlines how we collect, store, process, and protect information when you visit our website or interact with our consulting services and software product showcases.
             </p>
             <p className="text-slate-mid text-sm leading-relaxed font-light">
               By accessing or using our website, you acknowledge the terms set forth in this policy. If you have any questions regarding our privacy practices, please contact us at <code>hello@vertexloop.in</code>.

@@ -8,7 +8,7 @@
 - Education Initiative: CrackLeap (An education initiative of Vertex Loop Pvt Ltd)
 - Headquarters / Registration: Ambattur, Chennai, Tamil Nadu, India
 - Operating Scope: India & International
-- Primary Website: https://vertexloop.in
+- Primary Website: https://vertex-loop.vercel.app
 
 ## Core Domains & Capabilities
 
@@ -31,10 +31,10 @@
 - Formats: Digital, Offline, Hybrid
 
 ## Primary Canonical URLs
-- Home: https://vertexloop.in/
-- Software: https://vertexloop.in/software
-- Marketing: https://vertexloop.in/marketing
-- Academy: https://vertexloop.in/academy
-- Contact: https://vertexloop.in/contact
-- Privacy Policy: https://vertexloop.in/privacy-policy
-- Terms & Conditions: https://vertexloop.in/terms-conditions
+- Home: https://vertex-loop.vercel.app/
+- Software: https://vertex-loop.vercel.app/software
+- Marketing: https://vertex-loop.vercel.app/marketing
+- Academy: https://vertex-loop.vercel.app/academy
+- Contact: https://vertex-loop.vercel.app/contact
+- Privacy Policy: https://vertex-loop.vercel.app/privacy-policy
+- Terms & Conditions: https://vertex-loop.vercel.app/terms-conditions

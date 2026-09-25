@@ -32,10 +32,10 @@ graph TD
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://vertexloop.in/#organization",
+  "@id": "https://vertex-loop.vercel.app/#organization",
   "name": "Vertex Loop",
-  "url": "https://vertexloop.in",
-  "logo": "https://vertexloop.in/logo.png",
+  "url": "https://vertex-loop.vercel.app",
+  "logo": "https://vertex-loop.vercel.app/logo.png",
   "description": "Vertex Loop is a next-generation technology ecosystem operating across custom AI development, software engineering, cloud architecture, proprietary business software, and technology education.",
   "sameAs": [
     "https://x.com/LoopVertex99532",
