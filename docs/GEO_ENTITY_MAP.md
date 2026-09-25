@@ -4,7 +4,7 @@
 
 ```mermaid
 graph TD
-    VL["Vertex Loop (Parent Ecosystem)<br/>https://vertex-loop.vercel.app"]
+    VL["Vertex Loop (Parent Ecosystem)<br/>https://vertexloop.in"]
     
     %% Services Branch
     VL --> Services["Services Division"]

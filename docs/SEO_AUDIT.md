@@ -1,7 +1,7 @@
 # Technical SEO & Search Engine Audit Report — Vertex Loop
 
 ## Executive Summary
-This audit evaluates the search engine optimization (SEO), answer engine optimization (AEO), generative engine optimization (GEO), brand entity architecture, analytics infrastructure, and web performance of **Vertex Loop** (`https://vertex-loop.vercel.app/`).
+This audit evaluates the search engine optimization (SEO), answer engine optimization (AEO), generative engine optimization (GEO), brand entity architecture, analytics infrastructure, and web performance of **Vertex Loop** (`https://vertexloop.in/`).
 
 ---
 

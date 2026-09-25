@@ -1,6 +1,6 @@
 # Vertex Loop — International & Global SEO Strategy
 
-**Target Domain:** `https://vertex-loop.vercel.app/`  
+**Target Domain:** `https://vertexloop.in/`  
 **Primary Target Markets:** India, United States, United Kingdom, UAE, Singapore, Australia, Canada, Europe  
 
 ---
@@ -9,7 +9,7 @@
 
 1. **No Low-Quality Doorway Pages:** We do NOT create thousands of auto-generated location pages (e.g. `/ai-company-in-city-x`). All geographic targeting must be grounded in genuine business relevance, enterprise availability, and high-value localized content.
 2. **No Machine Translation Spam:** Content remains in high-quality professional English (`en`) tailored for international decision-makers across global technology hubs.
-3. **Single Canonical Authority Hub:** `https://vertex-loop.vercel.app/` serves as the global entity source of truth with explicit multi-region organization signals.
+3. **Single Canonical Authority Hub:** `https://vertexloop.in/` serves as the global entity source of truth with explicit multi-region organization signals.
 
 ---
 
@@ -37,5 +37,5 @@ In the `Organization` JSON-LD schema on Vertex Loop:
 ## 4. International Citation & Directory Plan
 
 * **Clutch.co / GoodFirms / G2:** List Vertex Loop under Global AI Developers, Enterprise Software Developers, Cloud Consultants.
-* **Crunchbase:** Maintain verified global corporate entity profile linking to `https://vertex-loop.vercel.app/`.
+* **Crunchbase:** Maintain verified global corporate entity profile linking to `https://vertexloop.in/`.
 * **LinkedIn:** Set company page HQ and target regional follower growth across North America, MENA, APAC, and Europe.

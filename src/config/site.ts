@@ -1,7 +1,7 @@
 const rawUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
   process.env.SITE_URL ||
-  'https://vertex-loop.vercel.app'
+  'https://vertexloop.in'
 
 export const siteConfig = {
   name: 'Vertex Loop Pvt Ltd',

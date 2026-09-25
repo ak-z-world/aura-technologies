@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This document details the Google Analytics 4 (GA4) setup and event tracking architecture across the Vertex Loop website (`https://vertex-loop.vercel.app/`).
+This document details the Google Analytics 4 (GA4) setup and event tracking architecture across the Vertex Loop website (`https://vertexloop.in/`).
 
 ---
 

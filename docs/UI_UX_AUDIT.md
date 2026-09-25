@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This document captures the complete visual, responsive, and functional audit of the Vertex Loop website (`https://vertex-loop.vercel.app/`). The primary objective was migrating all dark-themed Services and Products routes to the official Vertex Loop Light Theme design system, resolving hover dropdown bugs, ensuring accurate Crack Leap and SCRIPTen external links, and completing legal compliance pages.
+This document captures the complete visual, responsive, and functional audit of the Vertex Loop website (`https://vertexloop.in/`). The primary objective was migrating all dark-themed Services and Products routes to the official Vertex Loop Light Theme design system, resolving hover dropdown bugs, ensuring accurate Crack Leap and SCRIPTen external links, and completing legal compliance pages.
 
 ---
 

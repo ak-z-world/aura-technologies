@@ -1,6 +1,6 @@
 # Vertex Loop — Content Gap Analysis & Optimization Matrix
 
-**Audited Domain:** `https://vertex-loop.vercel.app/`  
+**Audited Domain:** `https://vertexloop.in/`  
 **Benchmark:** Top 10 Google Organic Rankings & AI Search Snippet Synthesis (Perplexity, SearchGPT, Gemini)  
 
 ---
