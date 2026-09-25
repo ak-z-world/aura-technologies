@@ -27,12 +27,6 @@ const PRODUCTS = [
   },
   {
     step: '05',
-    title: 'Cloud Solutions',
-    description: 'Cloud-based applications and systems designed around modern digital infrastructure.',
-    icon: Database,
-  },
-  {
-    step: '06',
     title: 'Software Products',
     description: 'Proprietary software products, tools and platforms developed for practical use cases.',
     icon: Box,

@@ -27,20 +27,10 @@ const STACK_COLUMNS = [
     items: [
       'AI',
       'Machine Learning',
-      'Deep Learning',
       'Generative AI',
       'LLMs',
       'NLP',
       'Computer Vision',
-    ],
-  },
-  {
-    title: 'Data',
-    icon: Database,
-    items: [
-      'Data Analytics',
-      'Data Processing',
-      'Data-driven Systems',
     ],
   },
   {

@@ -7,8 +7,8 @@ const DOMAIN_CARDS = [
     label: 'SOFTWARE',
     title: 'Software & AI',
     description:
-      'Software products, web and mobile applications, SaaS, PaaS and cloud-based solutions across modern software and AI technologies.',
-    tags: 'AI · ML · GenAI · Data · Automation · Cloud',
+      'Software products, web and mobile applications, SaaS and PaaS solutions across modern software and AI technologies.',
+    tags: 'AI · ML · GenAI · Automation · Cloud',
     ctaText: 'Explore Software',
     href: '/software',
     icon: Code2,
@@ -32,7 +32,7 @@ const DOMAIN_CARDS = [
     title: 'Education & Academy',
     description:
       'Technology-enabled learning through digital courses, skill development, training, assessment and personalised learning solutions.',
-    tags: 'Courses · Training · LMS · Assessment · AI Learning',
+    tags: 'Courses · Training · Assessment · AI Learning',
     ctaText: 'Explore Academy',
     href: '/academy',
     icon: GraduationCap,

@@ -19,12 +19,10 @@ const CAPABILITY_COLUMNS = [
     items: [
       'Artificial Intelligence',
       'Machine Learning',
-      'Deep Learning',
       'Generative AI',
       'LLMs',
       'NLP',
       'Computer Vision',
-      'Data Analytics',
     ],
   },
   {
@@ -44,7 +42,6 @@ const CAPABILITY_COLUMNS = [
     title: 'EDUCATION',
     icon: GraduationCap,
     items: [
-      'LMS',
       'Digital Learning',
       'Courses',
       'Assessment',

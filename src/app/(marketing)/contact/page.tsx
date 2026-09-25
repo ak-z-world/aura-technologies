@@ -4,17 +4,27 @@ import JsonLd from '@/components/seo/JsonLd'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Contact Our Engineering Team',
+  title: {
+    absolute: 'Contact Vertex Loop Pvt Ltd | Software, Marketing & Academy',
+  },
   description:
-    'Connect with Vertex Loop Pvt Ltd at our Ambattur, Chennai headquarters (G2, Venkatapuram, 600053). Phone: +91 94457 70160. Email: hello@vertexloop.in. Inquiries for AI, software, cloud & training.',
+    'Contact Vertex Loop Pvt Ltd about software products, digital marketing, technology solutions, training and CrackLeap learning initiatives.',
   alternates: {
     canonical: `${siteConfig.url}/contact`,
   },
   openGraph: {
-    title: 'Contact Our Engineering Team | Vertex Loop',
+    title: 'Contact Vertex Loop Pvt Ltd | Software, Marketing & Academy',
     description:
-      'Connect with Vertex Loop Pvt Ltd at our Ambattur, Chennai headquarters. Direct phone: +91 94457 70160. Email: hello@vertexloop.in.',
+      'Contact Vertex Loop Pvt Ltd about software products, digital marketing, technology solutions, training and CrackLeap learning initiatives.',
     url: `${siteConfig.url}/contact`,
+    siteName: 'Vertex Loop Pvt Ltd',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Vertex Loop Pvt Ltd | Software, Marketing & Academy',
+    description:
+      'Contact Vertex Loop Pvt Ltd about software products, digital marketing, technology solutions, training and CrackLeap learning initiatives.',
   },
 }
 

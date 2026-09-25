@@ -34,11 +34,6 @@ const ACADEMY_CAPABILITIES = [
     icon: ShieldCheck,
   },
   {
-    title: 'LMS',
-    subtitle: 'Learning platforms',
-    icon: LayoutDashboard,
-  },
-  {
     title: 'Assessment',
     subtitle: 'Evaluation tools',
     icon: FileCheck,
@@ -47,11 +42,6 @@ const ACADEMY_CAPABILITIES = [
     title: 'Personalised Learning',
     subtitle: 'Adaptive learning',
     icon: Compass,
-  },
-  {
-    title: 'AI-enabled Learning',
-    subtitle: 'Technology-driven',
-    icon: Sparkles,
   },
 ]
 

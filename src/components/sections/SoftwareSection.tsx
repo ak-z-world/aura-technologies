@@ -17,9 +17,7 @@ const CAPABILITIES = [
   { name: 'Web Applications', icon: Globe },
   { name: 'Mobile Applications', icon: Smartphone },
   { name: 'SaaS & PaaS', icon: Layers },
-  { name: 'Cloud Solutions', icon: Cloud },
   { name: 'AI & Machine Learning', icon: Sparkles },
-  { name: 'Data Analytics', icon: BarChart3 },
   { name: 'Automation', icon: Cpu },
 ]
 

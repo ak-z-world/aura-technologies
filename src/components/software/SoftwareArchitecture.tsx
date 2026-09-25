@@ -4,16 +4,13 @@ const ARCH_LAYERS = [
   { name: 'User', sub: 'End users and stakeholders' },
   { name: 'Application', sub: 'Web, Mobile or SaaS' },
   { name: 'Business Logic', sub: 'Core functionality and workflows' },
-  { name: 'Data', sub: 'Data storage and processing' },
   { name: 'AI / Automation', sub: 'Intelligence and automation' },
-  { name: 'Cloud / Infrastructure', sub: 'Deployment and infrastructure' },
 ]
 
 const RD_AREAS = [
   { label: 'Software', icon: Code2 },
   { label: 'AI', icon: Brain },
   { label: 'ML', icon: Cpu },
-  { label: 'Data', icon: Database },
   { label: 'Automation', icon: Workflow },
 ]
 

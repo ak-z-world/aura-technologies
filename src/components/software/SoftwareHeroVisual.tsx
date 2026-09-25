@@ -23,15 +23,6 @@ const LAYERS = [
     rightColor: '#38bdf8',
   },
   {
-    name: 'Data',
-    sub: 'Analytics',
-    icon: Database,
-    color: '#2563eb',
-    topColor: '#dbeafe',
-    leftColor: '#bfdbfe',
-    rightColor: '#60a5fa',
-  },
-  {
     name: 'Automation',
     sub: 'Workflows',
     icon: Workflow,
@@ -39,15 +30,6 @@ const LAYERS = [
     topColor: '#ffedd5',
     leftColor: '#fed7aa',
     rightColor: '#fb923c',
-  },
-  {
-    name: 'Cloud',
-    sub: 'Infrastructure',
-    icon: Cloud,
-    color: '#475569',
-    topColor: '#f1f5f9',
-    leftColor: '#e2e8f0',
-    rightColor: '#94a3b8',
   },
 ]
 

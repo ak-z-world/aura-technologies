@@ -26,13 +26,6 @@ const TECH_MATRIX = [
     bg: 'bg-sky-50 text-sky-700 border-sky-100',
   },
   {
-    code: 'DL',
-    name: 'Deep Learning',
-    icon: Layers,
-    accent: '#4f46e5',
-    bg: 'bg-indigo-50 text-indigo-700 border-indigo-100',
-  },
-  {
     code: 'NLP',
     name: 'Natural Language Processing',
     icon: MessageSquare,
@@ -59,13 +52,6 @@ const TECH_MATRIX = [
     icon: FileCode,
     accent: '#9333ea',
     bg: 'bg-fuchsia-50 text-fuchsia-700 border-fuchsia-100',
-  },
-  {
-    code: 'Data',
-    name: 'Data Analytics',
-    icon: BarChart2,
-    accent: '#d97706',
-    bg: 'bg-amber-50 text-amber-700 border-amber-100',
   },
   {
     code: 'Automation',

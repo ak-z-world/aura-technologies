@@ -88,10 +88,10 @@ export default function Navbar() {
         {/* Right CTA Button */}
         <div className="hidden md:flex items-center">
           <Link
-            href="/contact"
+            href={pathname?.startsWith('/academy') ? '#courses' : '/contact'}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#181e28] text-white text-[13px] font-medium tracking-wide transition-all duration-200 hover:bg-[#2c3545] hover:shadow-sm"
           >
-            <span>Start a conversation</span>
+            <span>{pathname?.startsWith('/academy') ? 'Explore Courses' : 'Start a conversation'}</span>
             <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>

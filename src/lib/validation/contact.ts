@@ -139,24 +139,25 @@ export function validateContactInquiry(raw: unknown): ValidationResult {
     errors.email = 'Invalid email format.'
   }
 
-  // 4. Phone Number (Required)
+  // 4. Phone Number (Optional)
   const rawPhone = typeof payload.phone === 'string' ? payload.phone.trim() : ''
   const digitsOnly = rawPhone.replace(/\D/g, '')
 
-  if (!rawPhone) {
-    errors.phone = 'Phone number is required so our team can reach you.'
-  } else if (digitsOnly.length < 7 || digitsOnly.length > 15 || !PHONE_REGEX.test(rawPhone)) {
-    errors.phone = 'Please provide a valid international or domestic phone number (e.g. +91 94457 70160).'
+  if (rawPhone && (digitsOnly.length < 7 || digitsOnly.length > 15 || !PHONE_REGEX.test(rawPhone))) {
+    errors.phone = 'Please provide a valid phone number (e.g. +91 98765 43210).'
   }
 
-  // 5. Message (Required)
-  const rawMessage = typeof payload.message === 'string' ? payload.message.trim() : ''
+  // 5. Message / Requirement (Required)
+  const rawRequirement = typeof (payload as { requirement?: string }).requirement === 'string' ? (payload as { requirement?: string }).requirement!.trim() : ''
+  const rawMsg = typeof payload.message === 'string' ? payload.message.trim() : ''
+  const rawMessage = rawRequirement || rawMsg
+
   if (!rawMessage) {
-    errors.message = 'Please describe your project or inquiry.'
-  } else if (rawMessage.length < 15) {
-    errors.message = 'Please provide at least 15 characters describing your requirements.'
+    errors.message = 'Please tell us about your requirement.'
+  } else if (rawMessage.length < 10) {
+    errors.message = 'Please provide at least 10 characters describing your requirement.'
   } else if (rawMessage.length > 5000) {
-    errors.message = 'Message cannot exceed 5,000 characters.'
+    errors.message = 'Requirement cannot exceed 5,000 characters.'
   }
 
   // 6. Optional string fields with length guards
@@ -166,8 +167,9 @@ export function validateContactInquiry(raw: unknown): ValidationResult {
   const hearAbout = typeof payload.hearAbout === 'string' ? payload.hearAbout.trim().slice(0, 200) : ''
   const timeline = typeof payload.timeline === 'string' ? payload.timeline.trim().slice(0, 50) : ''
   const budget = typeof payload.budget === 'string' ? payload.budget.trim().slice(0, 50) : ''
-  const engagementType = typeof payload.engagementType === 'string' ? payload.engagementType.trim().slice(0, 50) : ''
-  const service = typeof payload.service === 'string' ? payload.service.trim().slice(0, 100) : ''
+  const rawEnquiryType = typeof (payload as { enquiryType?: string }).enquiryType === 'string' ? (payload as { enquiryType?: string }).enquiryType!.trim().slice(0, 50) : ''
+  const engagementType = rawEnquiryType || (typeof payload.engagementType === 'string' ? payload.engagementType.trim().slice(0, 50) : 'Software')
+  const service = rawEnquiryType || (typeof payload.service === 'string' ? payload.service.trim().slice(0, 100) : 'Software')
 
   // 7. Preferred contact method
   let preferredContactMethod = 'email'
@@ -182,6 +184,8 @@ export function validateContactInquiry(raw: unknown): ValidationResult {
       .filter((d): d is string => typeof d === 'string')
       .map(d => d.trim().slice(0, 50))
       .slice(0, 10)
+  } else if (rawEnquiryType) {
+    divisions = [rawEnquiryType]
   }
 
   if (Object.keys(errors).length > 0) {
