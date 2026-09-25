@@ -1,38 +1,5 @@
 'use client'
 
-import React from 'react'
-import { Layout, Sparkles, Database, Workflow, Cloud } from 'lucide-react'
-
-const LAYERS = [
-  {
-    name: 'Applications',
-    sub: 'Web & Mobile',
-    icon: Layout,
-    color: '#d97706',
-    topColor: '#fef3c7',
-    leftColor: '#fde68a',
-    rightColor: '#f59e0b',
-  },
-  {
-    name: 'AI',
-    sub: 'Intelligence',
-    icon: Sparkles,
-    color: '#0284c7',
-    topColor: '#e0f2fe',
-    leftColor: '#bae6fd',
-    rightColor: '#38bdf8',
-  },
-  {
-    name: 'Automation',
-    sub: 'Workflows',
-    icon: Workflow,
-    color: '#c2410c',
-    topColor: '#ffedd5',
-    leftColor: '#fed7aa',
-    rightColor: '#fb923c',
-  },
-]
-
 export default function SoftwareHeroVisual() {
   return (
     <div className="relative w-full max-w-[540px] aspect-[4/3.4] mx-auto flex items-center justify-center select-none">

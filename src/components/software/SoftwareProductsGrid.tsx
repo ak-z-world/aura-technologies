@@ -1,4 +1,4 @@
-import { Globe, Smartphone, Cloud, Layers, Database, Box } from 'lucide-react'
+import { Globe, Smartphone, Cloud, Layers, Box } from 'lucide-react'
 
 const PRODUCTS = [
   {

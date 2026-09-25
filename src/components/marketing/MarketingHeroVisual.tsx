@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { Search, FileText, Users, BarChart3, Clock, Settings } from 'lucide-react'
 
 export default function MarketingHeroVisual() {
   return (

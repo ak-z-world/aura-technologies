@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, TrendingUp, Cpu, Link as LinkIcon, ArrowDown } from 'lucide-react'
+import { ArrowRight, TrendingUp, Cpu, Link as LinkIcon } from 'lucide-react'
 
 const PERFORMANCE_COLUMNS = [
   {

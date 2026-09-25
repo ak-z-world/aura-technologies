@@ -24,7 +24,6 @@ const VARIANT_MAP: Record<AnimationVariant, Variants> = {
 }
 
 interface Props extends AnimatedSectionProps {
-  as?: 'div' | 'section' | 'article' | 'aside'
   once?: boolean
   margin?: `${number}px` | `${number}%`
 }
@@ -34,7 +33,6 @@ export default function AnimatedSection({
   className,
   delay = 0,
   variant = 'fadeUp',
-  as: Tag = 'div',
   once = true,
   margin = '-100px',
 }: Props) {

@@ -5,36 +5,6 @@ import {
   Sparkles,
   Cpu,
 } from 'lucide-react'
-
-const EQUATION_NODES = [
-  {
-    name: 'Marketing',
-    icon: TrendingUp,
-    color: 'bg-rose-50 text-rose-600 border-rose-200',
-  },
-  {
-    name: 'Software',
-    icon: Code2,
-    color: 'bg-blue-50 text-blue-600 border-blue-200',
-  },
-  {
-    name: 'Data',
-    icon: Database,
-    color: 'bg-amber-50 text-amber-600 border-amber-200',
-  },
-  {
-    name: 'AI',
-    icon: Sparkles,
-    color: 'bg-purple-50 text-purple-600 border-purple-200',
-  },
-  {
-    name: 'Digital Systems',
-    icon: Cpu,
-    color: 'bg-indigo-50 text-indigo-600 border-indigo-200',
-    isResult: true,
-  },
-]
-
 export default function MarketingTechnology() {
   return (
     <section id="technology" className="py-20 md:py-24 bg-[#faf9f5] border-t border-[#1a2333]/6">

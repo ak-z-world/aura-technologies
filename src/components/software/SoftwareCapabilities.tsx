@@ -1,4 +1,4 @@
-import { Layout, Layers, Sparkles, Database, Cog, Code2 } from 'lucide-react'
+import { Layout, Layers, Sparkles, Cog, Code2 } from 'lucide-react'
 
 const STACK_COLUMNS = [
   {

@@ -7,34 +7,39 @@ import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Vertex Loop Pvt Ltd | Software, Digital Marketing & Education',
+    default: 'Vertex Loop Pvt Ltd | Software, Digital Marketing & Technology Education',
     template: '%s | Vertex Loop Pvt Ltd',
   },
   description:
-    'Vertex Loop Pvt Ltd operates across software, digital marketing and education to design products, support growth, and develop practical learning solutions.',
+    'Vertex Loop Pvt Ltd develops software products and technology solutions, provides digital marketing services, and delivers technology education through CrackLeap in India and internationally.',
   keywords: [
     'Vertex Loop Pvt Ltd',
     'Vertex Loop',
-    'AI Development Company',
-    'Custom Software Engineering',
-    'Enterprise AI Solutions',
-    'Autonomous AI Agents',
-    'RAG LLM Applications',
-    'Generative AI Development',
-    'Cloud Architecture AWS DevOps',
-    'WordPress Development',
-    'ERP Software System',
-    'HRMS Software Platform',
-    'Digital Invoicing Software',
-    'SCRIPTen Creator Tool',
-    'Crack Leap Tech Academy',
-    'Python Training Chennai',
-    'AI Training Bootcamps',
-    'College Campus Training Tamil Nadu',
-    'Corporate Software Training India',
-    'Technical SEO AEO GEO Agency',
+    'CrackLeap',
+    'Software Development',
+    'Software Products',
+    'Web Application Development',
+    'Mobile Application Development',
+    'SaaS Development',
+    'PaaS Solutions',
+    'AI Software Development',
+    'Artificial Intelligence',
+    'Machine Learning',
+    'Generative AI',
+    'Workflow Automation',
+    'Cloud Software Solutions',
+    'Digital Marketing Services',
+    'Search Engine Optimisation',
+    'SEO Services',
+    'Social Media Marketing',
+    'Performance Marketing',
+    'Marketing Automation',
+    'Brand Strategy',
+    'Technology Training',
+    'Technology Education',
+    'Software Training',
   ],
-  authors: [{ name: 'Vertex Loop Pvt Ltd Engineering', url: siteConfig.url }],
+  authors: [{ name: 'Vertex Loop Pvt Ltd', url: siteConfig.url }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
   metadataBase: new URL(siteConfig.url),
@@ -42,9 +47,9 @@ export const metadata: Metadata = {
     canonical: './',
   },
   openGraph: {
-    title: 'Global Technology & Software Solutions | Vertex Loop',
+    title: 'Vertex Loop Pvt Ltd | Software, Digital Marketing & Technology Education',
     description:
-      'Vertex Loop Pvt Ltd builds custom AI solutions, autonomous multi-agents, enterprise software engineering, cloud architectures, proprietary products (ERP, HRMS, Invoicing, SCRIPTen), and Crack Leap technology academy.',
+      'Vertex Loop Pvt Ltd develops software products and technology solutions, provides digital marketing services, and delivers technology education through CrackLeap in India and internationally.',
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: 'en_US',
@@ -54,15 +59,15 @@ export const metadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Vertex Loop Pvt Ltd Technology Ecosystem',
+        alt: 'Vertex Loop Pvt Ltd - Software, Digital Marketing & Education',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Global Technology & Software Solutions | Vertex Loop',
+    title: 'Vertex Loop Pvt Ltd | Software, Digital Marketing & Technology Education',
     description:
-      'Vertex Loop Pvt Ltd builds custom AI solutions, autonomous multi-agents, enterprise software engineering, cloud architectures, proprietary products (ERP, HRMS, Invoicing, SCRIPTen), and Crack Leap technology academy.',
+      'Vertex Loop Pvt Ltd develops software products and technology solutions, provides digital marketing services, and delivers technology education through CrackLeap in India and internationally.',
     creator: '@LoopVertex99532',
     images: [siteConfig.ogImage],
   },
@@ -77,10 +82,21 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/site.webmanifest',
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0f172a',
+  themeColor: '#faf9f5',
   width: 'device-width',
   initialScale: 1,
 }
@@ -94,7 +110,7 @@ const organizationSchema = {
   url: siteConfig.url,
   logo: siteConfig.logo,
   image: siteConfig.ogImage,
-  description: siteConfig.description,
+  description: siteConfig.fullDescription,
   email: siteConfig.email,
   telephone: siteConfig.telephone,
   address: {
@@ -113,9 +129,9 @@ const organizationSchema = {
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: siteConfig.telephone,
-    contactType: 'Customer Service & Architectural Inquiries',
+    contactType: 'Customer Service & Business Inquiries',
     email: siteConfig.email,
-    areaServed: ['Worldwide', 'India', 'United States', 'United Kingdom', 'Canada', 'Australia', 'United Arab Emirates', 'Singapore'],
+    areaServed: ['Worldwide', 'India'],
     availableLanguage: ['English', 'Tamil'],
   },
   sameAs: [
@@ -124,33 +140,39 @@ const organizationSchema = {
     siteConfig.links.github,
   ],
   knowsAbout: [
+    'Computer Software',
+    'Software Products',
+    'Web Applications',
+    'Mobile Applications',
+    'SaaS',
+    'PaaS',
     'Artificial Intelligence',
-    'Generative AI Development',
-    'Autonomous Multi-Agent Networks',
-    'RAG / Vector Database Applications',
-    'Custom Software Engineering',
-    'Enterprise Resource Planning (ERP)',
-    'Human Resource Management Systems (HRMS)',
-    'Digital Invoicing Platforms',
-    'Cloud Architecture & AWS DevOps',
-    'Technical SEO, AEO & GEO Optimization',
-    'Python & Software Development Academy Training',
+    'Machine Learning',
+    'Natural Language Processing',
+    'Generative AI',
+    'Large Language Models',
+    'Data Analytics',
+    'Workflow Automation',
+    'Cloud Software',
+    'Digital Marketing Services',
+    'Search Engine Optimisation (SEO)',
+    'Search Engine Marketing (SEM)',
+    'Social Media Marketing',
+    'Performance Marketing',
+    'Brand Strategy',
+    'Technology Training',
+    'CrackLeap Academy',
   ],
   areaServed: [
-    { '@type': 'Place', name: 'Worldwide (Remote Delivery)' },
+    { '@type': 'Place', name: 'Worldwide (International Delivery)' },
     { '@type': 'Country', name: 'India' },
-    { '@type': 'Country', name: 'United States' },
-    { '@type': 'Country', name: 'United Kingdom' },
-    { '@type': 'Country', name: 'Canada' },
-    { '@type': 'Country', name: 'Australia' },
-    { '@type': 'Country', name: 'United Arab Emirates' },
-    { '@type': 'Country', name: 'Singapore' },
   ],
   subOrganization: {
     '@type': 'EducationalOrganization',
-    name: 'Crack Leap',
+    name: 'CrackLeap',
     url: siteConfig.academyUrl,
-    description: 'Vertex Loop Pvt Ltd’s dedicated technology education ecosystem for developer upskilling and corporate training.',
+    description:
+      'CrackLeap is an education initiative of Vertex Loop Pvt Ltd focused on practical technology learning and software training.',
   },
 }
 
@@ -175,12 +197,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
-          rel="stylesheet"
-        />
         <JsonLd data={organizationSchema} id="org-jsonld" />
         <JsonLd data={webSiteSchema} id="website-jsonld" />
       </head>

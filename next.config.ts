@@ -11,45 +11,88 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: '/ai-products',
-        destination: '/products',
+        source: '/about',
+        destination: '/',
         permanent: true,
       },
       {
-        source: '/it-services',
-        destination: '/services/cloud-architecture',
+        source: '/ecosystem',
+        destination: '/software',
         permanent: true,
       },
-
-
       {
-        source: '/software-engineering',
-        destination: '/services/custom-software-development',
+        source: '/why-us',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/locations',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/locations/:slug*',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/products',
+        destination: '/software',
+        permanent: true,
+      },
+      {
+        source: '/products/:slug*',
+        destination: '/software',
+        permanent: true,
+      },
+      {
+        source: '/services',
+        destination: '/software',
+        permanent: true,
+      },
+      {
+        source: '/services/digital-marketing',
+        destination: '/marketing',
+        permanent: true,
+      },
+      {
+        source: '/services/:slug*',
+        destination: '/software',
         permanent: true,
       },
       {
         source: '/digital-marketing',
-        destination: '/services/digital-marketing',
+        destination: '/marketing',
         permanent: true,
       },
       {
-        source: '/scripten',
-        destination: '/products/scripten',
+        source: '/terms-and-conditions',
+        destination: '/terms-conditions',
         permanent: true,
       },
       {
-        source: '/erp',
-        destination: '/products/erp',
+        source: '/terms',
+        destination: '/terms-conditions',
         permanent: true,
       },
       {
-        source: '/invoicing',
-        destination: '/products/invoicing',
+        source: '/privacy',
+        destination: '/privacy-policy',
         permanent: true,
       },
       {
-        source: '/hrms',
-        destination: '/products/hrms',
+        source: '/ai-products',
+        destination: '/software',
+        permanent: true,
+      },
+      {
+        source: '/it-services',
+        destination: '/software',
+        permanent: true,
+      },
+      {
+        source: '/software-engineering',
+        destination: '/software',
         permanent: true,
       },
     ]

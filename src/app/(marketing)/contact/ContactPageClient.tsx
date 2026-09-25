@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import Link from 'next/link'
 import {
   Laptop,
@@ -60,7 +60,7 @@ export default function ContactPageClient() {
 
   // Anti-spam tokens
   const [honeypot, setHoneypot] = useState('')
-  const [formLoadedAt, setFormLoadedAt] = useState<number>(0)
+  const [formLoadedAt] = useState<number>(() => Date.now())
 
   // Status & validation states
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -70,10 +70,6 @@ export default function ContactPageClient() {
 
   const formRef = useRef<HTMLDivElement>(null)
   const nameInputRef = useRef<HTMLInputElement>(null)
-
-  useEffect(() => {
-    setFormLoadedAt(Date.now())
-  }, [])
 
   // Sync selected topic card with enquiry type dropdown
   const handleTopicSelect = (topicId: TopicId) => {

@@ -65,7 +65,7 @@ NEW WEBSITE CONTACT INQUIRY — VERTEX LOOP PVT LTD
 ================================================================================
 
 Submitted At: ${new Date(inquiry.submittedAt).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })} IST
-Source: Vertex Loop Website Contact Form (https://vertex-loop.vercel.app/contact)
+Source: Vertex Loop Website Contact Form (${siteConfig.url}/contact)
 
 1. VISITOR DETAILS:
 --------------------------------------------------------------------------------

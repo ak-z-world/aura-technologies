@@ -1,4 +1,4 @@
-import { FileText, Cpu, Brain, Database, Workflow, Code2, Shield } from 'lucide-react'
+import { FileText, Cpu, Brain, Workflow, Code2 } from 'lucide-react'
 
 const ARCH_LAYERS = [
   { name: 'User', sub: 'End users and stakeholders' },

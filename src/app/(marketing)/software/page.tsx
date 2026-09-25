@@ -15,54 +15,148 @@ import JsonLd from '@/components/seo/JsonLd'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Software Products & AI Solutions | Vertex Loop Pvt Ltd',
+  title: {
+    absolute: 'Software Development & AI Solutions | Vertex Loop Pvt Ltd',
+  },
   description:
-    'Vertex Loop Pvt Ltd designs and develops software products, web and mobile applications, SaaS, PaaS and cloud-based solutions, including systems that use AI, machine learning, data analytics and automation.',
+    'Vertex Loop Pvt Ltd develops software products, web and mobile applications, SaaS, cloud solutions and AI-enabled systems for organisations and users.',
   keywords: [
-    'Vertex Loop Software',
+    'Software Development',
     'Software Products',
-    'Web Applications',
-    'Mobile Applications',
+    'AI Software Development',
+    'Web Application Development',
+    'Mobile Application Development',
     'SaaS Development',
-    'PaaS Architecture',
-    'AI Solutions',
-    'Machine Learning Systems',
+    'PaaS Solutions',
+    'Cloud Software Development',
+    'Artificial Intelligence',
+    'Machine Learning',
+    'Generative AI',
+    'Large Language Models',
+    'Natural Language Processing',
     'Data Analytics',
     'Workflow Automation',
-    'Cloud Architecture',
-    'Enterprise Software Engineering',
+    'Software Platforms',
+    'Custom Software Development',
   ],
   alternates: {
     canonical: `${siteConfig.url}/software`,
   },
   openGraph: {
-    title: 'Software Products & AI Solutions | Vertex Loop Pvt Ltd',
+    title: 'Software Development & AI Solutions | Vertex Loop Pvt Ltd',
     description:
-      'Vertex Loop Pvt Ltd designs and develops software products, web and mobile applications, SaaS, PaaS and cloud-based solutions, including systems that use AI, machine learning, data analytics and automation.',
+      'Vertex Loop Pvt Ltd develops software products, web and mobile applications, SaaS, cloud solutions and AI-enabled systems for organisations and users.',
     url: `${siteConfig.url}/software`,
+    siteName: siteConfig.name,
+    type: 'website',
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'Vertex Loop Pvt Ltd - Software Products & AI Solutions',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Software Development & AI Solutions | Vertex Loop Pvt Ltd',
+    description:
+      'Vertex Loop Pvt Ltd develops software products, web and mobile applications, SaaS, cloud solutions and AI-enabled systems for organisations and users.',
   },
 }
 
-const softwarePageSchema = {
+const softwareServiceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Software Engineering & AI Solutions',
-  serviceType: 'Software Development & Intelligent Systems',
+  '@id': `${siteConfig.url}/software/#service`,
+  name: 'Software Development & AI Solutions',
+  serviceType: 'Software Engineering, Cloud Applications & Artificial Intelligence Systems',
   provider: {
     '@type': 'Organization',
+    '@id': `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     legalName: siteConfig.legalName,
     url: siteConfig.url,
   },
   description:
-    'Vertex Loop Pvt Ltd designs and develops software products, web and mobile applications, SaaS, PaaS and cloud-based solutions, including systems that use AI, machine learning, data analytics and automation.',
-  areaServed: 'Worldwide',
+    'Vertex Loop Pvt Ltd develops software products, web and mobile applications, SaaS, cloud solutions and AI-enabled systems for organisations and users worldwide.',
+  areaServed: [
+    { '@type': 'Place', name: 'Worldwide (International Delivery)' },
+    { '@type': 'Country', name: 'India' },
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Software & Technology Capabilities',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Web Application Development',
+          description: 'Web-based software designed around specific workflows and user needs.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Mobile Application Development',
+          description: 'Mobile applications designed to provide accessible digital experiences.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'SaaS & PaaS Engineering',
+          description: 'Software delivered as a service and platform-oriented environments.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'AI & Machine Learning Development',
+          description: 'Intelligent systems, generative AI, LLM workflows and automated processing.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Software Products & Tools',
+          description: 'Proprietary software products and tools developed for practical use cases.',
+        },
+      },
+    ],
+  },
+}
+
+const softwareBreadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: siteConfig.url,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Software',
+      item: `${siteConfig.url}/software`,
+    },
+  ],
 }
 
 export default function SoftwarePage() {
   return (
     <main className="min-h-screen bg-[#faf9f5] text-[#111827] overflow-x-hidden">
-      <JsonLd data={softwarePageSchema} id="software-page-jsonld" />
+      <JsonLd data={softwareServiceSchema} id="software-service-jsonld" />
+      <JsonLd data={softwareBreadcrumbSchema} id="software-breadcrumb-jsonld" />
 
       {/* 1. Header */}
       <Navbar />

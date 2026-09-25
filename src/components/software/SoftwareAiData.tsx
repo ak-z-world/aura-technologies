@@ -1,12 +1,10 @@
 import {
   Sparkles,
   GitBranch,
-  Layers,
   MessageSquare,
   Eye,
   Bot,
   FileCode,
-  BarChart2,
   Zap,
 } from 'lucide-react'
 

@@ -2,20 +2,22 @@ import type { Metadata } from 'next'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import PageHero from '@/components/ui/PageHero'
-import Link from 'next/link'
-import { FileText, ShieldAlert, CheckCircle2, Scale, ExternalLink, Mail, MapPin } from 'lucide-react'
+import { FileText, ShieldAlert, Scale, ExternalLink, Mail, MapPin } from 'lucide-react'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions',
+  title: {
+    absolute: 'Terms & Conditions | Vertex Loop Pvt Ltd',
+  },
   description:
-    'Read the official terms and conditions governing the use of the Vertex Loop Pvt Ltd website, software architectures, and consulting showcase.',
+    'Read the official terms and conditions governing the use of the Vertex Loop Pvt Ltd website, software architectures, and technology services.',
   alternates: {
     canonical: `${siteConfig.url}/terms-conditions`,
   },
   openGraph: {
-    title: 'Terms & Conditions | Vertex Loop',
-    description: 'Read the official terms and conditions governing the use of Vertex Loop Pvt Ltd.',
+    title: 'Terms & Conditions | Vertex Loop Pvt Ltd',
+    description:
+      'Read the official terms and conditions governing the use of Vertex Loop Pvt Ltd.',
     url: `${siteConfig.url}/terms-conditions`,
   },
 }
@@ -59,7 +61,7 @@ export default function TermsConditionsPage() {
               <Scale size={22} className="text-[#a07830]" /> 1. Introduction & Acceptance of Terms
             </h2>
             <p className="text-slate-mid text-sm leading-relaxed font-light mb-3">
-              These Terms and Conditions (&ldquo;Terms&rdquo;) govern your access to and use of <code>https://vertex-loop.vercel.app</code> (the &ldquo;Website&rdquo;), operated by Vertex Loop Pvt Ltd (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;).
+              These Terms and Conditions (&ldquo;Terms&rdquo;) govern your access to and use of <code>https://vertexloop.in</code> (the &ldquo;Website&rdquo;), operated by Vertex Loop Pvt Ltd (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;).
             </p>
             <p className="text-slate-mid text-sm leading-relaxed font-light">
               By browsing, accessing, or interacting with this Website, you agree to comply with and be bound by these Terms. If you do not agree with any part of these Terms, you should discontinue use of the Website immediately.

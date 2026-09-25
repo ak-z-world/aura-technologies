@@ -6,10 +6,8 @@ import {
   Target,
   Award,
   ShieldCheck,
-  LayoutDashboard,
   FileCheck,
   Compass,
-  Sparkles,
 } from 'lucide-react'
 
 const ACADEMY_CAPABILITIES = [

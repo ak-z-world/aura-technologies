@@ -6,9 +6,7 @@ import {
   Globe,
   Smartphone,
   Layers,
-  Cloud,
   Sparkles,
-  BarChart3,
   Cpu,
 } from 'lucide-react'
 

@@ -1,0 +1,40 @@
+# Vertex Loop Pvt Ltd
+
+> Vertex Loop Pvt Ltd is a technology company focused on software products and technology solutions, digital marketing services, and technology education through CrackLeap. Its software scope includes web and mobile applications, SaaS, PaaS, cloud solutions and AI-enabled systems, while its marketing services cover search, content, social media, performance marketing, analytics and automation. CrackLeap is an education initiative focused on practical technology learning and training.
+
+## Canonical Information
+- Legal Name: Vertex Loop Pvt Ltd
+- Brand Name: Vertex Loop
+- Education Initiative: CrackLeap (An education initiative of Vertex Loop Pvt Ltd)
+- Headquarters / Registration: Ambattur, Chennai, Tamil Nadu, India
+- Operating Scope: India & International
+- Primary Website: https://vertexloop.in
+
+## Core Domains & Capabilities
+
+### 1. Software & Technology Development (/software)
+- Software Products & Applications (Web Applications, Mobile Applications, SaaS, PaaS)
+- AI & Intelligent Systems (Machine Learning, Natural Language Processing, Generative AI, LLMs, Automation)
+- Cloud & Scalable Architecture (Modern distributed systems, cloud infrastructure, APIs)
+
+### 2. Digital Marketing Services (/marketing)
+- Search & Content (Search Engine Optimisation - SEO, Search Engine Marketing - SEM, Content Marketing, Email Marketing, Content Systems)
+- Social Media (Social Media Management, Social Content, Influencer Marketing)
+- Performance Marketing (Digital Advertising, Programmatic Advertising, Affiliate Marketing)
+- Analytics & Automation (Web & App Analytics, Conversion Analysis, Workflow Automation, AI-enabled Marketing Tools)
+- Brand Strategy (Positioning, Digital Communication, Online Reputation Management)
+
+### 3. CrackLeap Technology Academy (/academy)
+- Education initiative by Vertex Loop Pvt Ltd
+- Focus: Practical technology education, hands-on software development, real skill building
+- Core Learning Areas: Python & Django, React & Next.js, AWS & DevOps, AI & Machine Learning, Data Science
+- Formats: Digital, Offline, Hybrid
+
+## Primary Canonical URLs
+- Home: https://vertexloop.in/
+- Software: https://vertexloop.in/software
+- Marketing: https://vertexloop.in/marketing
+- Academy: https://vertexloop.in/academy
+- Contact: https://vertexloop.in/contact
+- Privacy Policy: https://vertexloop.in/privacy-policy
+- Terms & Conditions: https://vertexloop.in/terms-conditions
