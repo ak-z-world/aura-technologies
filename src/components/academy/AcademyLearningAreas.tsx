@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Code2, Layers, Cloud, Sparkles, Database } from 'lucide-react'
+import { ArrowRight, Code2, Layers, Cloud, Sparkles } from 'lucide-react'
 
 const LEARNING_AREAS = [
   {
