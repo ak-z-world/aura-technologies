@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Vertex Loop Pvt Ltd | Software, Marketing & Training',
+    title: 'Contact Vertex Loop | Software, Marketing & Training',
     description:
       'Contact Vertex Loop Pvt Ltd about software products, technology development, digital marketing services or CrackLeap training and education.',
     images: [siteConfig.ogImage],

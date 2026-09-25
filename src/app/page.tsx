@@ -15,17 +15,17 @@ import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Vertex Loop Pvt Ltd | Software, Digital Marketing & Technology Education',
+    absolute: 'Vertex Loop Pvt Ltd | Software, Marketing & Education',
   },
   description:
-    'Vertex Loop Pvt Ltd develops software products and technology solutions, provides digital marketing services, and delivers technology education through CrackLeap in India and internationally.',
+    'Vertex Loop Pvt Ltd develops software products, provides digital marketing services, and delivers practical technology education through CrackLeap.',
   alternates: {
     canonical: siteConfig.url,
   },
   openGraph: {
-    title: 'Vertex Loop Pvt Ltd | Software, Digital Marketing & Technology Education',
+    title: 'Vertex Loop Pvt Ltd | Software, Marketing & Education',
     description:
-      'Vertex Loop Pvt Ltd develops software products and technology solutions, provides digital marketing services, and delivers technology education through CrackLeap in India and internationally.',
+      'Vertex Loop Pvt Ltd develops software products, provides digital marketing services, and delivers practical technology education through CrackLeap.',
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: 'en_IN',
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vertex Loop Pvt Ltd | Software, Digital Marketing & Technology Education',
+    title: 'Vertex Loop | Software, Marketing & Education',
     description:
-      'Vertex Loop Pvt Ltd develops software products and technology solutions, provides digital marketing services, and delivers technology education through CrackLeap in India and internationally.',
+      'Vertex Loop Pvt Ltd develops software products, provides digital marketing services, and delivers practical technology education through CrackLeap.',
     images: [siteConfig.ogImage],
   },
 }
@@ -54,7 +54,7 @@ const homeWebPageSchema = {
   '@type': 'WebPage',
   '@id': `${siteConfig.url}/#webpage`,
   url: siteConfig.url,
-  name: 'Vertex Loop Pvt Ltd | Software, Digital Marketing & Technology Education',
+  name: 'Vertex Loop Pvt Ltd | Software, Marketing & Education',
   description: siteConfig.description,
   isPartOf: {
     '@id': `${siteConfig.url}/#website`,

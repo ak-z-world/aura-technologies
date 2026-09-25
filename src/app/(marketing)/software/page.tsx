@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Software Development & AI Solutions | Vertex Loop Pvt Ltd',
+    title: 'Software Development & AI Solutions | Vertex Loop',
     description:
       'Vertex Loop Pvt Ltd develops software products, web and mobile applications, SaaS, cloud solutions and AI-enabled systems for organisations and users.',
     images: [siteConfig.ogImage],

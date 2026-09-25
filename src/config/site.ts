@@ -10,7 +10,7 @@ export const siteConfig = {
   brandName: 'Vertex Loop',
   academyName: 'CrackLeap',
   description:
-    'Vertex Loop Pvt Ltd develops software products and technology solutions, provides digital marketing services, and delivers technology education through CrackLeap in India and internationally.',
+    'Vertex Loop Pvt Ltd develops software products, provides digital marketing services, and delivers practical technology education through CrackLeap.',
   fullDescription:
     'Vertex Loop Pvt Ltd is a technology company focused on software products and technology solutions, digital marketing services, and technology education through CrackLeap. Its software scope includes web and mobile applications, SaaS, PaaS, cloud solutions and AI-enabled systems, while its marketing services cover search, content, social media, performance marketing, analytics and automation. CrackLeap is an education initiative focused on practical technology learning and training.',
   url: rawUrl,

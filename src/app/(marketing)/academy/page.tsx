@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     absolute: 'CrackLeap | Technology Training & Education by Vertex Loop',
   },
   description:
-    'CrackLeap is an education initiative of Vertex Loop Pvt Ltd focused on practical learning across software development, AI, data, cloud and modern digital technologies.',
+    'CrackLeap is an education initiative of Vertex Loop Pvt Ltd focused on practical learning across software, AI, cloud and modern digital skills.',
   keywords: [
     'CrackLeap',
     'Technology Training',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'CrackLeap | Technology Training & Education by Vertex Loop',
     description:
-      'CrackLeap is an education initiative of Vertex Loop Pvt Ltd focused on practical learning across software development, AI, data, cloud and modern digital technologies.',
+      'CrackLeap is an education initiative of Vertex Loop Pvt Ltd focused on practical learning across software, AI, cloud and modern digital skills.',
     url: `${siteConfig.url}/academy`,
     siteName: siteConfig.name,
     locale: 'en_IN',
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CrackLeap | Technology Training & Education by Vertex Loop',
+    title: 'CrackLeap | Technology Training by Vertex Loop',
     description:
-      'CrackLeap is an education initiative of Vertex Loop Pvt Ltd focused on practical learning across software development, AI, data, cloud and modern digital technologies.',
+      'CrackLeap is an education initiative of Vertex Loop Pvt Ltd focused on practical learning across software, AI, cloud and modern digital skills.',
     images: [siteConfig.ogImage],
   },
 }

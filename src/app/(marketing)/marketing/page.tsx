@@ -17,7 +17,7 @@ import JsonLd from '@/components/seo/JsonLd'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Digital Marketing Services | SEO, Social Media & Performance | Vertex Loop',
+    absolute: 'Digital Marketing Services | SEO & Growth | Vertex Loop',
   },
   description:
     'Vertex Loop Pvt Ltd provides digital marketing services across SEO, SEM, content, social media, performance marketing, analytics, automation and brand strategy.',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     canonical: `${siteConfig.url}/marketing`,
   },
   openGraph: {
-    title: 'Digital Marketing Services | SEO, Social Media & Performance | Vertex Loop',
+    title: 'Digital Marketing Services | SEO & Growth | Vertex Loop',
     description:
       'Vertex Loop Pvt Ltd provides digital marketing services across SEO, SEM, content, social media, performance marketing, analytics, automation and brand strategy.',
     url: `${siteConfig.url}/marketing`,
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Digital Marketing Services | SEO, Social Media & Performance | Vertex Loop',
+    title: 'Digital Marketing Services | Vertex Loop',
     description:
       'Vertex Loop Pvt Ltd provides digital marketing services across SEO, SEM, content, social media, performance marketing, analytics, automation and brand strategy.',
     images: [siteConfig.ogImage],

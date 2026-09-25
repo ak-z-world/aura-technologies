@@ -7,11 +7,11 @@ import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Vertex Loop Pvt Ltd | Software, Digital Marketing & Technology Education',
+    default: 'Vertex Loop Pvt Ltd | Software, Marketing & Education',
     template: '%s | Vertex Loop Pvt Ltd',
   },
   description:
-    'Vertex Loop Pvt Ltd develops software products and technology solutions, provides digital marketing services, and delivers technology education through CrackLeap in India and internationally.',
+    'Vertex Loop Pvt Ltd develops software products, provides digital marketing services, and delivers practical technology education through CrackLeap.',
   keywords: [
     'Vertex Loop Pvt Ltd',
     'Vertex Loop',
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     canonical: './',
   },
   openGraph: {
-    title: 'Vertex Loop Pvt Ltd | Software, Digital Marketing & Technology Education',
+    title: 'Vertex Loop Pvt Ltd | Software, Marketing & Education',
     description:
-      'Vertex Loop Pvt Ltd develops software products and technology solutions, provides digital marketing services, and delivers technology education through CrackLeap in India and internationally.',
+      'Vertex Loop Pvt Ltd develops software products, provides digital marketing services, and delivers practical technology education through CrackLeap.',
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: 'en_IN',
@@ -66,9 +66,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vertex Loop Pvt Ltd | Software, Digital Marketing & Technology Education',
+    title: 'Vertex Loop | Software, Marketing & Education',
     description:
-      'Vertex Loop Pvt Ltd develops software products and technology solutions, provides digital marketing services, and delivers technology education through CrackLeap in India and internationally.',
+      'Vertex Loop Pvt Ltd develops software products, provides digital marketing services, and delivers practical technology education through CrackLeap.',
     creator: '@LoopVertex99532',
     images: [siteConfig.ogImage],
   },
