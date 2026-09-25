@@ -19,6 +19,25 @@ export const metadata: Metadata = {
     description:
       'Read the official terms and conditions governing the use of Vertex Loop Pvt Ltd.',
     url: `${siteConfig.url}/terms-conditions`,
+    siteName: siteConfig.name,
+    locale: 'en_IN',
+    type: 'website',
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'Vertex Loop Pvt Ltd - Terms & Conditions',
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Terms & Conditions | Vertex Loop Pvt Ltd',
+    description:
+      'Read the official terms and conditions governing the use of Vertex Loop Pvt Ltd.',
+    images: [siteConfig.ogImage],
   },
 }
 

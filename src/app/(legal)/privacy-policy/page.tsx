@@ -19,6 +19,25 @@ export const metadata: Metadata = {
     description:
       'Official Privacy Policy of Vertex Loop Pvt Ltd.',
     url: `${siteConfig.url}/privacy-policy`,
+    siteName: siteConfig.name,
+    locale: 'en_IN',
+    type: 'website',
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'Vertex Loop Pvt Ltd - Privacy Policy',
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy | Vertex Loop Pvt Ltd',
+    description:
+      'Official Privacy Policy of Vertex Loop Pvt Ltd.',
+    images: [siteConfig.ogImage],
   },
 }
 

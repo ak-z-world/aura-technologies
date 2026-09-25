@@ -44,6 +44,7 @@ export const metadata: Metadata = {
       'CrackLeap is an education initiative of Vertex Loop Pvt Ltd focused on practical learning across software development, AI, data, cloud and modern digital technologies.',
     url: `${siteConfig.url}/academy`,
     siteName: siteConfig.name,
+    locale: 'en_IN',
     type: 'website',
     images: [
       {
@@ -51,6 +52,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: 'CrackLeap Technology Academy - Vertex Loop Pvt Ltd',
+        type: 'image/png',
       },
     ],
   },
@@ -59,6 +61,7 @@ export const metadata: Metadata = {
     title: 'CrackLeap | Technology Training & Education by Vertex Loop',
     description:
       'CrackLeap is an education initiative of Vertex Loop Pvt Ltd focused on practical learning across software development, AI, data, cloud and modern digital technologies.',
+    images: [siteConfig.ogImage],
   },
 }
 

@@ -28,13 +28,24 @@ export const metadata: Metadata = {
       'Vertex Loop Pvt Ltd develops software products and technology solutions, provides digital marketing services, and delivers technology education through CrackLeap in India and internationally.',
     url: siteConfig.url,
     siteName: siteConfig.name,
+    locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'Vertex Loop Pvt Ltd',
+        type: 'image/png',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Vertex Loop Pvt Ltd | Software, Digital Marketing & Technology Education',
     description:
       'Vertex Loop Pvt Ltd develops software products and technology solutions, provides digital marketing services, and delivers technology education through CrackLeap in India and internationally.',
+    images: [siteConfig.ogImage],
   },
 }
 

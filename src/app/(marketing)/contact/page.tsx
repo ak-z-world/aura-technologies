@@ -26,13 +26,24 @@ export const metadata: Metadata = {
       'Contact Vertex Loop Pvt Ltd about software products, technology development, digital marketing services or CrackLeap training and education.',
     url: `${siteConfig.url}/contact`,
     siteName: siteConfig.name,
+    locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'Vertex Loop Pvt Ltd - Contact',
+        type: 'image/png',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Contact Vertex Loop Pvt Ltd | Software, Marketing & Training',
     description:
       'Contact Vertex Loop Pvt Ltd about software products, technology development, digital marketing services or CrackLeap training and education.',
+    images: [siteConfig.ogImage],
   },
 }
 

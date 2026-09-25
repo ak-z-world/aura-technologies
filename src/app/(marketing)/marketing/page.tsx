@@ -49,6 +49,7 @@ export const metadata: Metadata = {
       'Vertex Loop Pvt Ltd provides digital marketing services across SEO, SEM, content, social media, performance marketing, analytics, automation and brand strategy.',
     url: `${siteConfig.url}/marketing`,
     siteName: siteConfig.name,
+    locale: 'en_IN',
     type: 'website',
     images: [
       {
@@ -56,6 +57,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: 'Vertex Loop Pvt Ltd - Digital Marketing Services',
+        type: 'image/png',
       },
     ],
   },
@@ -64,6 +66,7 @@ export const metadata: Metadata = {
     title: 'Digital Marketing Services | SEO, Social Media & Performance | Vertex Loop',
     description:
       'Vertex Loop Pvt Ltd provides digital marketing services across SEO, SEM, content, social media, performance marketing, analytics, automation and brand strategy.',
+    images: [siteConfig.ogImage],
   },
 }
 

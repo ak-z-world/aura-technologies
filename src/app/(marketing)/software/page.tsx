@@ -48,6 +48,7 @@ export const metadata: Metadata = {
       'Vertex Loop Pvt Ltd develops software products, web and mobile applications, SaaS, cloud solutions and AI-enabled systems for organisations and users.',
     url: `${siteConfig.url}/software`,
     siteName: siteConfig.name,
+    locale: 'en_IN',
     type: 'website',
     images: [
       {
@@ -55,6 +56,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: 'Vertex Loop Pvt Ltd - Software Products & AI Solutions',
+        type: 'image/png',
       },
     ],
   },
@@ -63,6 +65,7 @@ export const metadata: Metadata = {
     title: 'Software Development & AI Solutions | Vertex Loop Pvt Ltd',
     description:
       'Vertex Loop Pvt Ltd develops software products, web and mobile applications, SaaS, cloud solutions and AI-enabled systems for organisations and users.',
+    images: [siteConfig.ogImage],
   },
 }
 
