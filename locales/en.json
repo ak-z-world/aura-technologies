@@ -1,0 +1,147 @@
+{
+  "brand": {
+    "name": "Vertex Loop Pvt Ltd",
+    "location": "Chennai, Tamil Nadu, India",
+    "tagline": "Building software, growing products, and developing capability. / Technology, Growth & Learning.",
+    "email": "hello@vertexloop.in",
+    "phone": "+91 94457 70160",
+    "phoneRaw": "9445770160",
+    "whatsappUrl": "https://wa.me/919445770160",
+    "website": "https://vertexloop.in",
+    "pillars": ["Software", "Digital Marketing", "Education"],
+    "ecosystem": ["Product Development", "Tech Services", "Digital Marketing", "CrackLeap Academy", "Scripten"]
+  },
+  "bot": {
+    "name": "Kural",
+    "fullName": "Kural from Vertex Loop",
+    "status": "Online",
+    "role": "AI Business Assistant",
+    "tagline": "Building software, growing products & developing capability",
+    "speechBubble": "Hi! I'm Kural 👋 How can I help?",
+    "pillText": "Chat with Kural",
+    "greeting": "Hey! I'm Kural from Vertex Loop 👋 Building software, growing products & developing capability. We do Product Dev, Digital Marketing & Academy. What brings you here today?",
+    "inputPlaceholder": "Type your message or choose an option...",
+    "sendAriaLabel": "Send message",
+    "closeAriaLabel": "Close chat",
+    "restartAriaLabel": "Restart conversation",
+    "footerText": "Vertex Loop Ecosystem • Product Dev, Marketing, Academy & Scripten"
+  },
+  "mainMenu": [
+    "🚀 Build Product / Tech Team",
+    "📈 Grow with Digital Marketing",
+    "🎓 Join CrackLeap Academy",
+    "✍️ Get Scripten Co-pilot",
+    "💼 Careers"
+  ],
+  "flows": {
+    "buildProduct": {
+      "key": "buildProduct",
+      "title": "Build Product / Tech Team",
+      "options": [
+        "Web Application",
+        "Mobile Application",
+        "SaaS & PaaS",
+        "AI, ML & Automation",
+        "Full-Stack + System Integration",
+        "Cloud + DevOps + Support"
+      ],
+      "stepPrompts": {
+        "service": "Awesome! What kind of software or tech solution are you planning to build?",
+        "company": "Great choice. What's your company or organization name?",
+        "name": "And what is your full name?",
+        "phone": "Your contact phone or WhatsApp number?",
+        "budget": "What is your estimated project budget?",
+        "budgetOptions": ["< ₹2 Lakhs", "₹2L - ₹5 Lakhs", "₹5L - ₹15 Lakhs", "₹15L+ / Enterprise", "Flexible / Need Estimation"]
+      }
+    },
+    "digitalMarketing": {
+      "key": "digitalMarketing",
+      "title": "Grow with Digital Marketing",
+      "options": [
+        "Search (SEO & SEM)",
+        "Content Marketing",
+        "Social Media",
+        "Performance Marketing",
+        "Analytics",
+        "Automation & Brand Strategy"
+      ],
+      "stepPrompts": {
+        "pillar": "Our 6-pillar marketing growth system drives high-ROI acquisition. Which area would you like to scale?",
+        "company": "What is your business or company name?",
+        "name": "What's your full name?",
+        "phone": "What's your phone or WhatsApp number?",
+        "website": "What is your website or social handle URL?",
+        "monthlyBudget": "What is your monthly marketing budget bracket?",
+        "budgetOptions": ["< ₹50,000/mo", "₹50k - ₹1.5L/mo", "₹1.5L - ₹5L/mo", "₹5L+/mo / Enterprise Scale"]
+      }
+    },
+    "crackleapAcademy": {
+      "key": "crackleapAcademy",
+      "title": "Join CrackLeap Academy",
+      "options": [
+        "Python + Agentic AI + AWS Flagship",
+        "Python Django Full Stack",
+        "React JS & Modern Frontend",
+        "AWS & DevOps Engineering",
+        "Python Full Stack Engineering",
+        "Generative AI & LLM Apps"
+      ],
+      "stepPrompts": {
+        "course": "Welcome to CrackLeap Academy! Practical engineering courses built for real-world job roles. Which course are you looking to join?",
+        "background": "What is your current background?",
+        "backgroundOptions": ["College Student / Fresher", "Working Professional (Switching to Tech)", "Experienced Developer Upskilling", "Founder / Freelancer"],
+        "name": "What's your full name?",
+        "phone": "Your WhatsApp number for the detailed curriculum, fee schedule, and mentor callback?",
+        "timing": "Which batch timing works best for you?",
+        "timingOptions": ["Weekday Evening Batch", "Weekend Intensive Batch", "Self-Paced with 1-on-1 Mentorship"]
+      }
+    },
+    "scriptenCopilot": {
+      "key": "scriptenCopilot",
+      "title": "Get Scripten Co-pilot for Content Creators",
+      "explain": "Scripten is your co-pilot for content creation - 13 agents research, script, and prep your publishing pack. Not auto-posting, you stay in control.",
+      "highlights": "⚡ 13 Specialized Agents • YouTube, Reels & Agencies • Plans at ₹399/mo, ₹799/mo, ₹1,999/mo • 2,300+ creators",
+      "options": [
+        "YouTube",
+        "Instagram Reels/Shorts",
+        "Marketing Agency",
+        "All Platforms"
+      ],
+      "stepPrompts": {
+        "platform": "You create content for?",
+        "niche": "What niche or industry is your content in? (e.g., Tech, Finance, AI, Education, Creator Economy...)",
+        "name": "What's your full name?",
+        "email": "What's your work email address?",
+        "phone": "Your phone / WhatsApp number for onboarding access?"
+      }
+    },
+    "careers": {
+      "key": "careers",
+      "title": "Careers at Vertex Loop",
+      "options": [
+        "Engineering Intern",
+        "Full-time Developer",
+        "Digital Marketing Role",
+        "Designer",
+        "Mentor"
+      ],
+      "stepPrompts": {
+        "role": "We are always excited to welcome passionate builders. Which role would you like to apply for?",
+        "name": "What is your full name?",
+        "phone": "Your phone or WhatsApp number?",
+        "portfolio": "Please share your Portfolio, GitHub, or LinkedIn URL:"
+      }
+    }
+  },
+  "messages": {
+    "thinking": "Kural is typing...",
+    "leadSuccess": "Thank you, {name}! 🎉 Kural has received your details and shared them with our leadership team at Vertex Loop.",
+    "leadSuccessSub": "We typically respond within 2 business hours. You can also connect with us right now on WhatsApp or Email:",
+    "whatsappCta": "Chat on WhatsApp (+91 94457 70160)",
+    "emailCta": "Email hello@vertexloop.in",
+    "restartPrompt": "Start a new conversation",
+    "invalidPhone": "Please enter a valid phone number (at least 10 digits).",
+    "invalidEmail": "Please enter a valid email address.",
+    "requiredField": "Please provide an answer to continue."
+  }
+}

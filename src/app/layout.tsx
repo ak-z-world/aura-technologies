@@ -189,6 +189,8 @@ const webSiteSchema = {
   inLanguage: 'en-US',
 }
 
+import ChatbotWidget from '@/components/chatbot/ChatbotWidget'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -205,6 +207,7 @@ export default function RootLayout({
           <GoogleAnalytics />
         </Suspense>
         {children}
+        <ChatbotWidget />
       </body>
     </html>
   )
