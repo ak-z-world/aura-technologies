@@ -34,7 +34,7 @@ export default function SoftwareHero() {
               Vertex Loop Pvt Ltd designs and develops software products, web and mobile
               applications, SaaS, PaaS and cloud-based solutions, including systems that use AI,
               machine learning and automation. We build for startups, SMEs and larger
-              organisations, delivering worldwide from Chennai, India (IST).
+              organisations, delivering worldwide from Chennai, India.
             </p>
 
             {/* CTAs */}

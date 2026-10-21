@@ -44,8 +44,8 @@ export default function AcademyHero() {
             {/* Supporting Copy */}
             <p className="text-base sm:text-lg md:text-[18px] text-[#4b5563] font-light leading-relaxed max-w-lg mb-9">
               CrackLeap is a technology training initiative focused on practical software
-              development, AI, and modern digital skills. Training is live and mentor-led
-              online, taught by Vertex Loop engineers, and open to learners worldwide;
+              development, AI, and modern digital skills. Training is live and mentor-led,
+              taught by Vertex Loop engineers, and open to learners worldwide;
               programs also run on campus with partner colleges in India.
             </p>
 

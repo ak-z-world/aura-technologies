@@ -90,7 +90,7 @@ const softwareFaqs = [
   },
   {
     q: 'Do you work with clients outside Chennai and outside India?',
-    a: 'Yes. Vertex Loop is based in Chennai, India (IST) and delivers software worldwide. Communication, reviews and delivery happen online, with scheduled overlap for your time zone.',
+    a: 'Yes. Vertex Loop is based in Chennai, India, and delivers software worldwide. Communication and reviews are scheduled around your time zone.',
   },
 ]
 

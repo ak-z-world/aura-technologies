@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     absolute: 'Contact Vertex Loop Pvt Ltd | Software, Marketing & Training',
   },
   description:
-    'Contact Vertex Loop Pvt Ltd (Chennai, India — working worldwide) about custom software, AI development, digital marketing services or CrackLeap training. Email hello@vertexloop.in or call +91 94457 70160.',
+    'Contact Vertex Loop Pvt Ltd (Chennai, India — working with clients worldwide) about custom software, AI development, digital marketing services or CrackLeap training. Email hello@vertexloop.in or call +91 94457 70160.',
   keywords: [
     'Contact Vertex Loop',
     'Vertex Loop Pvt Ltd Contact',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact Vertex Loop Pvt Ltd | Software, Marketing & Training',
     description:
-      'Contact Vertex Loop Pvt Ltd (Chennai, India — working worldwide) about custom software, AI development, digital marketing services or CrackLeap training. Email hello@vertexloop.in or call +91 94457 70160.',
+      'Contact Vertex Loop Pvt Ltd (Chennai, India — working with clients worldwide) about custom software, AI development, digital marketing services or CrackLeap training. Email hello@vertexloop.in or call +91 94457 70160.',
     url: `${siteConfig.url}/contact`,
     siteName: siteConfig.name,
     locale: 'en_IN',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact Vertex Loop | Software, Marketing & Training',
     description:
-      'Contact Vertex Loop Pvt Ltd (Chennai, India — working worldwide) about custom software, AI development, digital marketing services or CrackLeap training. Email hello@vertexloop.in or call +91 94457 70160.',
+      'Contact Vertex Loop Pvt Ltd (Chennai, India — working with clients worldwide) about custom software, AI development, digital marketing services or CrackLeap training. Email hello@vertexloop.in or call +91 94457 70160.',
     images: [siteConfig.ogImage],
   },
 }

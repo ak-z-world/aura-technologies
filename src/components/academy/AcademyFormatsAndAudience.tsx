@@ -2,8 +2,8 @@ import { Laptop, Building, User, UserCheck, Sparkles } from 'lucide-react'
 
 const FORMATS = [
   {
-    title: 'Live Online',
-    desc: 'Live, mentor-led online sessions — not pre-recorded videos.',
+    title: 'Live',
+    desc: 'Live, mentor-led sessions — not pre-recorded videos.',
     icon: Laptop,
   },
   {
@@ -58,8 +58,8 @@ export default function AcademyFormatsAndAudience() {
                 adapt to different needs.
               </h2>
               <p className="text-sm text-[#4b5563] font-light leading-relaxed mb-8 max-w-lg">
-                CrackLeap can support digital, offline and hybrid learning formats, including
-                courses, training, virtual classrooms and technology-enabled learning experiences.
+                CrackLeap can support different learning formats, including
+                courses, training and technology-enabled learning experiences.
               </p>
             </div>
 

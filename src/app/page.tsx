@@ -58,7 +58,7 @@ const homeFaqs = [
   },
   {
     q: 'Where is Vertex Loop based, and where do you deliver your services?',
-    a: 'Vertex Loop is based in Ambattur, Chennai, Tamil Nadu, India (IST). The team works, WFH-first, and delivers services worldwide — clients and learners join online, so you can work with us from any city, state or country without visiting an office.',
+    a: 'Vertex Loop is based in Ambattur, Chennai, Tamil Nadu, India, and delivers services worldwide — you can work with us from any city, state or country.',
   },
   {
     q: 'Can Vertex Loop build custom software or an AI agent for my business?',
@@ -70,7 +70,7 @@ const homeFaqs = [
   },
   {
     q: 'What is CrackLeap Academy?',
-    a: 'CrackLeap Academy is the education initiative of Vertex Loop Pvt Ltd. It offers live, mentor-led online software training — including Python with Agentic AI and AWS, Python Django, Python Full Stack, React JS, and AWS & DevOps — taught by Vertex Loop engineers who build software products. CrackLeap also runs training programs and workshops in partnership with colleges in India.',
+    a: 'CrackLeap Academy is the education initiative of Vertex Loop Pvt Ltd. It offers live, mentor-led software training — including Python with Agentic AI and AWS, Python Django, Python Full Stack, React JS, and AWS & DevOps — taught by Vertex Loop engineers who build software products. CrackLeap also runs training programs and workshops in partnership with colleges in India.',
   },
   {
     q: 'Which languages do you work and teach in?',

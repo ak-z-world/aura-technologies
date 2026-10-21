@@ -178,7 +178,7 @@ const organizationSchema = {
     alternateName: 'CrackLeap',
     url: siteConfig.academyUrl,
     description:
-      'CrackLeap Academy is the education initiative of Vertex Loop Pvt Ltd: live, mentor-led online software training taught by working engineers, with college training partnerships in India.',
+      'CrackLeap Academy is the education initiative of Vertex Loop Pvt Ltd: live, mentor-led software training taught by working engineers, with college training partnerships in India.',
   },
 }
 

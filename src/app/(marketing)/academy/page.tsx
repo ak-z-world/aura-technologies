@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     absolute: 'CrackLeap | Technology Training & Education by Vertex Loop',
   },
   description:
-    'CrackLeap Academy by Vertex Loop: live, mentor-led online software training in Python, Agentic AI, AWS & DevOps, React and full-stack development — taught by working engineers, open worldwide, with college partnerships in India.',
+    'CrackLeap Academy by Vertex Loop: live, mentor-led software training in Python, Agentic AI, AWS & DevOps, React and full-stack development — taught by working engineers, open worldwide, with college partnerships in India.',
   keywords: [
     'CrackLeap',
     'Technology Training',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'CrackLeap | Technology Training & Education by Vertex Loop',
     description:
-      'CrackLeap Academy by Vertex Loop: live, mentor-led online software training in Python, Agentic AI, AWS & DevOps, React and full-stack development — taught by working engineers, open worldwide, with college partnerships in India.',
+      'CrackLeap Academy by Vertex Loop: live, mentor-led software training in Python, Agentic AI, AWS & DevOps, React and full-stack development — taught by working engineers, open worldwide, with college partnerships in India.',
     url: `${siteConfig.url}/academy`,
     siteName: siteConfig.name,
     locale: 'en_IN',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'CrackLeap | Technology Training by Vertex Loop',
     description:
-      'CrackLeap Academy by Vertex Loop: live, mentor-led online software training in Python, Agentic AI, AWS & DevOps, React and full-stack development — taught by working engineers, open worldwide, with college partnerships in India.',
+      'CrackLeap Academy by Vertex Loop: live, mentor-led software training in Python, Agentic AI, AWS & DevOps, React and full-stack development — taught by working engineers, open worldwide, with college partnerships in India.',
     images: [siteConfig.ogImage],
   },
 }
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
 const academyFaqs = [
   {
     q: 'What is CrackLeap Academy?',
-    a: 'CrackLeap Academy is the education initiative of Vertex Loop Pvt Ltd: live, mentor-led online software training focused on practical, project-based learning — building real skills and a portfolio, not only certificates.',
+    a: 'CrackLeap Academy is the education initiative of Vertex Loop Pvt Ltd: live, mentor-led software training focused on practical, project-based learning — building real skills and a portfolio, not only certificates.',
   },
   {
     q: 'Who teaches at CrackLeap?',
@@ -78,7 +78,7 @@ const academyFaqs = [
   },
   {
     q: 'Are CrackLeap classes live or pre-recorded?',
-    a: 'Live. Every program is mentor-led and taught live online, with mentorship, doubt support and project work. CrackLeap does not sell pre-recorded-only courses. Programs and workshops also run on campus in partnership with colleges in India.',
+    a: 'Live. Every program is mentor-led and taught live, with mentorship, doubt support and project work. CrackLeap does not sell pre-recorded-only courses. Programs and workshops also run on campus in partnership with colleges in India.',
   },
   {
     q: 'Which programs does CrackLeap offer?',
