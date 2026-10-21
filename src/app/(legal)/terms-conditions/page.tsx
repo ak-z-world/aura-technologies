@@ -121,7 +121,7 @@ export default function TermsConditionsPage() {
           <div>
             <h2 className="text-display text-2xl font-semibold text-slate-ink mb-4">4. Proprietary Software Products & SCRIPTen</h2>
             <p className="text-slate-mid text-sm leading-relaxed font-light mb-3">
-              Vertex Loop develops proprietary business applications, including Vertex Loop ERP, Digital Invoicing Platform, Enterprise HRMS, and SCRIPTen.
+              Vertex Loop develops proprietary software products and tools, including SCRIPTen.
             </p>
             <div className="p-5 rounded-2xl bg-white/60 border border-white/80 mb-4">
               <h3 className="font-semibold text-slate-ink text-sm mb-2 flex items-center gap-2">

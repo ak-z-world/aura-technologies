@@ -13,13 +13,14 @@ import SoftwareCrossDomain from '@/components/software/SoftwareCrossDomain'
 import SoftwareFinalCta from '@/components/software/SoftwareFinalCta'
 import JsonLd from '@/components/seo/JsonLd'
 import { siteConfig } from '@/config/site'
+import FaqSection from '@/components/seo/FaqSection'
 
 export const metadata: Metadata = {
   title: {
     absolute: 'Software Development & AI Solutions | Vertex Loop Pvt Ltd',
   },
   description:
-    'Vertex Loop Pvt Ltd develops software products, web and mobile applications, SaaS, cloud solutions and AI-enabled systems for organisations and users.',
+    'Custom software development, AI agents, SaaS, web and mobile applications and cloud solutions from Chennai, India — built for startups, SMEs and enterprises worldwide. Custom quote per project.',
   keywords: [
     'Software Development',
     'Software Products',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Software Development & AI Solutions | Vertex Loop Pvt Ltd',
     description:
-      'Vertex Loop Pvt Ltd develops software products, web and mobile applications, SaaS, cloud solutions and AI-enabled systems for organisations and users.',
+      'Custom software development, AI agents, SaaS, web and mobile applications and cloud solutions from Chennai, India — built for startups, SMEs and enterprises worldwide. Custom quote per project.',
     url: `${siteConfig.url}/software`,
     siteName: siteConfig.name,
     locale: 'en_IN',
@@ -64,10 +65,34 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Software Development & AI Solutions | Vertex Loop',
     description:
-      'Vertex Loop Pvt Ltd develops software products, web and mobile applications, SaaS, cloud solutions and AI-enabled systems for organisations and users.',
+      'Custom software development, AI agents, SaaS, web and mobile applications and cloud solutions from Chennai, India — built for startups, SMEs and enterprises worldwide. Custom quote per project.',
     images: [siteConfig.ogImage],
   },
 }
+
+
+const softwareFaqs = [
+  {
+    q: 'What software development services does Vertex Loop offer?',
+    a: 'Vertex Loop develops custom software, web applications, mobile applications, SaaS and PaaS products, cloud-based solutions, APIs and software tools — designed around the specific workflows and needs of each organisation, rather than off-the-shelf templates.',
+  },
+  {
+    q: 'Do you build AI agents and generative AI applications?',
+    a: 'Yes. Vertex Loop builds AI-enabled systems, including AI agents, generative AI and LLM applications, machine learning, natural language processing and intelligent workflow automation, scoped to a real business use case.',
+  },
+  {
+    q: 'Who do you build software for?',
+    a: 'Startups, small and medium businesses and larger enterprises, in any industry. We take on both small projects and larger builds — custom software is not limited to one type or size of business.',
+  },
+  {
+    q: 'How does a software project start, and how is it priced?',
+    a: 'Every project starts with understanding the requirement, after which the scope is defined and a custom quote is provided. There are no fixed public packages or price lists, because the cost depends entirely on what has to be built.',
+  },
+  {
+    q: 'Do you work with clients outside Chennai and outside India?',
+    a: 'Yes. Vertex Loop is based in Chennai, India (IST) and delivers software worldwide. Communication, reviews and delivery happen online, with scheduled overlap for your time zone.',
+  },
+]
 
 const softwareServiceSchema = {
   '@context': 'https://schema.org',
@@ -191,7 +216,17 @@ export default function SoftwarePage() {
       {/* 10. Software Does Not Exist in Isolation */}
       <SoftwareCrossDomain />
 
-      {/* 11. Final CTA */}
+      {/* 11. FAQ */}
+      <FaqSection
+        id="faq"
+        label="Software — Frequently Asked Questions"
+        heading="Software development, answered."
+        faqs={softwareFaqs}
+        schemaId={`${siteConfig.url}/software/#faq`}
+        tone="cream"
+      />
+
+      {/* 12. Final CTA */}
       <SoftwareFinalCta />
 
       {/* 12. Footer */}

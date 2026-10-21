@@ -11,13 +11,14 @@ import AcademyTechnologies from '@/components/academy/AcademyTechnologies'
 import AcademyFormatsAndAudience from '@/components/academy/AcademyFormatsAndAudience'
 import AcademyFinalCta from '@/components/academy/AcademyFinalCta'
 import JsonLd from '@/components/seo/JsonLd'
+import FaqSection from '@/components/seo/FaqSection'
 
 export const metadata: Metadata = {
   title: {
     absolute: 'CrackLeap | Technology Training & Education by Vertex Loop',
   },
   description:
-    'CrackLeap is an education initiative of Vertex Loop Pvt Ltd focused on practical learning across software, AI, cloud and modern digital skills.',
+    'CrackLeap Academy by Vertex Loop: live, mentor-led online software training in Python, Agentic AI, AWS & DevOps, React and full-stack development — taught by working engineers, open worldwide, with college partnerships in India.',
   keywords: [
     'CrackLeap',
     'Technology Training',
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'CrackLeap | Technology Training & Education by Vertex Loop',
     description:
-      'CrackLeap is an education initiative of Vertex Loop Pvt Ltd focused on practical learning across software, AI, cloud and modern digital skills.',
+      'CrackLeap Academy by Vertex Loop: live, mentor-led online software training in Python, Agentic AI, AWS & DevOps, React and full-stack development — taught by working engineers, open worldwide, with college partnerships in India.',
     url: `${siteConfig.url}/academy`,
     siteName: siteConfig.name,
     locale: 'en_IN',
@@ -60,10 +61,42 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'CrackLeap | Technology Training by Vertex Loop',
     description:
-      'CrackLeap is an education initiative of Vertex Loop Pvt Ltd focused on practical learning across software, AI, cloud and modern digital skills.',
+      'CrackLeap Academy by Vertex Loop: live, mentor-led online software training in Python, Agentic AI, AWS & DevOps, React and full-stack development — taught by working engineers, open worldwide, with college partnerships in India.',
     images: [siteConfig.ogImage],
   },
 }
+
+
+const academyFaqs = [
+  {
+    q: 'What is CrackLeap Academy?',
+    a: 'CrackLeap Academy is the education initiative of Vertex Loop Pvt Ltd: live, mentor-led online software training focused on practical, project-based learning — building real skills and a portfolio, not only certificates.',
+  },
+  {
+    q: 'Who teaches at CrackLeap?',
+    a: 'CrackLeap sessions are taught by Vertex Loop engineers — working developers who build and ship software products — rather than full-time career trainers. Trainers are fluent in English and teach learners worldwide.',
+  },
+  {
+    q: 'Are CrackLeap classes live or pre-recorded?',
+    a: 'Live. Every program is mentor-led and taught live online, with mentorship, doubt support and project work. CrackLeap does not sell pre-recorded-only courses. Programs and workshops also run on campus in partnership with colleges in India.',
+  },
+  {
+    q: 'Which programs does CrackLeap offer?',
+    a: 'The flagship program is Python + Agentic AI + AWS. The catalog also includes Python Django Development, Python Full Stack, React JS, and AWS & DevOps Engineering, for students, graduates, professionals and career switchers.',
+  },
+  {
+    q: 'Do you guarantee placements?',
+    a: 'No. CrackLeap is honest about this: there is no placement guarantee or provision. We help learners prepare — with real projects, a verifiable certificate and skill report, and career-preparation guidance — but we do not promise jobs or interviews.',
+  },
+  {
+    q: 'How much do CrackLeap courses cost?',
+    a: 'Course fees are not published as a fixed public list, because they are shared for the current cohort when you enquire. College partnership pricing is customised to the college and the package it chooses. Contact hello@vertexloop.in or call +91 94457 70160 for the current details.',
+  },
+  {
+    q: 'Can a college partner with CrackLeap?',
+    a: 'Yes. Colleges can partner with CrackLeap for training programs and workshops for their students. Partnership terms and pricing are customised per college and package, and are discussed directly — write to hello@vertexloop.in.',
+  },
+]
 
 const academySchema = {
   '@context': 'https://schema.org',
@@ -179,6 +212,16 @@ export default function AcademyPage() {
 
         {/* Learning Formats + Who It's For */}
         <AcademyFormatsAndAudience />
+
+        {/* FAQ */}
+        <FaqSection
+          id="faq"
+          label="CrackLeap — Frequently Asked Questions"
+          heading="Training, answered honestly."
+          faqs={academyFaqs}
+          schemaId={`${siteConfig.url}/academy/#faq`}
+          tone="cream"
+        />
 
         {/* Final CTA */}
         <AcademyFinalCta />

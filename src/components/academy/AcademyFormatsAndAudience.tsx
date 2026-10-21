@@ -1,20 +1,20 @@
-import { Laptop, Users, Layers, User, UserCheck, Sparkles, Building } from 'lucide-react'
+import { Laptop, Building, User, UserCheck, Sparkles } from 'lucide-react'
 
 const FORMATS = [
   {
-    title: 'Online',
-    desc: 'Digital learning and virtual instruction.',
+    title: 'Live Online',
+    desc: 'Live, mentor-led online sessions — not pre-recorded videos.',
     icon: Laptop,
   },
   {
-    title: 'Offline',
-    desc: 'Instructor-led learning environments.',
-    icon: Users,
+    title: 'On-Campus with Colleges',
+    desc: 'Workshops and training programs hosted with partner colleges.',
+    icon: Building,
   },
   {
-    title: 'Hybrid',
-    desc: 'A combination of digital and in-person learning.',
-    icon: Layers,
+    title: '1:1 Mentorship',
+    desc: 'Personal mentorship, doubt support and code reviews from working engineers.',
+    icon: UserCheck,
   },
 ]
 

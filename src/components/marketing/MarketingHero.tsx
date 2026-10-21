@@ -35,6 +35,8 @@ export default function MarketingHero() {
             <p className="text-base sm:text-lg md:text-[18px] text-[#4b5563] font-light leading-relaxed max-w-xl mb-9">
               Vertex Loop Pvt Ltd provides digital marketing services across search, content,
               social media, performance marketing, analytics, automation and brand strategy.
+              We work with businesses in India and worldwide, delivered from
+              Chennai, India.
             </p>
 
             {/* CTAs */}

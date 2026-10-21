@@ -15,7 +15,12 @@ declare global {
   }
 }
 
-export const GA_MEASUREMENT_ID = 'G-91YN9MYRL0'
+// GA4 for the "Vertex Loop" web stream (https://vertexloop.in).
+// Set NEXT_PUBLIC_GA_MEASUREMENT_ID in the hosting environment to
+// G-91YN9MYRL0. The fallback keeps analytics working if the env var is
+// not set; if the property ever changes, update the env var, not the code.
+export const GA_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-91YN9MYRL0'
 
 export function trackGAEvent(action: string, params?: Record<string, unknown>) {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {

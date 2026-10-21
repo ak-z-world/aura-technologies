@@ -14,13 +14,14 @@ import MarketingEcosystemApplication from '@/components/marketing/MarketingEcosy
 import MarketingTechnology from '@/components/marketing/MarketingTechnology'
 import MarketingFinalCta from '@/components/marketing/MarketingFinalCta'
 import JsonLd from '@/components/seo/JsonLd'
+import FaqSection from '@/components/seo/FaqSection'
 
 export const metadata: Metadata = {
   title: {
     absolute: 'Digital Marketing Services | SEO & Growth | Vertex Loop',
   },
   description:
-    'Vertex Loop Pvt Ltd provides digital marketing services across SEO, SEM, content, social media, performance marketing, analytics, automation and brand strategy.',
+    'Digital marketing services from Chennai, India, delivered worldwide: SEO, AEO and GEO for AI search, SEM, content, social media, performance marketing, analytics, automation and brand strategy. Custom quote — no fixed packages.',
   keywords: [
     'Digital Marketing Services',
     'Search Engine Optimisation',
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Digital Marketing Services | SEO & Growth | Vertex Loop',
     description:
-      'Vertex Loop Pvt Ltd provides digital marketing services across SEO, SEM, content, social media, performance marketing, analytics, automation and brand strategy.',
+      'Digital marketing services from Chennai, India, delivered worldwide: SEO, AEO and GEO for AI search, SEM, content, social media, performance marketing, analytics, automation and brand strategy. Custom quote — no fixed packages.',
     url: `${siteConfig.url}/marketing`,
     siteName: siteConfig.name,
     locale: 'en_IN',
@@ -65,10 +66,34 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Digital Marketing Services | Vertex Loop',
     description:
-      'Vertex Loop Pvt Ltd provides digital marketing services across SEO, SEM, content, social media, performance marketing, analytics, automation and brand strategy.',
+      'Digital marketing services from Chennai, India, delivered worldwide: SEO, AEO and GEO for AI search, SEM, content, social media, performance marketing, analytics, automation and brand strategy. Custom quote — no fixed packages.',
     images: [siteConfig.ogImage],
   },
 }
+
+
+const marketingFaqs = [
+  {
+    q: 'What digital marketing services does Vertex Loop provide?',
+    a: 'Vertex Loop provides digital marketing across six areas: search (SEO and SEM), content marketing, social media management, performance marketing, analytics, and marketing automation with brand strategy — delivered as one connected system rather than disconnected activities.',
+  },
+  {
+    q: 'Do you optimise for AI search, such as Google AI Overviews and ChatGPT?',
+    a: 'Yes. Alongside traditional SEO, we structure content and brand information so a business can be found and cited in AI answers — Google AI Overviews, ChatGPT, Perplexity and Gemini. This is commonly called AEO (Answer Engine Optimisation) and GEO (Generative Engine Optimisation), and it is built on accurate, verifiable information about your business, not shortcuts.',
+  },
+  {
+    q: 'How are your digital marketing services priced?',
+    a: 'There are no fixed public packages. After understanding your goals and your current digital presence, we provide a custom quote for the work involved. Contact us at hello@vertexloop.in to start that conversation.',
+  },
+  {
+    q: 'Who pays for advertising spend?',
+    a: 'You do — directly from your own advertising accounts. Vertex Loop plans and manages campaigns, but advertising budgets are never routed through us, so you always keep full visibility and control of your spend.',
+  },
+  {
+    q: 'Do you work with businesses outside Chennai?',
+    a: 'Yes. Vertex Loop is based in Chennai, India and delivers digital marketing services to businesses across India and worldwide.',
+  },
+]
 
 const marketingServiceSchema = {
   '@context': 'https://schema.org',
@@ -208,6 +233,16 @@ export default function MarketingPage() {
 
         {/* Marketing + Technology */}
         <MarketingTechnology />
+
+        {/* FAQ */}
+        <FaqSection
+          id="faq"
+          label="Digital Marketing — Frequently Asked Questions"
+          heading="Marketing, answered."
+          faqs={marketingFaqs}
+          schemaId={`${siteConfig.url}/marketing/#faq`}
+          tone="cream"
+        />
 
         {/* Final CTA */}
         <MarketingFinalCta />

@@ -35,6 +35,7 @@ export default function HeroSection() {
             <p className="text-base sm:text-lg md:text-[19px] text-[#4b5563] font-light leading-relaxed max-w-xl mb-9">
               Vertex Loop Pvt Ltd works across software, digital marketing, and education to
               design products, support growth, and develop practical learning solutions.
+              Based in Chennai, India, we work with clients and learners worldwide.
             </p>
 
             {/* CTAs */}

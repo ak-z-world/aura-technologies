@@ -14,6 +14,8 @@ export const siteConfig = {
   fullDescription:
     'Vertex Loop Pvt Ltd is a technology company focused on software products and technology solutions, digital marketing services, and technology education through CrackLeap. Its software scope includes web and mobile applications, SaaS, PaaS, cloud solutions and AI-enabled systems, while its marketing services cover search, content, social media, performance marketing, analytics and automation. CrackLeap is an education initiative focused on practical technology learning and training.',
   url: rawUrl,
+  // Registered in Chennai, India in September 2026 (confirm exact date in VERIFY.md).
+  foundingDate: '2026-09',
   academyUrl: 'https://crackleap.vertexloop.in',
   ogImage: `${rawUrl}/og-image.png`,
   logo: `${rawUrl}/logo.png`,
@@ -22,7 +24,7 @@ export const siteConfig = {
   phoneRaw: '9445770160',
   address: {
     streetAddress: 'G2, Venkatapuram, Ambattur',
-    addressLocality: 'Ambattur, Chennai',
+    addressLocality: 'Chennai',
     addressRegion: 'Tamil Nadu',
     postalCode: '600053',
     addressCountry: 'IN',

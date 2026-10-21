@@ -33,7 +33,8 @@ export default function SoftwareHero() {
             <p className="text-base sm:text-lg md:text-[18px] text-[#4b5563] font-light leading-relaxed max-w-xl mb-9">
               Vertex Loop Pvt Ltd designs and develops software products, web and mobile
               applications, SaaS, PaaS and cloud-based solutions, including systems that use AI,
-              machine learning and automation.
+              machine learning and automation. We build for startups, SMEs and larger
+              organisations, delivering worldwide from Chennai, India (IST).
             </p>
 
             {/* CTAs */}

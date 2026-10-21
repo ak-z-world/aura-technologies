@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s | Vertex Loop Pvt Ltd',
   },
   description:
-    'Vertex Loop Pvt Ltd develops software products, provides digital marketing services, and delivers practical technology education through CrackLeap.',
+    'Chennai-based software, AI and digital marketing company delivering worldwide: custom software, AI agents, SaaS and web/mobile apps, marketing services, and CrackLeap training.',
   keywords: [
     'Vertex Loop Pvt Ltd',
     'Vertex Loop',
@@ -111,7 +111,9 @@ const organizationSchema = {
   url: siteConfig.url,
   logo: siteConfig.logo,
   image: siteConfig.ogImage,
-  description: siteConfig.fullDescription,
+  foundingDate: siteConfig.foundingDate,
+  slogan: 'Building software, growing products, and developing capability.',
+  description: `${siteConfig.fullDescription} Vertex Loop Pvt Ltd is based in Chennai, India and delivers its services to clients and learners worldwide. It is not affiliated with Vertex Inc. or Vertex Customer Solutions.`,
   email: siteConfig.email,
   telephone: siteConfig.telephone,
   address: {
@@ -132,8 +134,8 @@ const organizationSchema = {
     telephone: siteConfig.telephone,
     contactType: 'Customer Service & Business Inquiries',
     email: siteConfig.email,
-    areaServed: ['Worldwide', 'India'],
-    availableLanguage: ['English', 'Tamil'],
+    areaServed: 'Worldwide',
+    availableLanguage: ['English', 'Tamil', 'Hindi'],
   },
   sameAs: [
     siteConfig.links.twitter,
@@ -164,15 +166,19 @@ const organizationSchema = {
     'CrackLeap Academy',
   ],
   areaServed: [
-    { '@type': 'Place', name: 'Worldwide (International Delivery)' },
+    { '@type': 'Place', name: 'Worldwide' },
     { '@type': 'Country', name: 'India' },
+    { '@type': 'State', name: 'Tamil Nadu' },
+    { '@type': 'City', name: 'Chennai' },
   ],
   subOrganization: {
     '@type': 'EducationalOrganization',
-    name: 'CrackLeap',
+    '@id': `${siteConfig.academyUrl}/#organization`,
+    name: 'CrackLeap Academy',
+    alternateName: 'CrackLeap',
     url: siteConfig.academyUrl,
     description:
-      'CrackLeap is an education initiative of Vertex Loop Pvt Ltd focused on practical technology learning and software training.',
+      'CrackLeap Academy is the education initiative of Vertex Loop Pvt Ltd: live, mentor-led online software training taught by working engineers, with college training partnerships in India.',
   },
 }
 
@@ -186,7 +192,7 @@ const webSiteSchema = {
   publisher: {
     '@id': `${siteConfig.url}/#organization`,
   },
-  inLanguage: 'en-US',
+  inLanguage: 'en-IN',
 }
 
 import ChatbotWidget from '@/components/chatbot/ChatbotWidget'
